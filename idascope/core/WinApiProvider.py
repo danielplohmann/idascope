@@ -65,7 +65,7 @@ class WinApiProvider():
         Loads the keywords database from the file specified in the config.
         """
         keywords_file = open(self.idascope_config.winapi_keywords_file, "r")
-        self.winapi_data = json.loads(keywords_file.read(), object_hook=JsonHelper.decode_dict)
+        self.winapi_data = json.loads(keywords_file.read())
 
     def registerDataReceiver(self, receiving_function):
         """

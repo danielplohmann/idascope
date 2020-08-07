@@ -122,7 +122,7 @@ class SemanticIdentifier():
         """
         semantics_file = open(semantics_filename, "r")
         semantics = semantics_file.read()
-        return json.loads(semantics, object_hook=JsonHelper.decode_dict)
+        return json.loads(semantics)
 
     def _setSemantics(self, semantics_entry):
         semantics_content = {}
