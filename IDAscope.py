@@ -168,12 +168,18 @@ class IDAscopeForm(PluginForm):
         del IDASCOPE
 
     def Show(self):
-        if idc.GetInputMD5() is None:
+        if self.cc.ida_proxy.GetInputMD5() is None:
             return
         else:
+            options = 0
+            if self.cc.ida_proxy.idaapi.IDA_SDK_VERSION < 700:
+                options = PluginForm.FORM_CLOSE_LATER | PluginForm.FORM_RESTORE | PluginForm.FORM_SAVE
+            else:
+                options = PluginForm.WCLS_CLOSE_LATER | PluginForm.WOPN_RESTORE | PluginForm.WCLS_SAVE
+
             return PluginForm.Show(self,
                 NAME,
-                options=(PluginForm.FORM_CLOSE_LATER | PluginForm.FORM_RESTORE | PluginForm.FORM_SAVE))
+                options=options)
 
 ################################################################################
 # functionality offered to IDAscope's widgets

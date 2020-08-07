@@ -60,7 +60,10 @@ class IdaProxy():
         self.SEGMOD_KILL = self.idaapi.SEGMOD_KILL
         self.SEARCH_DOWN = 1
         self.MFF_FAST = self.idaapi.MFF_FAST
-        self.ASCSTR_C = self.idc.ASCSTR_C
+        if self.idaapi.IDA_SDK_VERSION < 700:
+            self.ASCSTR_C = self.idc.ASCSTR_C
+        else:
+            self.ASCSTR_C = self.idc.STRTYPE_C
         self.FUNCATTR_START = self.idc.FUNCATTR_START
 
 ###############################################################################
@@ -117,6 +120,12 @@ class IdaProxy():
 
     def GetFrame(self, ea):
         return self.idc.GetFrame(ea)
+
+    def GetInputMD5(self):
+        if self.idaapi.IDA_SDK_VERSION < 700:
+            return self.idc.GetInputMD5()
+        else:
+            return self.idc.retrieve_input_file_md5()
 
     def GetLongPrm(self, offset):
         return self.idc.GetLongPrm(offset)
