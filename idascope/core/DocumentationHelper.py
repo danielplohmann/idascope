@@ -107,7 +107,7 @@ class DocumentationHelper():
             for function_address in self.ida_proxy.Functions(self.ida_proxy.SegStart(seg_ea), \
                 self.ida_proxy.SegEnd(seg_ea)):
                 for block in self.ida_proxy.FlowChart(self.ida_proxy.get_func(function_address)):
-                    for head in self.ida_proxy.Heads(block.startEA, block.endEA):
+                    for head in self.ida_proxy.Heads(block.start_ea, block.end_ea):
                         self.colorInstruction(head, 0xFFFFFF, refresh=False)
         self.ida_proxy.refresh_idaview_anyway()
 
@@ -137,8 +137,8 @@ class DocumentationHelper():
         """
         function_chart = self.ida_proxy.FlowChart(self.ida_proxy.get_func(address))
         for block in function_chart:
-            if block.startEA <= address < block.endEA:
-                for head in self.ida_proxy.Heads(block.startEA, block.endEA):
+            if block.start_ea <= address < block.end_ea:
+                for head in self.ida_proxy.Heads(block.start_ea, block.end_ea):
                     self.colorInstruction(head, color, refresh)
 
     def getNextColorScheme(self):
@@ -198,10 +198,10 @@ class DocumentationHelper():
             function_chart = self.ida_proxy.FlowChart(self.ida_proxy.get_func(function_address))
             for basic_block in function_chart:
                 tagged_addresses_in_block = [(addr, tagged_addresses_in_function[addr]) for addr in \
-                    tagged_addresses_in_function.keys() if addr in range(basic_block.startEA, basic_block.endEA)]
+                    tagged_addresses_in_function.keys() if addr in range(basic_block.start_ea, basic_block.end_ea)]
                 if len(tagged_addresses_in_block) > 0:
                     base_color = self.selectBaseColor(tagged_addresses_in_block)
-                    self.colorBasicBlock(basic_block.startEA, base_color, refresh=False)
+                    self.colorBasicBlock(basic_block.start_ea, base_color, refresh=False)
                     for tagged_address in tagged_addresses_in_block:
                         highlight_color = self.selectHighlightColor(tagged_address[1])
                         self.colorInstruction(tagged_address[0], highlight_color, refresh=False)

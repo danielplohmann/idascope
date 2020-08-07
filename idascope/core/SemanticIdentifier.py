@@ -266,7 +266,7 @@ class SemanticIdentifier():
             function_ctx = self._getFunctionContext(function_ea)
             for block in function_chart:
                 num_blocks += 1
-                for instruction in self.ida_proxy.Heads(block.startEA, block.endEA):
+                for instruction in self.ida_proxy.Heads(block.start_ea, block.end_ea):
                     num_instructions += 1
                     if self.ida_proxy.isCode(self.ida_proxy.GetFlags(instruction)):
                         for ref in self._getAllRefsFrom(instruction):
@@ -626,8 +626,8 @@ class SemanticIdentifier():
         push_addresses = []
         function_chart = self.ida_proxy.FlowChart(self.ida_proxy.get_func(address))
         for block in function_chart:
-            if block.startEA <= address < block.endEA:
-                for instruction_addr in self.ida_proxy.Heads(block.startEA, block.endEA):
+            if block.start_ea <= address < block.end_ea:
+                for instruction_addr in self.ida_proxy.Heads(block.start_ea, block.end_ea):
                     if self.ida_proxy.GetMnem(instruction_addr) == "push":
                         push_addresses.append(instruction_addr)
                     if instruction_addr >= address:

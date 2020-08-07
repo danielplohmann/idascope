@@ -49,11 +49,11 @@ class ControlFlowBuilder():
 
             #save basic blocks flow
             for block_addr in self.ida_proxy.FlowChart(self.ida_proxy.get_func(function_ea)):
-                block = block_addr.startEA, block_addr.endEA
+                block = block_addr.start_ea, block_addr.end_ea
 
                 #save preds and succs
                 self.predecessors[block] = self.predecessors.get(block, set())
-                self.successors[block] = set((succ.startEA, succ.endEA) for succ in block_addr.succs())
+                self.successors[block] = set((succ.start_ea, succ.end_ea) for succ in block_addr.succs())
 
                 for succ in self.successors[block]:
                     self.predecessors[succ] = self.predecessors.get(succ, set())

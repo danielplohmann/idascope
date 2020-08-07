@@ -93,7 +93,7 @@ class CryptoIdentifier():
             function_dgraph = {}
             blocks_in_loops = set()
             for current_block in function_chart:
-                block = self.cc.AritlogBasicBlock(current_block.startEA, current_block.endEA)
+                block = self.cc.AritlogBasicBlock(current_block.start_ea, current_block.end_ea)
                 for instruction in self.ida_proxy.Heads(block.start_ea, block.end_ea):
                     if self.ida_proxy.isCode(self.ida_proxy.GetFlags(instruction)):
                         mnemonic = self.ida_proxy.GetMnem(instruction)
@@ -104,12 +104,12 @@ class CryptoIdentifier():
                             calls_in_function += 1
                 function_blocks.append(block)
                 # prepare graph for Tarjan's algorithm
-                succeeding_blocks = [succ.startEA for succ in current_block.succs()]
-                function_dgraph[current_block.startEA] = succeeding_blocks
+                succeeding_blocks = [succ.start_ea for succ in current_block.succs()]
+                function_dgraph[current_block.start_ea] = succeeding_blocks
                 # add trivial loops
-                if current_block.startEA in succeeding_blocks:
+                if current_block.start_ea in succeeding_blocks:
                     block.is_contained_in_trivial_loop = True
-                    blocks_in_loops.update([current_block.startEA])
+                    blocks_in_loops.update([current_block.start_ea])
             # perform Tarjan's algorithm to identify strongly connected components (= loops) in the function graph
             strongly_connected = self.graph_helper.calculateStronglyConnectedComponents(function_dgraph)
             non_trivial_loops = [component for component in strongly_connected if len(component) > 1]

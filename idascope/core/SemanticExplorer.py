@@ -218,7 +218,7 @@ class SemanticExplorer():
         block_addr = self.ida_proxy.FlowChart(self.ida_proxy.get_func(addr))
         if block_addr:
             block_addr = block_addr[0]
-            block = block_addr.startEA, block_addr.endEA
+            block = block_addr.start_ea, block_addr.end_ea
             if block in self.func_blocks.get(block, set()):
                 return block
         return self.findFirstBlockOfFunction(function, addr)
@@ -226,7 +226,7 @@ class SemanticExplorer():
     def findFirstBlockOfFunction(self, function_name, function_ea):
         suspicious_blocks = self.func_blocks.get(function_name, set())
         for block_addr in self.ida_proxy.FlowChart(self.ida_proxy.get_func(function_ea)):
-            block = block_addr.startEA, block_addr.endEA
+            block = block_addr.start_ea, block_addr.end_ea
             if block in suspicious_blocks:
                 return block
         return function_ea, function_ea
