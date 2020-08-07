@@ -70,7 +70,7 @@ class DocumentationHelper():
         """
         config_file = open(config_filename, "r")
         config = config_file.read()
-        parsed_config = json.loads(config, object_hook=JsonHelper.decode_dict)
+        parsed_config = json.loads(config)
         self.default_neutral_color = int(parsed_config["default_neutral_color"], 16)
         self.default_base_color = int(parsed_config["default_base_color"], 16)
         self.default_highlight_color = int(parsed_config["default_highlight_color"], 16)
