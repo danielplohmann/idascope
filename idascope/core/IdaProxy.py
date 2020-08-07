@@ -77,7 +77,7 @@ class IdaProxy():
         return self.idc.add_segm_ex(start_ea, end_ea, base, use32, align, comb)
 
     def Byte(self, byte):
-        return self.idc.byte(byte)
+        return self.idc.get_wide_byte(byte)
 
     def Comment(self, addr):
         return self.idc.get_cmt(addr)
@@ -170,7 +170,7 @@ class IdaProxy():
         return self.idc.is_code(flags)
 
     def Jump(self, address):
-        return self.idc.jump(address)
+        return self.idc.jumpto(address)
 
     def LocByName(self, name):
         return self.idc.get_name_ea_simple(name)
