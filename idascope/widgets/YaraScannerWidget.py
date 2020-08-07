@@ -36,7 +36,7 @@ class YaraScannerWidget(QMainWindow):
     def __init__(self, parent):
         self.cc = parent.cc
         self.cc.QMainWindow.__init__(self)
-        print "[|] loading YaraScannerWidget"
+        print("[|] loading YaraScannerWidget")
         # enable access to shared IDAscope modules
         self.parent = parent
         self.name = "YARA"

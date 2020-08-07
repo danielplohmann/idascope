@@ -43,7 +43,7 @@ class CryptoIdentifier():
 
     def __init__(self, config):
         self.name = "CryptoIdentifier"
-        print ("[|] loading CryptoIdentifier")
+        print("[|] loading CryptoIdentifier")
         self.cc = config.class_collection
         self.time = self.cc.time
         self.re = self.cc.re
@@ -83,7 +83,7 @@ class CryptoIdentifier():
         scan with the arithmetic/logic heuristic
         @return: a list of AritLogBasicBlock data objects that fulfill the parameters as specified
         """
-        print ("  [/] CryptoIdentifier: Starting aritlog heuristic analysis.")
+        print("  [/] CryptoIdentifier: Starting aritlog heuristic analysis.")
         self.aritlog_blocks = []
         time_before = self.time.time()
         for function_ea in self.ida_proxy.Functions():
@@ -121,7 +121,7 @@ class CryptoIdentifier():
                     block.is_contained_in_loop = True
                 block.num_calls_in_function = calls_in_function
             self.aritlog_blocks.extend(function_blocks)
-        print ("  [\\] Analysis took %3.2f seconds." % (self.time.time() - time_before))
+        print("  [\\] Analysis took %3.2f seconds." % (self.time.time() - time_before))
 
         return self.getAritlogBlocks(self.low_rating_threshold, self.high_rating_threshold,
             self.low_instruction_threshold, self.high_instruction_threshold,
@@ -207,7 +207,7 @@ class CryptoIdentifier():
                 segment.data = buf
                 segments.append(segment)
             except:
-                print ("[!] Tried to access invalid segment data. An error has occurred while address conversion")
+                print("[!] Tried to access invalid segment data. An error has occurred while address conversion")
         return segments
 
     def scanCryptoPatterns(self, pattern_size=32):
@@ -216,24 +216,24 @@ class CryptoIdentifier():
         @return: A list of CryptoSignatureHit data objects
         """
         crypt_results = []
-        print ("  [/] CryptoIdentifier: Starting crypto signature scanning.")
+        print("  [/] CryptoIdentifier: Starting crypto signature scanning.")
         time_before_matching = self.time.time()
         segments = self.getSegmentData()
-        print ("  [|] Segments under analysis: ")
+        print("  [|] Segments under analysis: ")
         for segment in segments:
-            print ("      " + str(segment))
-        print ("  [|] PatternManager initialized, number of signatures: %d" % len(self.pm.signatures))
+            print("      " + str(segment))
+        print("  [|] PatternManager initialized, number of signatures: %d" % len(self.pm.signatures))
         keywords = self.pm.getTokenizedSignatures(pattern_size)
-        print ("  [|] PatternManager tokenized patterns into %d chunks of %d bytes" % \
+        print("  [|] PatternManager tokenized patterns into %d chunks of %d bytes" % \
             (len(keywords.keys()), pattern_size))
         for keyword in keywords.keys():
             for segment in segments:
                 crypt_results.extend([self.cc.CryptoSignatureHit(segment.start_ea + match.start(), \
                     keywords[keyword], keyword) for match in self.re.finditer(self.re.escape(keyword), segment.data)])
-        print ("  [|] PatternManager now scanning variable signatures")
+        print("  [|] PatternManager now scanning variable signatures")
         variable_matches = self.scanVariablePatterns()
         crypt_results.extend(variable_matches)
-        print ("  [\\] Full matching took %3.2f seconds and resulted in %d hits." % \
+        print("  [\\] Full matching took %3.2f seconds and resulted in %d hits." % \
             (self.time.time() - time_before_matching, \
             len(crypt_results)))
         self.signature_hits = crypt_results
@@ -301,7 +301,7 @@ class CryptoIdentifier():
 
     def mapBase64ToTemporarySegment(self, decoded_base64):
         if len(decoded_base64) == 0:
-            print ("[!] No base64 strings found, skipping scanning of decoded strings.")
+            print("[!] No base64 strings found, skipping scanning of decoded strings.")
             return None
         byte_count = decoded_base64[-1][1] + len(decoded_base64[-1][2])
         # get end of final segment to spawn a new one at that location, write decoded bytes there, search
@@ -311,7 +311,7 @@ class CryptoIdentifier():
             current_seg = self.ida_proxy.NextSeg(seg_end)
             if not current_seg == self.ida_proxy.BAD_ADDR:
                 seg_end = self.ida_proxy.SegEnd(current_seg)
-        print ("[|] PatternManager is creating a temporary segment to allow scanning of decoded base64 strings.")
+        print("[|] PatternManager is creating a temporary segment to allow scanning of decoded base64 strings.")
         self.ida_proxy.AddSeg(seg_end, seg_end + byte_count, 0, True, self.ida_proxy.SA_REL_PARA, self.ida_proxy.SC_PUB)
         self.ida_proxy.SegRename(seg_end, "scopetmp")
         offset = seg_end

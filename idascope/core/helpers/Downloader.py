@@ -111,14 +111,14 @@ class Downloader(QtCore.QObject):
             conn.request("GET", path)
             response = conn.getresponse()
             if response.status == 200:
-                print "[+] Downloaded from: %s" % (url)
+                print("[+] Downloaded from: {}".format(url))
                 self._data = response.read()
             else:
-                print "[-] Download failed: %s (%s %s)" % (url, response.status, response.reason)
-                self._data = "Download failed (%s %s)!" % (response.status, response.reason)
+                print("[-] Download failed: {} ({} {})".format(url, response.status, response.reason))
+                self._data = "Download failed ({} {})!".format(response.status, response.reason)
             conn.close()
         except Exception as exc:
-            print ("[!] Downloader.download: Exception while downloading: %s" % exc)
+            print("[!] Downloader.download: Exception while downloading: {}".format(exc))
             self._data = None
         return self._data
 

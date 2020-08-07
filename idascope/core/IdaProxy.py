@@ -157,7 +157,7 @@ class IdaProxy():
             return type_at_address
         else:
             if self.verbose:
-                print ("[!] IdaProxy.FlowChart: No type information for 0x%x available, returning \"\".") % address
+                print("[!] IdaProxy.FlowChart: No type information for 0x{:x} available, returning \"\".".format(address))
             return ""
 
     def isCode(self, flags):
@@ -234,10 +234,10 @@ class IdaProxy():
         except:
             if self.verbose:
                 if function_address is not None:
-                    print ("[!] Trying to resolve an API address in non-function code at location: 0x%x, continuing " \
-                        + "analysis...") % function_address
+                    print(("[!] Trying to resolve an API address in non-function code at location: 0x{:x}, continuing " \
+                        + "analysis...").format(function_address))
                 else:
-                    print ("[!] IdaProxy.FlowChart: Tried to create a FlowChart on None object, skipping function.")
+                    print("[!] IdaProxy.FlowChart: Tried to create a FlowChart on None object, skipping function.")
         return function_chart
 
     def get_func(self, function_address):

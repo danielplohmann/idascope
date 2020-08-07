@@ -51,7 +51,7 @@ class DocumentationHelper():
     layout_color_map = {"tag": {"base_color": 0x112233, "highlight_color": 0x445566}}
 
     def __init__(self, idascope_config):
-        print ("[|] loading DocumentationHelper")
+        print("[|] loading DocumentationHelper")
         self.ida_proxy = IdaProxy()
         # default colors are grey / light red / red
         self.default_neutral_color = 0xCCCCCC
@@ -96,7 +96,7 @@ class DocumentationHelper():
         for group in config["semantic_groups"]:
             if group["tag"] == target_group:
                 return (group["base_color"], group["highlight_color"])
-        print "[-] Failed to get colors for group \"%s\" - you might want to check your semantics file." % target_group
+        print("[-] Failed to get colors for group \"{}\" - you might want to check your semantics file.".format(target_group))
         return (self.default_base_color, self.default_highlight_color)
 
     def uncolorAll(self):
@@ -181,7 +181,7 @@ class DocumentationHelper():
         else:
             tags_in_block = [item[1] for item in tagged_addresses_in_block]
             colors_in_block = set([self.color_map[tags_in_block[index]]["base_color"] \
-                for index in xrange(len(tags_in_block))])
+                for index in range(len(tags_in_block))])
             if len(colors_in_block) == 1:
                 return colors_in_block.pop()
             else:
@@ -198,7 +198,7 @@ class DocumentationHelper():
             function_chart = self.ida_proxy.FlowChart(self.ida_proxy.get_func(function_address))
             for basic_block in function_chart:
                 tagged_addresses_in_block = [(addr, tagged_addresses_in_function[addr]) for addr in \
-                    tagged_addresses_in_function.keys() if addr in xrange(basic_block.startEA, basic_block.endEA)]
+                    tagged_addresses_in_function.keys() if addr in range(basic_block.startEA, basic_block.endEA)]
                 if len(tagged_addresses_in_block) > 0:
                     base_color = self.selectBaseColor(tagged_addresses_in_block)
                     self.colorBasicBlock(basic_block.startEA, base_color, refresh=False)

@@ -39,7 +39,7 @@ class FunctionInspectionWidget(QMainWindow):
     def __init__(self, parent):
         self.cc = parent.cc
         self.cc.QMainWindow.__init__(self)
-        print "[|] loading FunctionInspectionWidget"
+        print("[|] loading FunctionInspectionWidget")
         # enable access to shared IDAscope modules
         self.parent = parent
         self.name = "Functions"

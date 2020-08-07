@@ -36,7 +36,7 @@ class SemanticExplorer():
     """
 
     def __init__(self, parent):
-        print ("[|] loading SemanticExplorer")
+        print("[|] loading SemanticExplorer")
         self.parent = parent
         self.cc = parent.cc
         self.ida_proxy = self.cc.ida_proxy
@@ -92,14 +92,14 @@ class SemanticExplorer():
 # real
 
     def load_json(self, json_file):
-        print "  loading json file: ", json_file
+        print("  loading json file: {}".format(json_file))
         loaded_dictionary = {}
         if self.cc.os.path.isfile(json_file):
             with open(json_file) as inf:
                 content = inf.read()
                 loaded_dictionary = self.cc.json.loads(content)
         else:
-            Warning("Can't find file: %s!" % json_file)
+            Warning("Can't find file: {}!".format(json_file))
         return loaded_dictionary
 
     def _collectSemanticApis(self, signatures):
@@ -121,13 +121,13 @@ class SemanticExplorer():
         # self._analyzeDemo()
         # return self.semantic_matches
         time_before = self.cc.time.time()
-        print "\n  Building data structures..."
+        print("\n  Building data structures...")
         self.buildDataStructure()
-        print "  completed after %3.2f seconds.\n" % (self.cc.time.time() - time_before)
+        print("  completed after {:3.2f} seconds.\n".format(self.cc.time.time() - time_before))
 
-        print "\n   Matching Semantics..."
+        print("\n   Matching Semantics...")
         self.semantic_matches = self.matchAll()
-        print ("\n  Full analysis completed in %3.2f seconds.\n" % (self.cc.time.time() - time_before))
+        print("\n  Full analysis completed in {:3.2f} seconds.\n".format(self.cc.time.time() - time_before))
         return self.semantic_matches
 
     def buildDataStructure(self):

@@ -38,7 +38,7 @@ class WinApiWidget(QWidget):
     def __init__(self, parent):
         self.cc = parent.cc
         self.cc.QWidget.__init__(self)
-        print "[|] loading WinApiWidget"
+        print("[|] loading WinApiWidget")
         self.parent = parent
         self.name = "WinAPI"
         self.icon = self.cc.QIcon(self.parent.config.icon_file_path + "winapi.png")

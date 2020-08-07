@@ -69,11 +69,11 @@ class ThreadedDownloader(QtCore.QObject):
             conn = self.httplib.HTTPConnection(host)
             conn.request("GET", path)
             response = conn.getresponse()
-            print response.status, response.reason
+            print(response.status, response.reason)
             self._data = response.read()
             conn.close()
         except Exception as exc:
-            print ("[!] ThreadedDownloader.run: Exception while downloading: %s" % exc)
+            print("[!] ThreadedDownloader.run: Exception while downloading: {}".format(exc))
             self._data = None
         finally:
             self.threadFinished.emit()

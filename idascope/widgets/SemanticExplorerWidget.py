@@ -39,7 +39,7 @@ class SemanticExplorerWidget(QMainWindow):
     def __init__(self, parent):
         self.cc = parent.cc
         self.cc.QMainWindow.__init__(self)
-        print "[|] loading SemanticExplorerWidget"
+        print("[|] loading SemanticExplorerWidget")
         # enable access to shared IDAscope modules
         self.parent = parent
         self.name = "Semantics"

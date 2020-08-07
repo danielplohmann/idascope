@@ -151,8 +151,8 @@ class ApiMatcher():
             apiOfSequence.decode("ascii")
         except:
             if self.config.debug:
-                print "SemanticExplorer._matchAPIs - addr: 0x%x" % addr
-                print "SemanticExplorer._matchAPIs - apiOfSequence: %s" % apiOfSequence.encode("hex")
+                print("SemanticExplorer._matchAPIs - addr: 0x{:x}".format(addr))
+                print("SemanticExplorer._matchAPIs - apiOfSequence: {}".format(apiOfSequence.encode("hex")))
             return False
         return apiOfSemantic in apiOfSequence
 

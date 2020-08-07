@@ -36,7 +36,7 @@ class CryptoIdentificationWidget(QMainWindow):
     def __init__(self, parent):
         self.cc = parent.cc
         self.cc.QMainWindow.__init__(self)
-        print "[|] loading CryptoIdentificationWidget"
+        print("[|] loading CryptoIdentificationWidget")
         # enable access to shared IDAscope modules
         self.parent = parent
         self.name = "Crypto"
@@ -430,6 +430,6 @@ class CryptoIdentificationWidget(QMainWindow):
                     else:
                         self.ida_proxy.MakeRptCmt(addr, place.getSignatureNames())
                 else:
-                    print "CryptoIdentificationWidget: Skipping 0x%x (%s), already has comment: \"%s\"" % \
-                        (addr, place.getSignatureNames(), self.ida_proxy.RptCmt(addr))
+                    print("CryptoIdentificationWidget: Skipping 0x{:x} ({}), already has comment: \"{}\""
+                          .format(addr, place.getSignatureNames(), self.ida_proxy.RptCmt(addr)))
 

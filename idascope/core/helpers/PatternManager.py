@@ -354,7 +354,7 @@ class PatternManager:
 
     def __init__(self, parent):
         self.cc = parent.cc
-        print ("[|] loading PatternManager")
+        print("[|] loading PatternManager")
 
     def padStringToDwords(self, stringToPad):
         dwordPadder = lambda item: item + "\x00" * 3
@@ -371,7 +371,7 @@ class PatternManager:
         tokens_to_names = {}
         for signature in self._getStaticPatternKeys():
             tokenized = [(signature[index:index + pattern_length], self.signatures[signature]) for index \
-                in xrange(0, len(signature), pattern_length)]
+                in range(0, len(signature), pattern_length)]
             for token in tokenized:
                 if not self._isZeroToken(token[0]):
                     if token[0] in tokens_to_names.keys():
@@ -422,8 +422,8 @@ class PatternManager:
         """
         Used for informational purposes only, prints all names of signatures defined in the PatternManager
         """
-        print ("[+] PatternManager has the following signatures: ")
+        print("[+] PatternManager has the following signatures: ")
         occurrences = self.get_signature_occurrences()
         for signature in sorted(occurrences.keys()):
-            print ("     %s: %d") % (signature, occurrences[signature])
+            print("     {}: {}".format(signature, occurrences[signature]))
 

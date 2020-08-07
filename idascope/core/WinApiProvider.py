@@ -43,7 +43,7 @@ class WinApiProvider():
     """
 
     def __init__(self, idascope_config):
-        print ("[|] Loading WinApiProvider")
+        print("[|] Loading WinApiProvider")
         self.os = os
         self.string = string
         self.ida_proxy = IdaProxy()
@@ -80,7 +80,7 @@ class WinApiProvider():
         """
         When a download of MSDN data is finished, notice all receivers.
         """
-        print "WinApiProvider.onDownloadFinished(): DOWNLOAD FINISHED"
+        print("WinApiProvider.onDownloadFinished(): DOWNLOAD FINISHED")
         data = self.downloader.get_data()
         if not data:
             data = "Download failed! Try again or check your Internet connection."
