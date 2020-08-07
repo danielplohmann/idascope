@@ -131,8 +131,13 @@ class WinApiProvider():
         api_filenames = self._getApiFilenames(keyword)
         if len(api_filenames) == 1:
             api_filenames = [self.idascope_config.winapi_rootdir + api_filenames[0]]
-        elif self.online_msdn_enabled and len(api_filenames) == 0:
+
+        # see if any exist
+        api_filenames = list(filter(os.path.exists, api_filenames))
+
+        if self.online_msdn_enabled and len(api_filenames) == 0:
             return self._getOnlineMsdnContent(keyword)
+
         return self._getDocumentContent(api_filenames)
 
     def getLinkedDocumentContent(self, url):
@@ -343,13 +348,14 @@ class WinApiProvider():
             start_index = feed_content.find("<link>")
             end_index = feed_content.find("</link>")
             link_url = feed_content[len("<link>") + start_index:end_index]
-            if "msdn.microsoft.com" in link_url:
+            if "docs.microsoft.com" in link_url:
                 return link_url
             else:
                 feed_content = feed_content[feed_content.find("</link>") + 7:]
             return ""
 
     def _cleanupDownloadedHtml(self, content):
-        content = content[content.find("<div class=\"topic\""):content.find("<div id=\"contentFeedback\"")]
+        # TODO: This is very dodgy and breaks easily. Would be nice to use an actual html parser here.
+        content = content[content.find("<div id=\"main-column\""):content.find("<div class=\"is-size-small right-container column is-one-quarter is-one-fifth-desktop is-hidden-mobile is-hidden-tablet-only\" data-bi-name=\"pageactions\" role=\"complementary\" aria-label=\"Page Actions\">")]
         content = "".join(s for s in content if s in self.string.printable)
         return content
