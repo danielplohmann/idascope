@@ -397,7 +397,10 @@ class PatternManager:
         @return (list) of keys from PatternManager.signatures of static keys
         """
         static_signature_keys = []
-        for signature in self.signatures.keys():
+        # When iterating over a dict (or keys of a dict) those must be immutable
+        # but dict.keys() returns a reference to the keys.
+        # => copy them as list
+        for signature in list(self.signatures.keys()):
             if not isinstance(signature, self.cc.VariablePattern):
                 static_signature_keys.append(signature)
             # extend self.signatures by dword padded version of MutablePatterns
