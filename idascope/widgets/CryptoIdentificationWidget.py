@@ -398,14 +398,14 @@ class CryptoIdentificationWidget(QMainWindow):
             for hit in signature_hits[signature]:
                 hit_information = self.cc.QTreeWidgetItem(root)
                 hit_information.setText(0, "0x%x (%d bytes matched)" % (hit.start_address, len(hit.matched_signature)))
-                self.qtreewidgetitems_to_addresses[hit_information] = hit.start_address
+                self.qtreewidgetitems_to_addresses[hit_information.text(0)] = hit.start_address
                 for xref in hit.code_refs_to:
                     code_ref = self.cc.QTreeWidgetItem(hit_information)
                     code_ref.setText(0, "referenced by 0x%x (function: %s)" % (xref[0],
                         self.ida_proxy.GetFunctionName(xref[0])))
                     if xref[1]:
                         code_ref.setForeground(0, self.cc.QBrush(self.cc.QColor(0xFF0000)))
-                    self.qtreewidgetitems_to_addresses[code_ref] = xref[0]
+                    self.qtreewidgetitems_to_addresses[code_ref.text(0)] = xref[0]
         self.signature_tree.setSortingEnabled(True)
 
     def _onSignatureTreeItemDoubleClicked(self, item, column):
@@ -413,8 +413,8 @@ class CryptoIdentificationWidget(QMainWindow):
         The action to perform when an entry in the signature TreeWIdget is double clicked.
         Changes IDA View either to location clicked.
         """
-        if item in self.qtreewidgetitems_to_addresses:
-            self.ida_proxy.Jump(self.qtreewidgetitems_to_addresses[item])
+        if item.text(0) in self.qtreewidgetitems_to_addresses:
+            self.ida_proxy.Jump(self.qtreewidgetitems_to_addresses[item.text(0)])
 
     def annotateHits(self):
         signature_hits = self.ci.getSignatureHits()
