@@ -228,8 +228,15 @@ class CryptoIdentifier():
             (len(keywords.keys()), pattern_size))
         for keyword in keywords.keys():
             for segment in segments:
-                crypt_results.extend([self.cc.CryptoSignatureHit(segment.start_ea + match.start(), \
-                    keywords[keyword], keyword) for match in self.re.finditer(self.re.escape(keyword), segment.data)])
+                if isinstance(keyword, bytes):
+                    keyword = str(keyword)
+                crypt_results.extend(
+                    [
+                        self.cc.CryptoSignatureHit(segment.start_ea + match.start(),
+                            keywords[keyword],
+                            keyword)
+                        for match in self.re.finditer(self.re.escape(keyword), segment.data)
+                    ])
         print("  [|] PatternManager now scanning variable signatures")
         variable_matches = self.scanVariablePatterns()
         crypt_results.extend(variable_matches)
