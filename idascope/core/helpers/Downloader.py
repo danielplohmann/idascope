@@ -29,7 +29,7 @@
 ########################################################################
 
 # TODO: Make this finally multi-threaded.
-import httplib
+import httplib2 as httplib
 
 import idascope.core.helpers.QtShim as QtShim
 QtGui = QtShim.get_QtGui()
