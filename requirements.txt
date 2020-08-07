@@ -1,1 +1,1 @@
-httplib2~=0.18.1
+requests~=2.24.0
