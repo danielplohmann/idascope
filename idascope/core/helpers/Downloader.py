@@ -36,7 +36,7 @@ QtGui = QtShim.get_QtGui()
 QtCore = QtShim.get_QtCore()
 Signal = QtShim.get_Signal()
 
-from ThreadedDownloader import ThreadedDownloader
+from .ThreadedDownloader import ThreadedDownloader
 
 
 class TempQThread(QtCore.QThread):

@@ -27,8 +27,8 @@
 import idascope.core.helpers.QtShim as QtShim
 QMainWindow = QtShim.get_QMainWindow()
 
-from NumberQTableWidgetItem import NumberQTableWidgetItem
-from FunctionFilterDialog import FunctionFilterDialog
+from .NumberQTableWidgetItem import NumberQTableWidgetItem
+from .FunctionFilterDialog import FunctionFilterDialog
 
 
 class FunctionInspectionWidget(QMainWindow):

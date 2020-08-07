@@ -26,7 +26,7 @@
 
 import json
 
-from helpers import JsonHelper
+from .helpers import JsonHelper
 
 annotations = {
                0x401000:

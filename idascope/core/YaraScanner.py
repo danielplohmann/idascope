@@ -40,7 +40,7 @@ except ImportError:
     print("[-] ERROR: Could not import YARA (not installed?), scanner disabled.")
     yara = None
 
-from IdaProxy import IdaProxy
+from .IdaProxy import IdaProxy
 import idascope.core.helpers.Misc as Misc
 from idascope.core.helpers.YaraRuleLoader import YaraRuleLoader
 from idascope.core.helpers.YaraRule import YaraRule

@@ -26,8 +26,8 @@
 #
 ########################################################################
 
-from YaraRule import YaraRule
-from YaraStatusController import StatusController
+from .YaraRule import YaraRule
+from .YaraStatusController import StatusController
 
 
 class YaraRuleLoader(object):

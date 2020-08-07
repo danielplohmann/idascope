@@ -39,7 +39,7 @@ import idascope.core.helpers.QtShim as QtShim
 QWidget = QtShim.get_QWidget()
 Signal = QtShim.get_Signal()
 
-from RangeSlider import RangeSlider
+from .RangeSlider import RangeSlider
 
 
 class BoundsEditor(QWidget):

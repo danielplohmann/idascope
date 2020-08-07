@@ -33,9 +33,9 @@ import os
 import re
 import time
 
-from helpers import JsonHelper
+from .helpers import JsonHelper
 
-from IdaProxy import IdaProxy
+from .IdaProxy import IdaProxy
 from idascope.core.structures.FunctionContext import FunctionContext
 from idascope.core.structures.FunctionContextFilter import FunctionContextFilter
 from idascope.core.structures.CallContext import CallContext

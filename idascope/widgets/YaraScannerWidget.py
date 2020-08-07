@@ -27,8 +27,8 @@
 import idascope.core.helpers.QtShim as QtShim
 QMainWindow = QtShim.get_QMainWindow()
 
-from NumberQTableWidgetItem import NumberQTableWidgetItem
-from YaraRuleDialog import YaraRuleDialog
+from .NumberQTableWidgetItem import NumberQTableWidgetItem
+from .YaraRuleDialog import YaraRuleDialog
 
 
 class YaraScannerWidget(QMainWindow):

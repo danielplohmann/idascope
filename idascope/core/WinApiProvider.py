@@ -32,9 +32,9 @@ import json
 import os
 import string
 
-from helpers import JsonHelper
-from helpers.Downloader import Downloader
-from IdaProxy import IdaProxy
+from .helpers import JsonHelper
+from .helpers.Downloader import Downloader
+from .IdaProxy import IdaProxy
 
 
 class WinApiProvider():

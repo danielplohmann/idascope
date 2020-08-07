@@ -27,8 +27,8 @@
 import idascope.core.helpers.QtShim as QtShim
 QMainWindow = QtShim.get_QMainWindow()
 
-from NumberQTableWidgetItem import NumberQTableWidgetItem
-from BoundsEditor import BoundsEditor
+from .NumberQTableWidgetItem import NumberQTableWidgetItem
+from .BoundsEditor import BoundsEditor
 
 
 class CryptoIdentificationWidget(QMainWindow):
