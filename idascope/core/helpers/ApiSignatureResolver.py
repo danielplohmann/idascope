@@ -77,7 +77,7 @@ class ApiSignatureResolver():
                 #Buffer missing api signature
                 missing_apis.append(api_name)
         if missing_apis:
-            print('[Error]: Analysis may be incomplete due to the following unresolved signatures', end='')
+            print('[Error]: Analysis may be incomplete due to the following unresolved signatures')
             for missing in missing_apis:
                 print(missing)
         return api_signatures

@@ -153,7 +153,7 @@ class IDAscope_Tests(unittest.TestCase):
 
 
 def main(argv):
-    print "#" * 10 + " NEW TEST RUN: IDAscope ## " + datetime.datetime.utcnow().strftime("%A, %d. %B %Y %I:%M:%S") + " " + "##"
+    print("#" * 10 + " NEW TEST RUN: IDAscope ## " + datetime.datetime.utcnow().strftime("%A, %d. %B %Y %I:%M:%S") + " " + "##")
     unittest.main()
 
 
