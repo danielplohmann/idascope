@@ -43,17 +43,17 @@ class ControlFlowBuilder():
         block_calls = {}
         function_apis = {}
 
-        print "\n  Calculating control flow...",
+        print("\n  Calculating control flow...", end='')
         for function_ea in self.ida_proxy.Functions():
             function_name = self.ida_proxy.GetFunctionName(function_ea)
 
             #save basic blocks flow
             for block_addr in self.ida_proxy.FlowChart(self.ida_proxy.get_func(function_ea)):
-                block = block_addr.startEA, block_addr.endEA
+                block = block_addr.start_ea, block_addr.end_ea
 
                 #save preds and succs
                 self.predecessors[block] = self.predecessors.get(block, set())
-                self.successors[block] = set((succ.startEA, succ.endEA) for succ in block_addr.succs())
+                self.successors[block] = set((succ.start_ea, succ.end_ea) for succ in block_addr.succs())
 
                 for succ in self.successors[block]:
                     self.predecessors[succ] = self.predecessors.get(succ, set())
@@ -78,10 +78,10 @@ class ControlFlowBuilder():
                                 semanticRefs[api] = semanticRefs.get(api, set())
                                 semanticRefs[api].add(block)
 
-        print " done."
-        print "  Pruning flow graph...",
+        print(" done.")
+        print("  Pruning flow graph...", end='')
         predecessors, successors = self.cc.ControlFlowFilter(self, self.func_blocks, self.predecessors, self.successors).filter()
-        print " done."
+        print(" done.")
 
         return self.func_blocks, function_apis, block_calls, successors, predecessors, semanticRefs
 

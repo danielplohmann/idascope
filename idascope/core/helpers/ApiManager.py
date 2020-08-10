@@ -113,7 +113,7 @@ class ApiManager():
             maxDepth -= 1
 
         if missingArgs > 0:
-            print '[WARNING]: Not possible to track all arguments for ', "0x%x" % api_addr
+            print('[WARNING]: Not possible to track all arguments for ', "0x{:x}".format(api_addr))
         return args
 
     def _getPush(self, address, arg_count):
@@ -281,10 +281,10 @@ class ApiManager():
     def _readString(self, addr, isUnicode=False):
         """(Sality sample)
         - Example for 'purity_control'
-        print _readString(0x422370)
+        print(_readString(0x422370))
 
         - Example for 'osDevives\amsint32' (unicode)
-        print _readString(0x421a50, True)"""
+        print(_readString(0x421a50, True))"""
         try:
             result = ''
             increment = 1

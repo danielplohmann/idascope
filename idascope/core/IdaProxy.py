@@ -60,7 +60,10 @@ class IdaProxy():
         self.SEGMOD_KILL = self.idaapi.SEGMOD_KILL
         self.SEARCH_DOWN = 1
         self.MFF_FAST = self.idaapi.MFF_FAST
-        self.ASCSTR_C = self.idc.ASCSTR_C
+        if self.idaapi.IDA_SDK_VERSION < 700:
+            self.ASCSTR_C = self.idc.ASCSTR_C
+        else:
+            self.ASCSTR_C = self.idc.STRTYPE_C
         self.FUNCATTR_START = self.idc.FUNCATTR_START
 
 ###############################################################################
@@ -68,158 +71,161 @@ class IdaProxy():
 ###############################################################################
 
     def AddHotkey(self, hotkey, function):
-        return self.idc.AddHotkey(hotkey, function)
+        return self.idc.add_idc_hotkey(hotkey, function)
 
     def AddSeg(self, start_ea, end_ea, base, use32, align, comb):
-        return self.idc.AddSeg(start_ea, end_ea, base, use32, align, comb)
+        return self.idc.add_segm_ex(start_ea, end_ea, base, use32, align, comb)
 
     def Byte(self, byte):
-        return self.idc.Byte(byte)
+        return self.idc.get_wide_byte(byte)
 
     def Comment(self, addr):
-        return self.idc.Comment(addr)
+        return self.idc.get_cmt(addr)
 
     def DelSeg(self, address, flags):
-        return self.idc.DelSeg(address, flags)
+        return self.idc.del_segm(address, flags)
 
     def Demangle(self, name, disable_mask):
-        return self.idc.Demangle(name, disable_mask)
+        return self.idc.demangle(name, disable_mask)
 
     def Dword(self, addr):
-        return self.idc.Dword(addr)
+        return self.idc.get_wide_dword(addr)
 
     def FirstSeg(self):
-        return self.idc.FirstSeg()
+        return self.idc.get_first_seg()
 
     def get_byte(self, address):
         return self.idaapi.get_byte(address)
 
     def GetCommentEx(self, ea, repeatable):
-        return self.idaapi.GetCommentEx(ea, repeatable)
+        return self.idaapi.get_cmt(ea, repeatable)
 
     def GetDisasm(self, address):
-        return self.idc.GetDisasm(address)
+        return self.idc.generate_disasm_line(address)
 
     def GetFlags(self, address):
-        return self.idc.GetFlags(address)
+        return self.idc.get_full_flags(address)
 
     def GetFunctionAttr(self, ea, attr):
-        return self.idc.GetFunctionAttr(ea, attr)
+        return self.idc.get_func_attr(ea, attr)
 
     def GetFunctionCmt(self, ea, repeatable):
-        return self.idc.GetFunctionCmt(ea, repeatable)
+        return self.idc.get_func_cmt(ea, repeatable)
 
     def GetFunctionFlags(self, address):
-        return self.idc.GetFunctionFlags(address)
+        return self.idc.get_func_flags(address)
 
     def GetFunctionName(self, address):
-        return self.idc.GetFunctionName(address)
+        return self.idc.get_func_name(address)
 
     def GetFrame(self, ea):
-        return self.idc.GetFrame(ea)
+        return self.idc.get_frame(ea)
+
+    def GetInputMD5(self):
+        return self.idc.retrieve_input_file_md5()
 
     def GetLongPrm(self, offset):
-        return self.idc.GetLongPrm(offset)
+        return self.idc.get_inf_attr(offset)
 
     def GetLastMember(self, sid):
-        return self.idc.GetLastMember(sid)
+        return self.idc.get_last_member(sid)
 
     def GetMnem(self, address):
-        return self.idc.GetMnem(address)
+        return self.idc.print_insn_mnem(address)
 
     def GetMemberComment(self, sid, member_offset, repeatable):
-        return self.idc.GetMemberComment(sid, member_offset, repeatable)
+        return self.idc.get_member_cmt(sid, member_offset, repeatable)
 
     def GetMemberFlag(self, sid, member_offset):
-        return self.idc.GetMemberFlag(sid, member_offset)
+        return self.idc.get_member_flag(sid, member_offset)
 
     def GetMemberName(self, sid, member_offset):
-        return self.idc.GetMemberName(sid, member_offset)
+        return self.idc.get_member_name(sid, member_offset)
 
     def GetMemberSize(self, sid, member_offset):
-        return self.idc.GetMemberSize(sid, member_offset)
+        return self.idc.get_member_size(sid, member_offset)
 
     def GetMemberOffset(self, sid, member_name):
-        return self.idc.GetMemberOffset(sid, member_name)
+        return self.idc.get_member_offset(sid, member_name)
 
     def GetOpType(self, address, index):
-        return self.idc.GetOpType(address, index)
+        return self.idc.get_operand_type(address, index)
 
     def GetOperandValue(self, address, index):
-        return self.idc.GetOperandValue(address, index)
+        return self.idc.get_operand_value(address, index)
 
     def GetString(self, address):
-        return self.idc.GetString(address)
+        return self.idc.get_strlit_contents(address)
 
     def GetType(self, address):
-        type_at_address = self.idc.GetType(address)
+        type_at_address = self.idc.get_type(address)
         if type_at_address is not None:
             return type_at_address
         else:
             if self.verbose:
-                print ("[!] IdaProxy.FlowChart: No type information for 0x%x available, returning \"\".") % address
+                print("[!] IdaProxy.FlowChart: No type information for 0x{:x} available, returning \"\".".format(address))
             return ""
 
     def isCode(self, flags):
-        return self.idc.isCode(flags)
+        return self.idc.is_code(flags)
 
     def Jump(self, address):
-        return self.idc.Jump(address)
+        return self.idc.jumpto(address)
 
     def LocByName(self, name):
-        return self.idc.LocByName(name)
+        return self.idc.get_name_ea_simple(name)
 
     def MakeFunction(self, instruction):
-        return self.idc.MakeFunction(instruction)
+        return self.idc.add_func(instruction)
 
     def MakeNameEx(self, address, name, warning_level):
-        return self.idc.MakeNameEx(address, name, warning_level)
+        return self.idc.set_name(address, name, warning_level)
 
     def MakeRptCmt(self, ea, comment):
-        return self.idc.MakeRptCmt(ea, comment)
+        return self.idc.set_cmt(ea, comment, 1)
 
     def Name(self, address):
-        return self.idc.Name(address)
+        return self.idc.get_name(address, self.idc.GN_VISIBLE)
 
     def NextSeg(self, address):
-        return self.idc.NextSeg(address)
+        return self.idc.get_next_seg(address)
 
     def PatchByte(self, address, byte):
-        self.idc.PatchByte(address, byte)
+        self.idc.patch_byte(address, byte)
 
     def PrevHead(self, ea, minea=0):
-        return self.idc.PrevHead(ea, minea)
+        return self.idc.prev_head(ea, minea)
 
     def NextHead(self, ea, minea=0):
-        return self.idc.NextHead(ea, minea)
+        return self.idc.next_head(ea, minea)
 
     def RptCmt(self, ea):
-        return self.idc.RptCmt(ea)
+        return self.idc.get_cmt(ea, 1)
 
     def SegEnd(self, address):
-        return self.idc.SegEnd(address)
+        return self.idc.get_segm_end(address)
 
     def SegName(self, address):
-        return self.idc.SegName(address)
+        return self.idc.get_segm_name(address)
 
     def SegRename(self, address, name):
-        return self.idc.SegRename(address, name)
+        return self.idc.set_segm_name(address, name)
 
     def SegStart(self, address):
-        return self.idc.SegStart(address)
+        return self.idc.get_segm_start(address)
 
     def SetColor(self, address, location_type, color):
-        return self.idc.SetColor(address, location_type, color)
+        return self.idc.set_color(address, location_type, color)
 
     def GetOpnd(self, ea, n):
-        return self.idc.GetOpnd(ea, n)
+        return self.idc.print_operand(ea, n)
 
 ###############################################################################
 # From idaapi.py
 ###############################################################################
 
     def CompileLine(self, line):
-        return self.idaapi.CompileLine(line)
+        return self.idaapi.compile_idc_text(line)
 
     def find_not_func(self, *args):
         return self.idaapi.find_not_func(*args)
@@ -234,10 +240,10 @@ class IdaProxy():
         except:
             if self.verbose:
                 if function_address is not None:
-                    print ("[!] Trying to resolve an API address in non-function code at location: 0x%x, continuing " \
-                        + "analysis...") % function_address
+                    print(("[!] Trying to resolve an API address in non-function code at location: 0x{:x}, continuing " \
+                        + "analysis...").format(function_address))
                 else:
-                    print ("[!] IdaProxy.FlowChart: Tried to create a FlowChart on None object, skipping function.")
+                    print("[!] IdaProxy.FlowChart: Tried to create a FlowChart on None object, skipping function.")
         return function_chart
 
     def get_func(self, function_address):
@@ -247,7 +253,7 @@ class IdaProxy():
         return self.idaapi.get_highlighted_identifier()
 
     def isASCII(self, flags):
-        return self.idaapi.isASCII(flags)
+        return self.idaapi.is_strlit(flags)
 
     def minEA(self):
         return self.idaapi.cvar.inf.minEA

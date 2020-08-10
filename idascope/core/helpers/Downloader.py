@@ -29,14 +29,14 @@
 ########################################################################
 
 # TODO: Make this finally multi-threaded.
-import httplib
+import requests
 
 import idascope.core.helpers.QtShim as QtShim
 QtGui = QtShim.get_QtGui()
 QtCore = QtShim.get_QtCore()
 Signal = QtShim.get_Signal()
 
-from ThreadedDownloader import ThreadedDownloader
+from .ThreadedDownloader import ThreadedDownloader
 
 
 class TempQThread(QtCore.QThread):
@@ -60,7 +60,7 @@ class Downloader(QtCore.QObject):
 
     def __init__(self):
         super(Downloader, self).__init__()
-        self.httplib = httplib
+        self.requests = requests
         self.TempQThread = TempQThread
         self.ThreadedDownloader = ThreadedDownloader
         self._data = None
@@ -104,21 +104,16 @@ class Downloader(QtCore.QObject):
         @return: (str) the downloaded content.
         """
         # print "Downloader.download(): type of received parameter: ", type(url)
-        host = url[8:url.find("/", 8)]
-        path = url[url.find("/", 8):]
         try:
-            conn = self.httplib.HTTPSConnection(host)
-            conn.request("GET", path)
-            response = conn.getresponse()
-            if response.status == 200:
-                print "[+] Downloaded from: %s" % (url)
-                self._data = response.read()
-            else:
-                print "[-] Download failed: %s (%s %s)" % (url, response.status, response.reason)
-                self._data = "Download failed (%s %s)!" % (response.status, response.reason)
-            conn.close()
+            with self.requests.get(url) as response:
+                if response.status_code == 200:
+                    print("[+] Downloaded from: {}".format(url))
+                    self._data = response.text
+                else:
+                    print("[-] Download failed: {} ({} {})".format(url, response.status_code, response.reason))
+                    self._data = "Download failed ({} {})!".format(response.status_code, response.reason)
         except Exception as exc:
-            print ("[!] Downloader.download: Exception while downloading: %s" % exc)
+            print("[!] Downloader.download: Exception while downloading: {}".format(exc))
             self._data = None
         return self._data
 

@@ -33,9 +33,9 @@ import os
 import re
 import time
 
-from helpers import JsonHelper
+from .helpers import JsonHelper
 
-from IdaProxy import IdaProxy
+from .IdaProxy import IdaProxy
 from idascope.core.structures.FunctionContext import FunctionContext
 from idascope.core.structures.FunctionContextFilter import FunctionContextFilter
 from idascope.core.structures.CallContext import CallContext
@@ -49,7 +49,7 @@ class SemanticIdentifier():
     """
 
     def __init__(self, idascope_config):
-        print ("[|] loading SemanticIdentifier")
+        print("[|] loading SemanticIdentifier")
         self.os = os
         self.re = re
         self.time = time
@@ -78,7 +78,7 @@ class SemanticIdentifier():
 
     def _getRealApiNames(self):
         num_imports = self.ida_proxy.get_import_module_qty()
-        for i in xrange(0, num_imports):
+        for i in range(0, num_imports):
             self.ida_proxy.enum_import_names(i, self._cbEnumImports)
 
     def lookupRealApiName(self, api_name):
@@ -122,7 +122,7 @@ class SemanticIdentifier():
         """
         semantics_file = open(semantics_filename, "r")
         semantics = semantics_file.read()
-        return json.loads(semantics, object_hook=JsonHelper.decode_dict)
+        return json.loads(semantics)
 
     def _setSemantics(self, semantics_entry):
         semantics_content = {}
@@ -189,7 +189,7 @@ class SemanticIdentifier():
         This is highly efficient because we only touch places in the IDB that actually have references
         to our API names of interest.
         """
-        print ("  [/] SemanticIdentifier: Starting (fast) scan by references of function semantics.")
+        print("  [/] SemanticIdentifier: Starting (fast) scan by references of function semantics.")
         time_before = self.time.time()
         self.last_scan_result = {}
         for semantic_tag in self.semantic_definitions:
@@ -208,7 +208,7 @@ class SemanticIdentifier():
                     call_ctx.group = semantic_tag["group"]
                     call_ctx.parameter_contexts = self._resolveApiCall(call_ctx)
                     function_ctx.call_contexts.append(call_ctx)
-        print ("  [\\] Analysis took %3.2f seconds." % (self.time.time() - time_before))
+        print("  [\\] Analysis took {:3.2f} seconds.".format(self.time.time() - time_before))
 
     def _getAllRefsTo(self, addr):
         code_ref_addrs = [ref for ref in self.ida_proxy.CodeRefsTo(addr, 0)]
@@ -255,7 +255,7 @@ class SemanticIdentifier():
         gathering information like number of instructions, number of basic blocks,
         references to and from functions etc.
         """
-        print ("  [/] SemanticIdentifier: Starting deep scan of function semantics.")
+        print("  [/] SemanticIdentifier: Starting deep scan of function semantics.")
         time_before = self.time.time()
         for function_ea in self.ida_proxy.Functions():
             function_chart = self.ida_proxy.FlowChart(self.ida_proxy.get_func(function_ea))
@@ -266,7 +266,7 @@ class SemanticIdentifier():
             function_ctx = self._getFunctionContext(function_ea)
             for block in function_chart:
                 num_blocks += 1
-                for instruction in self.ida_proxy.Heads(block.startEA, block.endEA):
+                for instruction in self.ida_proxy.Heads(block.start_ea, block.end_ea):
                     num_instructions += 1
                     if self.ida_proxy.isCode(self.ida_proxy.GetFlags(instruction)):
                         for ref in self._getAllRefsFrom(instruction):
@@ -279,7 +279,7 @@ class SemanticIdentifier():
             function_ctx.number_of_xrefs_from = len(xrefs_from)
             function_ctx.number_of_basic_blocks = num_blocks
             function_ctx.number_of_instructions = num_instructions
-        print ("  [\\] Analysis took %3.2f seconds." % (self.time.time() - time_before))
+        print("  [\\] Analysis took {:3.2f} seconds.".format(self.time.time() - time_before))
 
     def getFunctionAddressForAddress(self, address):
         """
@@ -608,8 +608,8 @@ class SemanticIdentifier():
                     type_and_name["name"] = parameter[parameter.rfind(" "):].strip()
                     api_signature["parameters"].append(type_and_name)
         else:
-            print ("[-] SemanticIdentifier._getApiSignature: No API/function signature for \"%s\" @ 0x%x available. " \
-            + "(non-critical)") % (api_name, api_location)
+            print(("[-] SemanticIdentifier._getApiSignature: No API/function signature for \"{}\" @ 0x{:x} available. " \
+            + "(non-critical)").format(api_name, api_location))
         # TODO:
         # here should be a check for the calling convention
         # currently, list list is simply reversed to match the order parameters are pushed to the stack
@@ -626,8 +626,8 @@ class SemanticIdentifier():
         push_addresses = []
         function_chart = self.ida_proxy.FlowChart(self.ida_proxy.get_func(address))
         for block in function_chart:
-            if block.startEA <= address < block.endEA:
-                for instruction_addr in self.ida_proxy.Heads(block.startEA, block.endEA):
+            if block.start_ea <= address < block.end_ea:
+                for instruction_addr in self.ida_proxy.Heads(block.start_ea, block.end_ea):
                     if self.ida_proxy.GetMnem(instruction_addr) == "push":
                         push_addresses.append(instruction_addr)
                     if instruction_addr >= address:
@@ -674,7 +674,7 @@ class SemanticIdentifier():
         nicely print the last scan result (mostly used for debugging)
         """
         for function_address in self.last_scan_result.keys():
-            print ("0x%x - %s -> ") % (function_address, self.ida_proxy.GetFunctionName(function_address)) \
-                + ", ".join(self.getTagsForFunctionAddress(function_address))
+            print("0x{:x} - {} -> ".format(function_address, self.ida_proxy.GetFunctionName(function_address)) \
+                + ", ".join(self.getTagsForFunctionAddress(function_address)))
             for call_ctx in self.last_scan_result[function_address].call_contexts:
-                print ("    0x%x - %s (%s)") % (call_ctx.address_of_call, call_ctx.called_function_name, call_ctx.tag)
+                print("    0x{:x} - {} ({})".format(call_ctx.address_of_call, call_ctx.called_function_name, call_ctx.tag))

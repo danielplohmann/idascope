@@ -95,7 +95,7 @@ class FunctionContext():
         elif additional == "xrefs_in":
             return self.number_of_xrefs_to
         else:
-            print "[!] FunctionContext.getCountForAdditional(): Invalid query -> %s" % additional
+            print("[!] FunctionContext.getCountForAdditional(): Invalid query -> {}".format(additional))
             return 0
 
     def getAllTaggedAddresses(self):

@@ -42,7 +42,7 @@ class ControlFlowFilter():
             blocks = self.func_blocks.get(function, set())
 
             for addr in self.ida_proxy.FlowChart(self.ida_proxy.get_func(function_ea)):
-                block = addr.startEA, addr.endEA
+                block = addr.start_ea, addr.end_ea
                 post[block] = post.get(block, set())
                 pre[block] = pre.get(block, set())
 

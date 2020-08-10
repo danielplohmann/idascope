@@ -40,7 +40,7 @@ except ImportError:
     print("[-] ERROR: Could not import YARA (not installed?), scanner disabled.")
     yara = None
 
-from IdaProxy import IdaProxy
+from .IdaProxy import IdaProxy
 import idascope.core.helpers.Misc as Misc
 from idascope.core.helpers.YaraRuleLoader import YaraRuleLoader
 from idascope.core.helpers.YaraRule import YaraRule
@@ -54,7 +54,7 @@ class YaraScanner():
     """
 
     def __init__(self, idascope_config):
-        print ("[|] loading YaraScanner")
+        print("[|] loading YaraScanner")
         self.os = os
         self.re = re
         self.traceback = traceback
@@ -102,28 +102,28 @@ class YaraScanner():
             self._yara_rules.extend(rules_from_file)
             rules = self.yara.compile(filepath)
             self._compiled_rules.append(rules)
-            print "loading rules from file: %s (%d)" % (filepath, len(rules_from_file))
+            print("loading rules from file: {} ({})".format(filepath, len(rules_from_file)))
             if rules:
                 self.num_files_loaded += 1
         except Exception as exc:
-            print "[!] Could not load yara rules from file: %s --- Exception: " % filepath
-            print ">" * 60
-            print self.traceback.format_exc(exc)
-            print "<" * 60
+            print("[!] Could not load yara rules from file: {} --- Exception: ".format(filepath))
+            print(">" * 60)
+            print(self.traceback.format_exc(exc))
+            print("<" * 60)
 
     def scan(self):
         if not self.yara:
-            print "[!] yara-python not available, please install it from (http://plusvic.github.io/yara/)"
+            print("[!] yara-python not available, please install it from (http://plusvic.github.io/yara/)")
             return
         memory, offsets = self._get_memory()
         self.segment_offsets = offsets
         self._results = []
         matches = []
-        print "[!] Performing YARA scan..."
+        print("[!] Performing YARA scan...")
         for rule in self._compiled_rules:
             matches.append(rule.match(data=memory, callback=self._result_callback))
         if len(matches) == 0:
-            print "  [-] no matches. :("
+            print("  [-] no matches. :(")
 
     def _get_memory(self):
         result = ""
@@ -144,7 +144,7 @@ class YaraScanner():
             adjusted_offsets.append((self._translateMemOffsetToVirtualAddress(string[0]), string[1], string[2]))
         data["strings"] = adjusted_offsets
         if data["matches"]:
-            print "  [+] YARA Match for signature: %s" % data["rule"]
+            print("  [+] YARA Match for signature: {}".format(data["rule"]))
         result_rule = None
         for rule in self._yara_rules:
             if rule.rule_name == data["rule"]:

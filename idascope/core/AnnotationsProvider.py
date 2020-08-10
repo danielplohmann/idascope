@@ -26,7 +26,7 @@
 
 import json
 
-from helpers import JsonHelper
+from .helpers import JsonHelper
 
 annotations = {
                0x401000:
@@ -62,7 +62,7 @@ class AnnotationsProvider():
         # TODO adapt implementation for this module
         config_file = open(config_filename, "r")
         config = config_file.read()
-        parsed_config = json.loads(config, object_hook=JsonHelper.decode_dict)
+        parsed_config = json.loads(config)
         self.renaming_seperator = parsed_config["renaming_seperator"]
         self.semantic_definitions = parsed_config["semantic_definitions"]
         return

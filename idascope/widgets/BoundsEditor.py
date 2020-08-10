@@ -39,7 +39,7 @@ import idascope.core.helpers.QtShim as QtShim
 QWidget = QtShim.get_QWidget()
 Signal = QtShim.get_Signal()
 
-from RangeSlider import RangeSlider
+from .RangeSlider import RangeSlider
 
 
 class BoundsEditor(QWidget):
@@ -105,11 +105,11 @@ class BoundsEditor(QWidget):
     def _updateLowOnEnter(self):
         try:
             try:
-                low = eval(unicode(self._label_lo.text()).strip())
+                low = eval(str(self._label_lo.text()).strip())
             except Exception as exc:
                 low = self.low
                 self._label_lo.setText(self.format % self.low)
-                print exc
+                print(exc)
 
             if not self.is_float:
                 low = int(low)
@@ -128,7 +128,7 @@ class BoundsEditor(QWidget):
     def _updateHighOnEnter(self):
         try:
             try:
-                high = eval(unicode(self._label_hi.text()).strip())
+                high = eval(str(self._label_hi.text()).strip())
             except:
                 high = self.high
                 self._label_hi.setText(self.format % self.high)

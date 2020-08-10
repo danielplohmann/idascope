@@ -36,7 +36,7 @@ class SemanticExplorer():
     """
 
     def __init__(self, parent):
-        print ("[|] loading SemanticExplorer")
+        print("[|] loading SemanticExplorer")
         self.parent = parent
         self.cc = parent.cc
         self.ida_proxy = self.cc.ida_proxy
@@ -92,14 +92,14 @@ class SemanticExplorer():
 # real
 
     def load_json(self, json_file):
-        print "  loading json file: ", json_file
+        print("  loading json file: {}".format(json_file))
         loaded_dictionary = {}
         if self.cc.os.path.isfile(json_file):
             with open(json_file) as inf:
                 content = inf.read()
                 loaded_dictionary = self.cc.json.loads(content)
         else:
-            Warning("Can't find file: %s!" % json_file)
+            Warning("Can't find file: {}!".format(json_file))
         return loaded_dictionary
 
     def _collectSemanticApis(self, signatures):
@@ -121,13 +121,13 @@ class SemanticExplorer():
         # self._analyzeDemo()
         # return self.semantic_matches
         time_before = self.cc.time.time()
-        print "\n  Building data structures..."
+        print("\n  Building data structures...")
         self.buildDataStructure()
-        print "  completed after %3.2f seconds.\n" % (self.cc.time.time() - time_before)
+        print("  completed after {:3.2f} seconds.\n".format(self.cc.time.time() - time_before))
 
-        print "\n   Matching Semantics..."
+        print("\n   Matching Semantics...")
         self.semantic_matches = self.matchAll()
-        print ("\n  Full analysis completed in %3.2f seconds.\n" % (self.cc.time.time() - time_before))
+        print("\n  Full analysis completed in {:3.2f} seconds.\n".format(self.cc.time.time() - time_before))
         return self.semantic_matches
 
     def buildDataStructure(self):
@@ -218,7 +218,7 @@ class SemanticExplorer():
         block_addr = self.ida_proxy.FlowChart(self.ida_proxy.get_func(addr))
         if block_addr:
             block_addr = block_addr[0]
-            block = block_addr.startEA, block_addr.endEA
+            block = block_addr.start_ea, block_addr.end_ea
             if block in self.func_blocks.get(block, set()):
                 return block
         return self.findFirstBlockOfFunction(function, addr)
@@ -226,7 +226,7 @@ class SemanticExplorer():
     def findFirstBlockOfFunction(self, function_name, function_ea):
         suspicious_blocks = self.func_blocks.get(function_name, set())
         for block_addr in self.ida_proxy.FlowChart(self.ida_proxy.get_func(function_ea)):
-            block = block_addr.startEA, block_addr.endEA
+            block = block_addr.start_ea, block_addr.end_ea
             if block in suspicious_blocks:
                 return block
         return function_ea, function_ea

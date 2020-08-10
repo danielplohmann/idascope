@@ -28,7 +28,7 @@
 #
 #######################################################################
 
-import httplib
+import requests
 
 import idascope.core.helpers.QtShim as QtShim
 QtGui = QtShim.get_QtGui()
@@ -42,7 +42,7 @@ class ThreadedDownloader(QtCore.QObject):
 
     def __init__(self, url):
         super(ThreadedDownloader, self).__init__()
-        self.httplib = httplib
+        self.requests = requests
         self.QtCore = QtCore
         self.url = url
         self._data = None
@@ -63,17 +63,12 @@ class ThreadedDownloader(QtCore.QObject):
         pass
 
     def run(self):
-        host = self.url[7:self.url.find("/", 7)]
-        path = self.url[self.url.find("/", 7):]
         try:
-            conn = self.httplib.HTTPConnection(host)
-            conn.request("GET", path)
-            response = conn.getresponse()
-            print response.status, response.reason
-            self._data = response.read()
-            conn.close()
+            with self.requests.get(self.url) as response:
+                print(response.status_code, response.reason)
+                self._data = response.text
         except Exception as exc:
-            print ("[!] ThreadedDownloader.run: Exception while downloading: %s" % exc)
+            print("[!] ThreadedDownloader.run: Exception while downloading: {}".format(exc))
             self._data = None
         finally:
             self.threadFinished.emit()

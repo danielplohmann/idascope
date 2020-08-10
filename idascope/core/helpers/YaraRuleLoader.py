@@ -26,8 +26,8 @@
 #
 ########################################################################
 
-from YaraRule import YaraRule
-from YaraStatusController import StatusController
+from .YaraRule import YaraRule
+from .YaraStatusController import StatusController
 
 
 class YaraRuleLoader(object):
@@ -58,7 +58,7 @@ class YaraRuleLoader(object):
         result = ""
         # go through file and copy everything but comments and strings, instead write blanks or underlines
         skip_i = 0
-        for i in xrange(len(content)):
+        for i in range(len(content)):
             # skip character(s)
             if (skip_i > 0):
                 skip_i -= 1
@@ -147,7 +147,7 @@ class YaraRuleLoader(object):
         needed_chars = [" ", "\r", "\n", "\t", "\"", "/", "{", "}"]
 
         # go through file and split it in Yara rules and them in sections
-        for i in xrange(len(content_cleaned)):
+        for i in range(len(content_cleaned)):
             ## header
             # find end of header section
             if self.statusController.controlStatus("header", self.statusController.findKeyword(content_cleaned, i, "{"), ""):

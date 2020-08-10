@@ -63,7 +63,7 @@ class YaraRule(object):
         unique_names = {}
         for string in self.strings:
             if string[1] in unique_names:
-                print "[!] Rule %s (%s) has duplicate variable name: \"%s\"" % (self.rule_name, self.filename, string[1])
+                print("[!] Rule {} ({}) has duplicate variable name: \"{}\"".format(self.rule_name, self.filename, string[1]))
                 raise Exception("Duplicate variable name")
             else:
                 unique_names[string[1]] = "loaded"
@@ -78,7 +78,7 @@ class YaraRule(object):
     def _linebreakAndTabsToSpace(self, content):
         """ replace all linebreaks and tabs by spaces """
         new_content = ""
-        for i in xrange(len(content)):
+        for i in range(len(content)):
             if (content[i] == "\r"):
                 new_content += " "
             elif (content[i] == "\n"):
@@ -130,7 +130,7 @@ class YaraRule(object):
         temp, meta_body_cleaned = raw_meta_cleaned.split(":", 1)
         meta_body = raw_meta[len(temp) + 1:]
         # go through file and split it in Yara rules and them in sections
-        for i in xrange(len(meta_body_cleaned)):
+        for i in range(len(meta_body_cleaned)):
             # find beginning of meta entry name
             if self.statusController.controlStatus("find_name", not self.statusController.findKeyword(meta_body_cleaned, i, " "), "name"):
                 pass
@@ -203,7 +203,7 @@ class YaraRule(object):
         raw_strings = raw_strings[len(temp) + 1:]
         # go through file and split it in Yara rules and them in sections
         skip_i = 0
-        for i in xrange(len(raw_strings_cleaned)):
+        for i in range(len(raw_strings_cleaned)):
             # skip character(s)
             if (skip_i > 0):
                 skip_i -= 1

@@ -26,9 +26,9 @@
 
 import json
 
-from IdaProxy import IdaProxy
+from .IdaProxy import IdaProxy
 
-from helpers import JsonHelper
+from .helpers import JsonHelper
 
 
     ## 6 nice opposing colors as used in IDAscope standard config
@@ -51,7 +51,7 @@ class DocumentationHelper():
     layout_color_map = {"tag": {"base_color": 0x112233, "highlight_color": 0x445566}}
 
     def __init__(self, idascope_config):
-        print ("[|] loading DocumentationHelper")
+        print("[|] loading DocumentationHelper")
         self.ida_proxy = IdaProxy()
         # default colors are grey / light red / red
         self.default_neutral_color = 0xCCCCCC
@@ -70,7 +70,7 @@ class DocumentationHelper():
         """
         config_file = open(config_filename, "r")
         config = config_file.read()
-        parsed_config = json.loads(config, object_hook=JsonHelper.decode_dict)
+        parsed_config = json.loads(config)
         self.default_neutral_color = int(parsed_config["default_neutral_color"], 16)
         self.default_base_color = int(parsed_config["default_base_color"], 16)
         self.default_highlight_color = int(parsed_config["default_highlight_color"], 16)
@@ -96,7 +96,7 @@ class DocumentationHelper():
         for group in config["semantic_groups"]:
             if group["tag"] == target_group:
                 return (group["base_color"], group["highlight_color"])
-        print "[-] Failed to get colors for group \"%s\" - you might want to check your semantics file." % target_group
+        print("[-] Failed to get colors for group \"{}\" - you might want to check your semantics file.".format(target_group))
         return (self.default_base_color, self.default_highlight_color)
 
     def uncolorAll(self):
@@ -107,7 +107,7 @@ class DocumentationHelper():
             for function_address in self.ida_proxy.Functions(self.ida_proxy.SegStart(seg_ea), \
                 self.ida_proxy.SegEnd(seg_ea)):
                 for block in self.ida_proxy.FlowChart(self.ida_proxy.get_func(function_address)):
-                    for head in self.ida_proxy.Heads(block.startEA, block.endEA):
+                    for head in self.ida_proxy.Heads(block.start_ea, block.end_ea):
                         self.colorInstruction(head, 0xFFFFFF, refresh=False)
         self.ida_proxy.refresh_idaview_anyway()
 
@@ -137,8 +137,8 @@ class DocumentationHelper():
         """
         function_chart = self.ida_proxy.FlowChart(self.ida_proxy.get_func(address))
         for block in function_chart:
-            if block.startEA <= address < block.endEA:
-                for head in self.ida_proxy.Heads(block.startEA, block.endEA):
+            if block.start_ea <= address < block.end_ea:
+                for head in self.ida_proxy.Heads(block.start_ea, block.end_ea):
                     self.colorInstruction(head, color, refresh)
 
     def getNextColorScheme(self):
@@ -181,7 +181,7 @@ class DocumentationHelper():
         else:
             tags_in_block = [item[1] for item in tagged_addresses_in_block]
             colors_in_block = set([self.color_map[tags_in_block[index]]["base_color"] \
-                for index in xrange(len(tags_in_block))])
+                for index in range(len(tags_in_block))])
             if len(colors_in_block) == 1:
                 return colors_in_block.pop()
             else:
@@ -198,10 +198,10 @@ class DocumentationHelper():
             function_chart = self.ida_proxy.FlowChart(self.ida_proxy.get_func(function_address))
             for basic_block in function_chart:
                 tagged_addresses_in_block = [(addr, tagged_addresses_in_function[addr]) for addr in \
-                    tagged_addresses_in_function.keys() if addr in xrange(basic_block.startEA, basic_block.endEA)]
+                    tagged_addresses_in_function.keys() if addr in range(basic_block.start_ea, basic_block.end_ea)]
                 if len(tagged_addresses_in_block) > 0:
                     base_color = self.selectBaseColor(tagged_addresses_in_block)
-                    self.colorBasicBlock(basic_block.startEA, base_color, refresh=False)
+                    self.colorBasicBlock(basic_block.start_ea, base_color, refresh=False)
                     for tagged_address in tagged_addresses_in_block:
                         highlight_color = self.selectHighlightColor(tagged_address[1])
                         self.colorInstruction(tagged_address[0], highlight_color, refresh=False)
