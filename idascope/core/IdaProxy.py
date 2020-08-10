@@ -74,13 +74,15 @@ class IdaProxy():
         return self.idc.add_idc_hotkey(hotkey, function)
 
     def AddSeg(self, start_ea, end_ea, base, use32, align, comb):
-        return self.idc.add_segm_ex(start_ea, end_ea, base, use32, align, comb)
+        # TODO investigate if flags are optional
+        flags = 0x0008  # quiet
+        return self.idc.add_segm_ex(start_ea, end_ea, base, use32, align, comb, flags)
 
     def Byte(self, byte):
         return self.idc.get_wide_byte(byte)
 
     def Comment(self, addr):
-        return self.idc.get_cmt(addr)
+        return self.idc.get_cmt(addr, False)
 
     def DelSeg(self, address, flags):
         return self.idc.del_segm(address, flags)
@@ -101,7 +103,9 @@ class IdaProxy():
         return self.idaapi.get_cmt(ea, repeatable)
 
     def GetDisasm(self, address):
-        return self.idc.generate_disasm_line(address)
+        # TODO investigate if flags are optional
+        flags = 2  # multiline
+        return self.idc.generate_disasm_line(address, flags)
 
     def GetFlags(self, address):
         return self.idc.get_full_flags(address)
@@ -173,7 +177,7 @@ class IdaProxy():
         return self.idc.jumpto(address)
 
     def LocByName(self, name):
-        return self.idc.get_name_ea_simple(name)
+        return self.idc.get_name_ea_simple(str(name))
 
     def MakeFunction(self, instruction):
         return self.idc.add_func(instruction)
