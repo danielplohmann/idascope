@@ -1,0 +1,1148 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>IDAscope.idascope.core.SemanticIdentifier.SemanticIdentifier</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="IDAscope-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="IDAscope-module.html">Package&nbsp;IDAscope</a> ::
+        <a href="IDAscope.idascope-module.html">Package&nbsp;idascope</a> ::
+        <a href="IDAscope.idascope.core-module.html">Package&nbsp;core</a> ::
+        <a href="IDAscope.idascope.core.SemanticIdentifier-module.html">Module&nbsp;SemanticIdentifier</a> ::
+        Class&nbsp;SemanticIdentifier
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="IDAscope.idascope.core.SemanticIdentifier.SemanticIdentifier-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class SemanticIdentifier</h1><p class="nomargin-top"><span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier">source&nbsp;code</a></span></p>
+<p>A module to analyze and explore an IDB for semantics. For a set of API
+  names, references to these are identified and used for creating context 
+  and allowing tagging of them.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="__init__"></a><span class="summary-sig-name">__init__</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">config_filename</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="IDAscope.idascope.core.SemanticIdentifier.SemanticIdentifier-class.html#load_config" class="summary-sig-name">load_config</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">config_filename</span>)</span><br />
+      Loads a semantic configuration file and collects all definitions from
+      it.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier.load_config">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="IDAscope.idascope.core.SemanticIdentifier.SemanticIdentifier-class.html#calculate_number_of_basic_blocks_for_function_address" class="summary-sig-name">calculate_number_of_basic_blocks_for_function_address</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">function_address</span>)</span><br />
+      Calculates the number of basic blocks for a given function by walking
+      its FlowChart.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier.calculate_number_of_basic_blocks_for_function_address">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="IDAscope.idascope.core.SemanticIdentifier.SemanticIdentifier-class.html#get_number_of_basic_blocks_for_function_address" class="summary-sig-name">get_number_of_basic_blocks_for_function_address</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">address</span>)</span><br />
+      returns the number of basic blocks for the function containing the 
+      queried address, based on the value stored in the last scan result.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier.get_number_of_basic_blocks_for_function_address">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="scan"></a><span class="summary-sig-name">scan</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Scan the whole IDB with all available techniques.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier.scan">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="IDAscope.idascope.core.SemanticIdentifier.SemanticIdentifier-class.html#scan_by_references" class="summary-sig-name">scan_by_references</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Scan by references to API names, based on the definitions loaded from
+      the config file.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier.scan_by_references">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="IDAscope.idascope.core.SemanticIdentifier.SemanticIdentifier-class.html#scan_all_code" class="summary-sig-name">scan_all_code</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Not implemented yet.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier.scan_all_code">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="IDAscope.idascope.core.SemanticIdentifier.SemanticIdentifier-class.html#get_function_address_for_address" class="summary-sig-name">get_function_address_for_address</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">address</span>)</span><br />
+      Get a function address containing the queried address.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier.get_function_address_for_address">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="IDAscope.idascope.core.SemanticIdentifier.SemanticIdentifier-class.html#calculate_number_of_functions" class="summary-sig-name">calculate_number_of_functions</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Calculate the number of functions in all segments.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier.calculate_number_of_functions">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="IDAscope.idascope.core.SemanticIdentifier.SemanticIdentifier-class.html#get_identified_function_addresses" class="summary-sig-name">get_identified_function_addresses</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get all function address that have been covered by the last scanning.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier.get_identified_function_addresses">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="IDAscope.idascope.core.SemanticIdentifier.SemanticIdentifier-class.html#get_identified_dummy_function_addresses" class="summary-sig-name">get_identified_dummy_function_addresses</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get all function address with a dummy name that have been covered by 
+      the last scanning.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier.get_identified_dummy_function_addresses">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="IDAscope.idascope.core.SemanticIdentifier.SemanticIdentifier-class.html#get_tags" class="summary-sig-name">get_tags</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get all the tags that have been covered by the last scanning.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier.get_tags">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="IDAscope.idascope.core.SemanticIdentifier.SemanticIdentifier-class.html#get_tags_for_function_address" class="summary-sig-name">get_tags_for_function_address</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">address</span>)</span><br />
+      Get all tags found for the function containing the queried address.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier.get_tags_for_function_address">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="IDAscope.idascope.core.SemanticIdentifier.SemanticIdentifier-class.html#get_tag_count_for_function_address" class="summary-sig-name">get_tag_count_for_function_address</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">tag</span>,
+        <span class="summary-sig-arg">address</span>)</span><br />
+      Get the number of occurrences for a certain tag for the function 
+      containing the queried address.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier.get_tag_count_for_function_address">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="IDAscope.idascope.core.SemanticIdentifier.SemanticIdentifier-class.html#get_tagged_apis_for_function_address" class="summary-sig-name">get_tagged_apis_for_function_address</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">address</span>)</span><br />
+      Get all call contexts for the function containing the queried 
+      address.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier.get_tagged_apis_for_function_address">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="IDAscope.idascope.core.SemanticIdentifier.SemanticIdentifier-class.html#get_address_tag_pairs_ordered_by_function" class="summary-sig-name">get_address_tag_pairs_ordered_by_function</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get all call contexts for all functions</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier.get_address_tag_pairs_ordered_by_function">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="IDAscope.idascope.core.SemanticIdentifier.SemanticIdentifier-class.html#get_functions_to_rename" class="summary-sig-name">get_functions_to_rename</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get all functions that can be renamed according to the last scan 
+      result.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier.get_functions_to_rename">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="rename_functions"></a><span class="summary-sig-name">rename_functions</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Perform the renaming of functions according to the last scan result.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier.rename_functions">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="rename_potential_wrapper_functions"></a><span class="summary-sig-name">rename_potential_wrapper_functions</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier.rename_potential_wrapper_functions">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="IDAscope.idascope.core.SemanticIdentifier.SemanticIdentifier-class.html#get_parameters_for_call_address" class="summary-sig-name">get_parameters_for_call_address</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">call_address</span>)</span><br />
+      Get the parameters for the given address of a function call.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier.get_parameters_for_call_address">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="IDAscope.idascope.core.SemanticIdentifier.SemanticIdentifier-class.html#_resolve_api_call" class="summary-sig-name" onclick="show_private();">_resolve_api_call</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">call_context</span>)</span><br />
+      Resolve the parameters for an API calls based on a call context for 
+      this API call.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier._resolve_api_call">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="IDAscope.idascope.core.SemanticIdentifier.SemanticIdentifier-class.html#_match_push_addresses_to_signature" class="summary-sig-name" onclick="show_private();">_match_push_addresses_to_signature</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">push_addresses</span>,
+        <span class="summary-sig-arg">api_signature</span>)</span><br />
+      Combine the results of 
+      <i>_get_push_addresses_before_target_address</i> and 
+      <i>_get_api_signature</i> in order to produce a list of 
+      ParameterContext data objects.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier._match_push_addresses_to_signature">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="IDAscope.idascope.core.SemanticIdentifier.SemanticIdentifier-class.html#_get_api_signature" class="summary-sig-name" onclick="show_private();">_get_api_signature</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">api_name</span>)</span><br />
+      Get the signature for a function by using IDA's <i>GetType()</i>.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier._get_api_signature">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="IDAscope.idascope.core.SemanticIdentifier.SemanticIdentifier-class.html#_get_push_addresses_before_target_address" class="summary-sig-name" onclick="show_private();">_get_push_addresses_before_target_address</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">address</span>)</span><br />
+      Get the addresses of all push instructions in the basic block 
+      preceding the given address.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier._get_push_addresses_before_target_address">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="IDAscope.idascope.core.SemanticIdentifier.SemanticIdentifier-class.html#get_last_result" class="summary-sig-name">get_last_result</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the last scan result as retrieved by <i>scan_by_references</i>.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier.get_last_result">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="print_last_result"></a><span class="summary-sig-name">print_last_result</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      nicely print the last scan result (mostly used for debugging)</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier.print_last_result">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="load_config"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">load_config</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">config_filename</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier.load_config">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Loads a semantic configuration file and collects all definitions from 
+  it.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>config_filename</code></strong> (str) - filename of a semantic configuration file</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="calculate_number_of_basic_blocks_for_function_address"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">calculate_number_of_basic_blocks_for_function_address</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">function_address</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier.calculate_number_of_basic_blocks_for_function_address">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Calculates the number of basic blocks for a given function by walking 
+  its FlowChart.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>function_address</code></strong> (int) - function address to calculate the block count for</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_number_of_basic_blocks_for_function_address"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_number_of_basic_blocks_for_function_address</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">address</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier.get_number_of_basic_blocks_for_function_address">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>returns the number of basic blocks for the function containing the 
+  queried address, based on the value stored in the last scan result.</p>
+  <p>If the number of basic blocks for this function has never been 
+  calculated, zero is returned.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>function_address</code></strong> (int) - function address to get the block count for</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>(int) The number of blocks in th e function</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="scan_by_references"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">scan_by_references</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier.scan_by_references">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Scan by references to API names, based on the definitions loaded from 
+  the config file. This is highly efficient because we only touch places in
+  the IDB that actually have references to our API names of interest.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="scan_all_code"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">scan_all_code</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier.scan_all_code">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Not implemented yet. In the long run, this function shall perform a 
+  full enumeration of all instructions, gathering information like number 
+  of instructions, number of basic blocks, references to and from functions
+  etc.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_function_address_for_address"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_function_address_for_address</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">address</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier.get_function_address_for_address">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get a function address containing the queried address.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>address</code></strong> (int) - address to check the function address for</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>(int) The start address of the function containing this address</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="calculate_number_of_functions"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">calculate_number_of_functions</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier.calculate_number_of_functions">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Calculate the number of functions in all segments.</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>(int) the number of functions found.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_identified_function_addresses"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_identified_function_addresses</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier.get_identified_function_addresses">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get all function address that have been covered by the last 
+  scanning.</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>(list of int) The addresses of covered functions.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_identified_dummy_function_addresses"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_identified_dummy_function_addresses</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier.get_identified_dummy_function_addresses">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get all function address with a dummy name that have been covered by 
+  the last scanning.</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>(list of int) The addresses of covered functions.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_tags"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_tags</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier.get_tags">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get all the tags that have been covered by the last scanning. @return 
+  (list of str) The tags found.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_tags_for_function_address"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_tags_for_function_address</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">address</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier.get_tags_for_function_address">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get all tags found for the function containing the queried 
+  address.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>address</code></strong> (int) - address in the target function</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>(list of str) The tags for the function containing the queried 
+          address</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_tag_count_for_function_address"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_tag_count_for_function_address</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">tag</span>,
+        <span class="sig-arg">address</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier.get_tag_count_for_function_address">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the number of occurrences for a certain tag for the function 
+  containing the queried address.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>tag</code></strong> (str) - a tag as included in semantic definitions</li>
+        <li><strong class="pname"><code>address</code></strong> (int) - address in the target function</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>(int) The number of occurrences for this tag in the function</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_tagged_apis_for_function_address"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_tagged_apis_for_function_address</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">address</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier.get_tagged_apis_for_function_address">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get all call contexts for the function containing the queried 
+  address.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>address</code></strong> (int) - address in the target function</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>(list of CallContext data objects) The call contexts identified 
+          by the scanning of this function</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_address_tag_pairs_ordered_by_function"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_address_tag_pairs_ordered_by_function</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier.get_address_tag_pairs_ordered_by_function">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get all call contexts for all functions</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>a dictionary with key/value entries of the following form: 
+          (function_address, dict((call_address, tag)))</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_functions_to_rename"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_functions_to_rename</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier.get_functions_to_rename">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get all functions that can be renamed according to the last scan 
+  result. Only functions with the standard IDA name <i>sub_[0-9A-F]+</i> 
+  will be considered for renaming.</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>a list of dictionaries, each consisting of three tuples: 
+          (&quot;old_function_name&quot;, str),                  
+          (&quot;new_function_name&quot;, str), 
+          (&quot;function_address&quot;, int)</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_parameters_for_call_address"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_parameters_for_call_address</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">call_address</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier.get_parameters_for_call_address">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the parameters for the given address of a function call.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>call_address</code></strong> (int) - address of the target call to inspect</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>a list of ParameterContext data objects.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_resolve_api_call"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_resolve_api_call</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">call_context</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier._resolve_api_call">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Resolve the parameters for an API calls based on a call context for 
+  this API call.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>call_context</code></strong> (a CallContext data object) - the call context to get the parameter information for</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>a list of ParameterContext data objects.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_match_push_addresses_to_signature"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_match_push_addresses_to_signature</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">push_addresses</span>,
+        <span class="sig-arg">api_signature</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier._match_push_addresses_to_signature">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Combine the results of 
+  <i>_get_push_addresses_before_target_address</i> and 
+  <i>_get_api_signature</i> in order to produce a list of ParameterContext 
+  data objects.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>push_addresses</code></strong> (a list of int) - the identified push addresses before a function call that shall 
+          be matched to a function signature</li>
+        <li><strong class="pname"><code>api_signature</code></strong> (a dictionary with the layout as returned by 
+          <i>_get_api_signature</i>) - information about a function definition with parameter names, 
+          types, and so on.</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>a list of ParameterContext data objects.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_get_api_signature"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_get_api_signature</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">api_name</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier._get_api_signature">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the signature for a function by using IDA's <i>GetType()</i>. The 
+  string is then parsed with a Regex and returned as a dictionary.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>api_name</code></strong> (str) - name of the API / function to get type information for</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>a dictionary with key/value entries of the following form: 
+          (&quot;return_type&quot;, str), (&quot;parameters&quot;, 
+          [dict((&quot;type&quot;, str), (&quot;name&quot;, str))])</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_get_push_addresses_before_target_address"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_get_push_addresses_before_target_address</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">address</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier._get_push_addresses_before_target_address">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the addresses of all push instructions in the basic block 
+  preceding the given address.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>address</code></strong> (int) - address to get the push addresses for.</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>a list of int</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_last_result"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_last_result</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="IDAscope.idascope.core.SemanticIdentifier-pysrc.html#SemanticIdentifier.get_last_result">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the last scan result as retrieved by 
+  <i>scan_by_references</i>.</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>a dictionary with key/value entries of the following form: 
+          (function_address, FunctionContext)</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="IDAscope-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Mon Sep 17 13:18:34 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>IDAscope.recursive_pylint</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="IDAscope-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="IDAscope-module.html">Package&nbsp;IDAscope</a> ::
+        Module&nbsp;recursive_pylint
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="IDAscope.recursive_pylint-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="IDAscope.recursive_pylint-module.html">Module IDAscope.recursive_pylint</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment">#! /usr/bin/env python</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-docstring">'''</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-docstring">this module runs pylint on all python scripts found in a directory tree</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-docstring">'''</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">os</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">re</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">sys</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt id="link-0" class="py-name" targets="Variable IDAscope.recursive_pylint.total=IDAscope.recursive_pylint-module.html#total"><a title="IDAscope.recursive_pylint.total" class="py-name" href="#" onclick="return doclink('link-0', 'total', 'link-0');">total</a></tt> <tt class="py-op">=</tt> <tt class="py-number">0.0</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt id="link-1" class="py-name" targets="Variable IDAscope.recursive_pylint.count=IDAscope.recursive_pylint-module.html#count"><a title="IDAscope.recursive_pylint.count" class="py-name" href="#" onclick="return doclink('link-1', 'count', 'link-1');">count</a></tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt id="link-2" class="py-name" targets="Variable IDAscope.recursive_pylint.num_code_lines=IDAscope.recursive_pylint-module.html#num_code_lines"><a title="IDAscope.recursive_pylint.num_code_lines" class="py-name" href="#" onclick="return doclink('link-2', 'num_code_lines', 'link-2');">num_code_lines</a></tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt id="link-3" class="py-name" targets="Variable IDAscope.recursive_pylint.num_comment_lines=IDAscope.recursive_pylint-module.html#num_comment_lines"><a title="IDAscope.recursive_pylint.num_comment_lines" class="py-name" href="#" onclick="return doclink('link-3', 'num_comment_lines', 'link-3');">num_comment_lines</a></tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt id="link-4" class="py-name" targets="Variable IDAscope.recursive_pylint.num_blank_lines=IDAscope.recursive_pylint-module.html#num_blank_lines"><a title="IDAscope.recursive_pylint.num_blank_lines" class="py-name" href="#" onclick="return doclink('link-4', 'num_blank_lines', 'link-4');">num_blank_lines</a></tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt id="link-5" class="py-name" targets="Variable IDAscope.recursive_pylint.num_all_lines=IDAscope.recursive_pylint-module.html#num_all_lines"><a title="IDAscope.recursive_pylint.num_all_lines" class="py-name" href="#" onclick="return doclink('link-5', 'num_all_lines', 'link-5');">num_all_lines</a></tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt id="link-6" class="py-name" targets="Variable IDAscope.recursive_pylint.EXCLUDED_FILENAMES=IDAscope.recursive_pylint-module.html#EXCLUDED_FILENAMES"><a title="IDAscope.recursive_pylint.EXCLUDED_FILENAMES" class="py-name" href="#" onclick="return doclink('link-6', 'EXCLUDED_FILENAMES', 'link-6');">EXCLUDED_FILENAMES</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-string">"PatternManager.py"</tt><tt class="py-op">]</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"> </tt>
+<a name="check"></a><div id="check-def"><a name="L20"></a><tt class="py-lineno"> 20</tt> <a class="py-toggle" href="#" id="check-toggle" onclick="return toggle('check');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="IDAscope.recursive_pylint-module.html#check">check</a><tt class="py-op">(</tt><tt class="py-param">module</tt><tt class="py-op">,</tt> <tt class="py-param">full_comment</tt><tt class="py-op">=</tt><tt class="py-name">False</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="check-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="check-expanded"><a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line">    <tt class="py-docstring">'''</tt> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"><tt class="py-docstring">    apply pylint to the file specified if it is a *.py file</tt> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"><tt class="py-docstring">    '''</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line">    <tt class="py-keyword">global</tt> <tt id="link-7" class="py-name"><a title="IDAscope.recursive_pylint.total" class="py-name" href="#" onclick="return doclink('link-7', 'total', 'link-0');">total</a></tt><tt class="py-op">,</tt> <tt id="link-8" class="py-name"><a title="IDAscope.recursive_pylint.count" class="py-name" href="#" onclick="return doclink('link-8', 'count', 'link-1');">count</a></tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">module</tt><tt class="py-op">[</tt><tt class="py-op">-</tt><tt class="py-number">3</tt><tt class="py-op">:</tt><tt class="py-op">]</tt> <tt class="py-op">==</tt> <tt class="py-string">".py"</tt><tt class="py-op">:</tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line">        <tt class="py-name">f_pyfile</tt> <tt class="py-op">=</tt> <tt class="py-name">open</tt><tt class="py-op">(</tt><tt class="py-name">module</tt><tt class="py-op">,</tt> <tt class="py-string">"r"</tt><tt class="py-op">)</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line">        <tt class="py-name">pyfile_lines</tt> <tt class="py-op">=</tt> <tt class="py-name">f_pyfile</tt><tt class="py-op">.</tt><tt class="py-name">readlines</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line">        <tt class="py-name">is_continued_comment</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">line</tt> <tt class="py-keyword">in</tt> <tt class="py-name">pyfile_lines</tt><tt class="py-op">:</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line">            <tt class="py-keyword">global</tt> <tt id="link-9" class="py-name"><a title="IDAscope.recursive_pylint.num_code_lines" class="py-name" href="#" onclick="return doclink('link-9', 'num_code_lines', 'link-2');">num_code_lines</a></tt> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line">            <tt class="py-keyword">global</tt> <tt id="link-10" class="py-name"><a title="IDAscope.recursive_pylint.num_comment_lines" class="py-name" href="#" onclick="return doclink('link-10', 'num_comment_lines', 'link-3');">num_comment_lines</a></tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line">            <tt class="py-keyword">global</tt> <tt id="link-11" class="py-name"><a title="IDAscope.recursive_pylint.num_blank_lines" class="py-name" href="#" onclick="return doclink('link-11', 'num_blank_lines', 'link-4');">num_blank_lines</a></tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line">            <tt class="py-keyword">global</tt> <tt id="link-12" class="py-name"><a title="IDAscope.recursive_pylint.num_all_lines" class="py-name" href="#" onclick="return doclink('link-12', 'num_all_lines', 'link-5');">num_all_lines</a></tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line">            <tt class="py-name">stripped</tt> <tt class="py-op">=</tt> <tt class="py-name">line</tt><tt class="py-op">.</tt><tt class="py-name">strip</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">stripped</tt><tt class="py-op">)</tt> <tt class="py-op">==</tt> <tt class="py-number">0</tt><tt class="py-op">:</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line">                <tt id="link-13" class="py-name"><a title="IDAscope.recursive_pylint.num_blank_lines" class="py-name" href="#" onclick="return doclink('link-13', 'num_blank_lines', 'link-4');">num_blank_lines</a></tt> <tt class="py-op">+=</tt> <tt class="py-number">1</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line">            <tt class="py-keyword">elif</tt> <tt class="py-name">is_continued_comment</tt><tt class="py-op">:</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-string">"\"\"\""</tt> <tt class="py-keyword">in</tt> <tt class="py-name">stripped</tt><tt class="py-op">:</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line">                    <tt class="py-name">is_continued_comment</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line">                <tt id="link-14" class="py-name"><a title="IDAscope.recursive_pylint.num_comment_lines" class="py-name" href="#" onclick="return doclink('link-14', 'num_comment_lines', 'link-3');">num_comment_lines</a></tt> <tt class="py-op">+=</tt> <tt class="py-number">1</tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line">            <tt class="py-keyword">elif</tt> <tt class="py-string">"\"\"\""</tt> <tt class="py-keyword">in</tt> <tt class="py-name">stripped</tt><tt class="py-op">:</tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line">                <tt class="py-name">is_continued_comment</tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line">                <tt id="link-15" class="py-name"><a title="IDAscope.recursive_pylint.num_comment_lines" class="py-name" href="#" onclick="return doclink('link-15', 'num_comment_lines', 'link-3');">num_comment_lines</a></tt> <tt class="py-op">+=</tt> <tt class="py-number">1</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line">            <tt class="py-keyword">elif</tt> <tt class="py-name">stripped</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> <tt class="py-op">==</tt> <tt class="py-string">"#"</tt><tt class="py-op">:</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">                <tt id="link-16" class="py-name"><a title="IDAscope.recursive_pylint.num_comment_lines" class="py-name" href="#" onclick="return doclink('link-16', 'num_comment_lines', 'link-3');">num_comment_lines</a></tt> <tt class="py-op">+=</tt> <tt class="py-number">1</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line">            <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line">                <tt id="link-17" class="py-name"><a title="IDAscope.recursive_pylint.num_code_lines" class="py-name" href="#" onclick="return doclink('link-17', 'num_code_lines', 'link-2');">num_code_lines</a></tt> <tt class="py-op">+=</tt> <tt class="py-number">1</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">            <tt id="link-18" class="py-name"><a title="IDAscope.recursive_pylint.num_all_lines" class="py-name" href="#" onclick="return doclink('link-18', 'num_all_lines', 'link-5');">num_all_lines</a></tt> <tt class="py-op">+=</tt> <tt class="py-number">1</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">        <tt class="py-comment"># we don't check empty files</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">pyfile_lines</tt><tt class="py-op">)</tt> <tt class="py-op">==</tt> <tt class="py-number">0</tt><tt class="py-op">:</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">        <tt class="py-comment"># we don't check idascope.core.PatternManager because it contains huge lines (signatures) that distort the rating</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">module</tt> <tt class="py-keyword">in</tt> <tt id="link-19" class="py-name"><a title="IDAscope.recursive_pylint.EXCLUDED_FILENAMES" class="py-name" href="#" onclick="return doclink('link-19', 'EXCLUDED_FILENAMES', 'link-6');">EXCLUDED_FILENAMES</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">        <tt class="py-keyword">print</tt> <tt class="py-string">"CHECKING "</tt><tt class="py-op">,</tt> <tt class="py-name">module</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line">        <tt class="py-comment"># E1101 - %s %r has no %r member                    - will bug around a lot about Qt widgets</tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line">        <tt class="py-comment"># W0201 - Attribute %r defined outside __init__     - ignored because IMHO code is better organized with the setup methods</tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">        <tt class="py-comment"># F0401 - Unable to import %r (%s)                  - we are evaluating code for Windows on another machine so this is not taken into concern </tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line">        <tt class="py-comment"># R0903 - Too few public methods (%s/%s)            - we don't care about that.</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">        <tt class="py-comment"># we use line length: 120</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">        <tt class="py-name">pout</tt> <tt class="py-op">=</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">popen</tt><tt class="py-op">(</tt><tt class="py-string">'pylint --method-rgx=\'[a-z_][a-zA-Z0-9_]{2,30}$\' --disable=E1101,W0201,F0401,R0903 --max-line-length=120 %s'</tt><tt class="py-op">%</tt> <tt class="py-name">module</tt><tt class="py-op">,</tt> <tt class="py-string">'r'</tt><tt class="py-op">)</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">line</tt> <tt class="py-keyword">in</tt> <tt class="py-name">pout</tt><tt class="py-op">:</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">full_comment</tt><tt class="py-op">:</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">                <tt class="py-name">sys</tt><tt class="py-op">.</tt><tt class="py-name">stdout</tt><tt class="py-op">.</tt><tt class="py-name">write</tt><tt class="py-op">(</tt><tt class="py-name">line</tt><tt class="py-op">)</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">                <tt class="py-name">sys</tt><tt class="py-op">.</tt><tt class="py-name">stdout</tt><tt class="py-op">.</tt><tt class="py-name">flush</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt>  <tt class="py-name">re</tt><tt class="py-op">.</tt><tt class="py-name">match</tt><tt class="py-op">(</tt><tt class="py-string">"E....:."</tt><tt class="py-op">,</tt> <tt class="py-name">line</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">full_comment</tt><tt class="py-op">:</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">                    <tt class="py-keyword">print</tt> <tt class="py-name">line</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-string">"Your code has been rated at"</tt> <tt class="py-keyword">in</tt> <tt class="py-name">line</tt><tt class="py-op">:</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">full_comment</tt><tt class="py-op">:</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">                    <tt class="py-keyword">print</tt> <tt class="py-name">line</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">                <tt class="py-name">score</tt> <tt class="py-op">=</tt> <tt class="py-name">re</tt><tt class="py-op">.</tt><tt class="py-name">findall</tt><tt class="py-op">(</tt><tt class="py-string">"\d.\d\d"</tt><tt class="py-op">,</tt> <tt class="py-name">line</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">                <tt id="link-20" class="py-name"><a title="IDAscope.recursive_pylint.total" class="py-name" href="#" onclick="return doclink('link-20', 'total', 'link-0');">total</a></tt> <tt class="py-op">+=</tt> <tt class="py-name">float</tt><tt class="py-op">(</tt><tt class="py-name">score</tt><tt class="py-op">)</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line">                <tt id="link-21" class="py-name"><a title="IDAscope.recursive_pylint.count" class="py-name" href="#" onclick="return doclink('link-21', 'count', 'link-1');">count</a></tt> <tt class="py-op">+=</tt> <tt class="py-number">1</tt> </tt>
+</div><a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">     </tt>
+<a name="kill_pyc"></a><div id="kill_pyc-def"><a name="L78"></a><tt class="py-lineno"> 78</tt> <a class="py-toggle" href="#" id="kill_pyc-toggle" onclick="return toggle('kill_pyc');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="IDAscope.recursive_pylint-module.html#kill_pyc">kill_pyc</a><tt class="py-op">(</tt><tt class="py-param">filepath</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="kill_pyc-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="kill_pyc-expanded"><a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">filepath</tt><tt class="py-op">[</tt><tt class="py-op">-</tt><tt class="py-number">4</tt><tt class="py-op">:</tt><tt class="py-op">]</tt> <tt class="py-op">==</tt> <tt class="py-string">".pyc"</tt><tt class="py-op">:</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">        <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">remove</tt><tt class="py-op">(</tt><tt class="py-name">filepath</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">     </tt>
+<a name="walk_files"></a><div id="walk_files-def"><a name="L82"></a><tt class="py-lineno"> 82</tt> <a class="py-toggle" href="#" id="walk_files-toggle" onclick="return toggle('walk_files');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="IDAscope.recursive_pylint-module.html#walk_files">walk_files</a><tt class="py-op">(</tt><tt class="py-param">base_directory</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="walk_files-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="walk_files-expanded"><a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line">    <tt class="py-keyword">print</tt> <tt class="py-string">"looking for *.py scripts in subdirectories of "</tt><tt class="py-op">,</tt> <tt class="py-name">base_directory</tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt class="py-name">root</tt><tt class="py-op">,</tt> <tt class="py-name">dirs</tt><tt class="py-op">,</tt> <tt class="py-name">files</tt> <tt class="py-keyword">in</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">walk</tt><tt class="py-op">(</tt><tt class="py-name">base_directory</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">name</tt> <tt class="py-keyword">in</tt> <tt class="py-name">files</tt><tt class="py-op">:</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">            <tt class="py-name">filepath</tt> <tt class="py-op">=</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt class="py-name">root</tt><tt class="py-op">,</tt> <tt class="py-name">name</tt><tt class="py-op">)</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">            <tt id="link-22" class="py-name" targets="Function IDAscope.recursive_pylint.check()=IDAscope.recursive_pylint-module.html#check"><a title="IDAscope.recursive_pylint.check" class="py-name" href="#" onclick="return doclink('link-22', 'check', 'link-22');">check</a></tt><tt class="py-op">(</tt><tt class="py-name">filepath</tt><tt class="py-op">)</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">            <tt id="link-23" class="py-name" targets="Function IDAscope.recursive_pylint.kill_pyc()=IDAscope.recursive_pylint-module.html#kill_pyc"><a title="IDAscope.recursive_pylint.kill_pyc" class="py-name" href="#" onclick="return doclink('link-23', 'kill_pyc', 'link-23');">kill_pyc</a></tt><tt class="py-op">(</tt><tt class="py-name">filepath</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">     </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line"><tt class="py-keyword">if</tt> <tt class="py-name">__name__</tt> <tt class="py-op">==</tt> <tt class="py-string">"__main__"</tt><tt class="py-op">:</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">    <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">        <tt class="py-keyword">print</tt> <tt class="py-name">sys</tt><tt class="py-op">.</tt><tt class="py-name">argv</tt>    </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line">        <tt class="py-name">base_directory</tt> <tt class="py-op">=</tt> <tt class="py-name">sys</tt><tt class="py-op">.</tt><tt class="py-name">argv</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">isdir</tt><tt class="py-op">(</tt><tt class="py-name">base_directory</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">            <tt id="link-24" class="py-name" targets="Function IDAscope.recursive_pylint.walk_files()=IDAscope.recursive_pylint-module.html#walk_files"><a title="IDAscope.recursive_pylint.walk_files" class="py-name" href="#" onclick="return doclink('link-24', 'walk_files', 'link-24');">walk_files</a></tt><tt class="py-op">(</tt><tt class="py-name">base_directory</tt><tt class="py-op">)</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line">            <tt id="link-25" class="py-name"><a title="IDAscope.recursive_pylint.check" class="py-name" href="#" onclick="return doclink('link-25', 'check', 'link-22');">check</a></tt><tt class="py-op">(</tt><tt class="py-name">base_directory</tt><tt class="py-op">,</tt> <tt class="py-name">True</tt><tt class="py-op">)</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">    <tt class="py-keyword">except</tt> <tt class="py-name">IndexError</tt><tt class="py-op">:</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line">        <tt class="py-keyword">print</tt> <tt class="py-string">"no directory specified, defaulting to current working directory"</tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line">        <tt class="py-name">base_directory</tt> <tt class="py-op">=</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">getcwd</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line">        <tt id="link-26" class="py-name"><a title="IDAscope.recursive_pylint.walk_files" class="py-name" href="#" onclick="return doclink('link-26', 'walk_files', 'link-24');">walk_files</a></tt><tt class="py-op">(</tt><tt class="py-name">base_directory</tt><tt class="py-op">)</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line"> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line">    <tt class="py-keyword">print</tt> <tt class="py-string">"=="</tt> <tt class="py-op">*</tt> <tt class="py-number">50</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line">    <tt class="py-keyword">print</tt> <tt class="py-string">"%d modules rated"</tt><tt class="py-op">%</tt> <tt id="link-27" class="py-name"><a title="IDAscope.recursive_pylint.count" class="py-name" href="#" onclick="return doclink('link-27', 'count', 'link-1');">count</a></tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line">    <tt class="py-keyword">print</tt> <tt class="py-string">"AVERAGE SCORE = %.02f"</tt><tt class="py-op">%</tt> <tt class="py-op">(</tt><tt id="link-28" class="py-name"><a title="IDAscope.recursive_pylint.total" class="py-name" href="#" onclick="return doclink('link-28', 'total', 'link-0');">total</a></tt> <tt class="py-op">/</tt> <tt id="link-29" class="py-name"><a title="IDAscope.recursive_pylint.count" class="py-name" href="#" onclick="return doclink('link-29', 'count', 'link-1');">count</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line">    <tt class="py-keyword">print</tt> <tt class="py-string">"=="</tt> <tt class="py-op">*</tt> <tt class="py-number">50</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">    <tt class="py-keyword">print</tt> <tt class="py-string">"in total %d lines: %d code (%2.2f %%), %d comments (%2.2f %%) %d blank (%2.2f %%)"</tt> <tt class="py-op">%</tt> \ </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line">        <tt class="py-op">(</tt><tt id="link-30" class="py-name"><a title="IDAscope.recursive_pylint.num_all_lines" class="py-name" href="#" onclick="return doclink('link-30', 'num_all_lines', 'link-5');">num_all_lines</a></tt><tt class="py-op">,</tt>  </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line">        <tt id="link-31" class="py-name"><a title="IDAscope.recursive_pylint.num_code_lines" class="py-name" href="#" onclick="return doclink('link-31', 'num_code_lines', 'link-2');">num_code_lines</a></tt><tt class="py-op">,</tt> <tt class="py-op">(</tt><tt class="py-number">100.0</tt> <tt class="py-op">*</tt> <tt id="link-32" class="py-name"><a title="IDAscope.recursive_pylint.num_code_lines" class="py-name" href="#" onclick="return doclink('link-32', 'num_code_lines', 'link-2');">num_code_lines</a></tt> <tt class="py-op">/</tt> <tt id="link-33" class="py-name"><a title="IDAscope.recursive_pylint.num_all_lines" class="py-name" href="#" onclick="return doclink('link-33', 'num_all_lines', 'link-5');">num_all_lines</a></tt><tt class="py-op">)</tt><tt class="py-op">,</tt>  </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">        <tt id="link-34" class="py-name"><a title="IDAscope.recursive_pylint.num_comment_lines" class="py-name" href="#" onclick="return doclink('link-34', 'num_comment_lines', 'link-3');">num_comment_lines</a></tt><tt class="py-op">,</tt> <tt class="py-op">(</tt><tt class="py-number">100.0</tt> <tt class="py-op">*</tt> <tt id="link-35" class="py-name"><a title="IDAscope.recursive_pylint.num_comment_lines" class="py-name" href="#" onclick="return doclink('link-35', 'num_comment_lines', 'link-3');">num_comment_lines</a></tt> <tt class="py-op">/</tt> <tt id="link-36" class="py-name"><a title="IDAscope.recursive_pylint.num_all_lines" class="py-name" href="#" onclick="return doclink('link-36', 'num_all_lines', 'link-5');">num_all_lines</a></tt><tt class="py-op">)</tt><tt class="py-op">,</tt>  </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line">        <tt id="link-37" class="py-name"><a title="IDAscope.recursive_pylint.num_blank_lines" class="py-name" href="#" onclick="return doclink('link-37', 'num_blank_lines', 'link-4');">num_blank_lines</a></tt><tt class="py-op">,</tt> <tt class="py-op">(</tt><tt class="py-number">100.0</tt> <tt class="py-op">*</tt> <tt id="link-38" class="py-name"><a title="IDAscope.recursive_pylint.num_blank_lines" class="py-name" href="#" onclick="return doclink('link-38', 'num_blank_lines', 'link-4');">num_blank_lines</a></tt> <tt class="py-op">/</tt> <tt id="link-39" class="py-name"><a title="IDAscope.recursive_pylint.num_all_lines" class="py-name" href="#" onclick="return doclink('link-39', 'num_all_lines', 'link-5');">num_all_lines</a></tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="IDAscope-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Mon Sep 17 13:18:34 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

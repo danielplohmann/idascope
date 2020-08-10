@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>IDAscope.idascope.core.DocumentationHelper.DocumentationHelper</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="IDAscope-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="IDAscope-module.html">Package&nbsp;IDAscope</a> ::
+        <a href="IDAscope.idascope-module.html">Package&nbsp;idascope</a> ::
+        <a href="IDAscope.idascope.core-module.html">Package&nbsp;core</a> ::
+        <a href="IDAscope.idascope.core.DocumentationHelper-module.html">Module&nbsp;DocumentationHelper</a> ::
+        Class&nbsp;DocumentationHelper
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="IDAscope.idascope.core.DocumentationHelper.DocumentationHelper-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class DocumentationHelper</h1><p class="nomargin-top"><span class="codelink"><a href="IDAscope.idascope.core.DocumentationHelper-pysrc.html#DocumentationHelper">source&nbsp;code</a></span></p>
+<p>This class handles instruction coloring.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="__init__"></a><span class="summary-sig-name">__init__</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">config_filename</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.DocumentationHelper-pysrc.html#DocumentationHelper.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="IDAscope.idascope.core.DocumentationHelper.DocumentationHelper-class.html#load_config" class="summary-sig-name">load_config</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">config_filename</span>)</span><br />
+      Loads a semantic configuration file and generates a color map from 
+      the contained information.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.DocumentationHelper-pysrc.html#DocumentationHelper.load_config">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="IDAscope.idascope.core.DocumentationHelper.DocumentationHelper-class.html#_generate_color_map_from_definitions" class="summary-sig-name" onclick="show_private();">_generate_color_map_from_definitions</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">definitions</span>)</span><br />
+      Internal function to generate a color map from a semantic definitions
+      config file.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.DocumentationHelper-pysrc.html#DocumentationHelper._generate_color_map_from_definitions">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="uncolor_all"></a><span class="summary-sig-name">uncolor_all</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Uncolors all instructions of all segments by changing their color to 
+      white.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.DocumentationHelper-pysrc.html#DocumentationHelper.uncolor_all">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="IDAscope.idascope.core.DocumentationHelper.DocumentationHelper-class.html#color_instruction" class="summary-sig-name">color_instruction</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">address</span>,
+        <span class="summary-sig-arg">color</span>,
+        <span class="summary-sig-arg">refresh</span>=<span class="summary-sig-default">True</span>)</span><br />
+      Colors the instruction at an address with the given color code.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.DocumentationHelper-pysrc.html#DocumentationHelper.color_instruction">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="IDAscope.idascope.core.DocumentationHelper.DocumentationHelper-class.html#color_basic_block" class="summary-sig-name">color_basic_block</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">address</span>,
+        <span class="summary-sig-arg">color</span>,
+        <span class="summary-sig-arg">refresh</span>=<span class="summary-sig-default">True</span>)</span><br />
+      Colors the basic block containing a target address with the given 
+      color code.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.DocumentationHelper-pysrc.html#DocumentationHelper.color_basic_block">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="IDAscope.idascope.core.DocumentationHelper.DocumentationHelper-class.html#get_next_color_scheme" class="summary-sig-name">get_next_color_scheme</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      get the next color scheme in the three-cycle 
+      &quot;individual/mono/uncolored&quot;, where individual is semantic 
+      coloring</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.DocumentationHelper-pysrc.html#DocumentationHelper.get_next_color_scheme">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="IDAscope.idascope.core.DocumentationHelper.DocumentationHelper-class.html#select_highlight_color" class="summary-sig-name">select_highlight_color</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">tag</span>)</span><br />
+      automatically chooses the highlight color for a tag based on the 
+      current color scheme</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.DocumentationHelper-pysrc.html#DocumentationHelper.select_highlight_color">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="IDAscope.idascope.core.DocumentationHelper.DocumentationHelper-class.html#select_base_color" class="summary-sig-name">select_base_color</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">tagged_addresses_in_block</span>)</span><br />
+      automatically chooses the base color for a block based on the current
+      color scheme</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.DocumentationHelper-pysrc.html#DocumentationHelper.select_base_color">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="IDAscope.idascope.core.DocumentationHelper.DocumentationHelper-class.html#colorize" class="summary-sig-name">colorize</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">scan_result</span>)</span><br />
+      perform coloring on the IDB, based on a scan performed by 
+      SemanticIdentifier</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.DocumentationHelper-pysrc.html#DocumentationHelper.colorize">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_next_non_func_instruction"></a><span class="summary-sig-name">get_next_non_func_instruction</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">addr</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.DocumentationHelper-pysrc.html#DocumentationHelper.get_next_non_func_instruction">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="convert_non_function_code"></a><span class="summary-sig-name">convert_non_function_code</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.DocumentationHelper-pysrc.html#DocumentationHelper.convert_non_function_code">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS VARIABLES ==================== -->
+<a name="section-ClassVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="IDAscope.idascope.core.DocumentationHelper.DocumentationHelper-class.html#layout_color_map" class="summary-name">layout_color_map</a> = <code title="{&quot;tag&quot;: {&quot;base_color&quot;: 0x112233, &quot;highlight_color&quot;: 0x445566}}">{&quot;tag&quot;: {&quot;base_color&quot;: 0x112233, &quot;highlight<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="load_config"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">load_config</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">config_filename</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="IDAscope.idascope.core.DocumentationHelper-pysrc.html#DocumentationHelper.load_config">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Loads a semantic configuration file and generates a color map from the
+  contained information.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>config_filename</code></strong> (str) - filename of a semantic configuration file</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_generate_color_map_from_definitions"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_generate_color_map_from_definitions</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">definitions</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="IDAscope.idascope.core.DocumentationHelper-pysrc.html#DocumentationHelper._generate_color_map_from_definitions">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Internal function to generate a color map from a semantic definitions 
+  config file.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>definitions</code></strong> (dict) - the defintions part of a semantic definitions config file.</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>a dictionary of a color map, see <i>layout_color_map</i> for a 
+          reference</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="color_instruction"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">color_instruction</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">address</span>,
+        <span class="sig-arg">color</span>,
+        <span class="sig-arg">refresh</span>=<span class="sig-default">True</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="IDAscope.idascope.core.DocumentationHelper-pysrc.html#DocumentationHelper.color_instruction">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Colors the instruction at an address with the given color code.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>address</code></strong> (int) - address of the instruction to color</li>
+        <li><strong class="pname"><code>color</code></strong> (int (0xBBGGRR)) - color-code to set for the instruction</li>
+        <li><strong class="pname"><code>refresh</code></strong> (boolean) - refresh IDA view to ensure the color shows directly, can be 
+          omitted for performance.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="color_basic_block"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">color_basic_block</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">address</span>,
+        <span class="sig-arg">color</span>,
+        <span class="sig-arg">refresh</span>=<span class="sig-default">True</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="IDAscope.idascope.core.DocumentationHelper-pysrc.html#DocumentationHelper.color_basic_block">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Colors the basic block containing a target address with the given 
+  color code.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>address</code></strong> (int) - address an instruction in the basic block to color</li>
+        <li><strong class="pname"><code>color</code></strong> (int (0xBBGGRR)) - color-code to set for the instruction</li>
+        <li><strong class="pname"><code>refresh</code></strong> (boolean) - refresh IDA view to ensure the color shows directly, can be 
+          omitted for performance.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_next_color_scheme"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_next_color_scheme</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="IDAscope.idascope.core.DocumentationHelper-pysrc.html#DocumentationHelper.get_next_color_scheme">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>get the next color scheme in the three-cycle 
+  &quot;individual/mono/uncolored&quot;, where individual is semantic 
+  coloring</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>next state</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="select_highlight_color"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">select_highlight_color</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">tag</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="IDAscope.idascope.core.DocumentationHelper-pysrc.html#DocumentationHelper.select_highlight_color">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>automatically chooses the highlight color for a tag based on the 
+  current color scheme</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>(int) a color code</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="select_base_color"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">select_base_color</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">tagged_addresses_in_block</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="IDAscope.idascope.core.DocumentationHelper-pysrc.html#DocumentationHelper.select_base_color">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>automatically chooses the base color for a block based on the current 
+  color scheme</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>tagged_addresses_in_block</code></strong> (a list of tuples (int, str) containing pairs of instruction 
+          addresses and tags) - all tagged addresses in a basic block for which the color shall 
+          be chosen</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>(int) a color code</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="colorize"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">colorize</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">scan_result</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="IDAscope.idascope.core.DocumentationHelper-pysrc.html#DocumentationHelper.colorize">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>perform coloring on the IDB, based on a scan performed by 
+  SemanticIdentifier</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>scan_result</code></strong> (a dictionary with key/value entries of the following form: 
+          (address, [FunctionContext])) - result of a scan as performed by SemanticIdentifier</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== CLASS VARIABLE DETAILS ==================== -->
+<a name="section-ClassVariableDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variable Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariableDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="layout_color_map"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">layout_color_map</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+{&quot;tag&quot;: {&quot;base_color&quot;: 0x112233, &quot;highlight_color&quot;: 0x445566}}
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="IDAscope-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Mon Sep 17 13:18:34 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

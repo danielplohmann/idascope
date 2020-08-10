@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>IDAscope.idascope.core.CryptoIdentifier.CryptoIdentifier</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="IDAscope-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="IDAscope-module.html">Package&nbsp;IDAscope</a> ::
+        <a href="IDAscope.idascope-module.html">Package&nbsp;idascope</a> ::
+        <a href="IDAscope.idascope.core-module.html">Package&nbsp;core</a> ::
+        <a href="IDAscope.idascope.core.CryptoIdentifier-module.html">Module&nbsp;CryptoIdentifier</a> ::
+        Class&nbsp;CryptoIdentifier
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="IDAscope.idascope.core.CryptoIdentifier.CryptoIdentifier-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class CryptoIdentifier</h1><p class="nomargin-top"><span class="codelink"><a href="IDAscope.idascope.core.CryptoIdentifier-pysrc.html#CryptoIdentifier">source&nbsp;code</a></span></p>
+<pre class="literalblock">
+
+This class contains the logic to perform Crypto identification.
+Two techniques are currently supported:
+1. A heuristic approach that identifies functions and basic blocks
+based on the ratio of arithmetic/logic instructions to all instructions
+2. A signature-based approach, using the signatures defined in PatternManager
+
+</pre>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="__init__"></a><span class="summary-sig-name">__init__</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.CryptoIdentifier-pysrc.html#CryptoIdentifier.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="scan"></a><span class="summary-sig-name">scan</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Scan the whole IDB with all available techniques.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.CryptoIdentifier-pysrc.html#CryptoIdentifier.scan">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="IDAscope.idascope.core.CryptoIdentifier.CryptoIdentifier-class.html#scan_aritlog" class="summary-sig-name">scan_aritlog</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      scan with the arithmetic/logic heuristic</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.CryptoIdentifier-pysrc.html#CryptoIdentifier.scan_aritlog">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="IDAscope.idascope.core.CryptoIdentifier.CryptoIdentifier-class.html#update_thresholds" class="summary-sig-name">update_thresholds</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">min_rating</span>,
+        <span class="summary-sig-arg">max_rating</span>,
+        <span class="summary-sig-arg">min_instr</span>,
+        <span class="summary-sig-arg">max_instr</span>,
+        <span class="summary-sig-arg">min_call</span>,
+        <span class="summary-sig-arg">max_call</span>)</span><br />
+      update all six threshold bounds</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.CryptoIdentifier-pysrc.html#CryptoIdentifier.update_thresholds">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="IDAscope.idascope.core.CryptoIdentifier.CryptoIdentifier-class.html#get_aritlog_blocks" class="summary-sig-name">get_aritlog_blocks</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">min_rating</span>,
+        <span class="summary-sig-arg">max_rating</span>,
+        <span class="summary-sig-arg">min_instr</span>,
+        <span class="summary-sig-arg">max_instr</span>,
+        <span class="summary-sig-arg">min_api</span>,
+        <span class="summary-sig-arg">max_api</span>,
+        <span class="summary-sig-arg">is_nonzero</span>)</span><br />
+      get all blocks that are within the limits specified by the heuristic 
+      parameters.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.CryptoIdentifier-pysrc.html#CryptoIdentifier.get_aritlog_blocks">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="IDAscope.idascope.core.CryptoIdentifier.CryptoIdentifier-class.html#get_unfiltered_block_count" class="summary-sig-name">get_unfiltered_block_count</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      returns the number of basic blocks that have been analyzed.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.CryptoIdentifier-pysrc.html#CryptoIdentifier.get_unfiltered_block_count">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="IDAscope.idascope.core.CryptoIdentifier.CryptoIdentifier-class.html#get_segment_data" class="summary-sig-name">get_segment_data</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      returns the raw bytes of the segments as stored by IDA</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.CryptoIdentifier-pysrc.html#CryptoIdentifier.get_segment_data">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="IDAscope.idascope.core.CryptoIdentifier.CryptoIdentifier-class.html#scan_crypto_patterns" class="summary-sig-name">scan_crypto_patterns</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pattern_size</span>=<span class="summary-sig-default">32</span>)</span><br />
+      perform a scan ofr signatures.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.CryptoIdentifier-pysrc.html#CryptoIdentifier.scan_crypto_patterns">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="IDAscope.idascope.core.CryptoIdentifier.CryptoIdentifier-class.html#get_signature_length" class="summary-sig-name">get_signature_length</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">signature_name</span>)</span><br />
+      returns the length for a signature, identified by its name</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.CryptoIdentifier-pysrc.html#CryptoIdentifier.get_signature_length">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="IDAscope.idascope.core.CryptoIdentifier.CryptoIdentifier-class.html#get_xrefs_to_address" class="summary-sig-name">get_xrefs_to_address</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">address</span>)</span><br />
+      get all references to a certain address.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.CryptoIdentifier-pysrc.html#CryptoIdentifier.get_xrefs_to_address">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="IDAscope.idascope.core.CryptoIdentifier.CryptoIdentifier-class.html#get_signature_hits" class="summary-sig-name">get_signature_hits</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get all signature hits that have a length of at least 
+      match_filter_factor percent of the signature they triggered.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="IDAscope.idascope.core.CryptoIdentifier-pysrc.html#CryptoIdentifier.get_signature_hits">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="scan_aritlog"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">scan_aritlog</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="IDAscope.idascope.core.CryptoIdentifier-pysrc.html#CryptoIdentifier.scan_aritlog">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>scan with the arithmetic/logic heuristic</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>a list of AritLogBasicBlock data objects that fulfill the 
+          parameters as specified</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="update_thresholds"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">update_thresholds</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">min_rating</span>,
+        <span class="sig-arg">max_rating</span>,
+        <span class="sig-arg">min_instr</span>,
+        <span class="sig-arg">max_instr</span>,
+        <span class="sig-arg">min_call</span>,
+        <span class="sig-arg">max_call</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="IDAscope.idascope.core.CryptoIdentifier-pysrc.html#CryptoIdentifier.update_thresholds">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>update all six threshold bounds</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>min_rating</code></strong> (float) - the minimum arit/log ratio a basic block must have</li>
+        <li><strong class="pname"><code>max_rating</code></strong> (float) - the maximum arit/log ratio a basic block can have</li>
+        <li><strong class="pname"><code>min_instr</code></strong> (int) - the minimum number of instructions a basic block must have</li>
+        <li><strong class="pname"><code>max_instr</code></strong> (int) - the minimum number of instructions a basic block can have</li>
+        <li><strong class="pname"><code>min_call</code></strong> (int) - the minimum number of calls a basic block must have</li>
+        <li><strong class="pname"><code>max_call</code></strong> (int) - the minimum number of calls a basic block can have</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_aritlog_blocks"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_aritlog_blocks</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">min_rating</span>,
+        <span class="sig-arg">max_rating</span>,
+        <span class="sig-arg">min_instr</span>,
+        <span class="sig-arg">max_instr</span>,
+        <span class="sig-arg">min_api</span>,
+        <span class="sig-arg">max_api</span>,
+        <span class="sig-arg">is_nonzero</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="IDAscope.idascope.core.CryptoIdentifier-pysrc.html#CryptoIdentifier.get_aritlog_blocks">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>get all blocks that are within the limits specified by the heuristic 
+  parameters. parameters are the same as in function 
+  &quot;update_thresholds&quot; except param is_nonzero: defines whether 
+  zeroing instructions (like xor eax, eax) shall be counted or not. type 
+  is_nonzero: boolean</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>a list of AritlogBasicBlock data objects, according to the 
+          parameters</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_unfiltered_block_count"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_unfiltered_block_count</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="IDAscope.idascope.core.CryptoIdentifier-pysrc.html#CryptoIdentifier.get_unfiltered_block_count">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>returns the number of basic blocks that have been analyzed.</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>(int) number of basic blocks</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_segment_data"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_segment_data</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="IDAscope.idascope.core.CryptoIdentifier-pysrc.html#CryptoIdentifier.get_segment_data">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>returns the raw bytes of the segments as stored by IDA</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>a list of Segment data objects.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="scan_crypto_patterns"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">scan_crypto_patterns</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">pattern_size</span>=<span class="sig-default">32</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="IDAscope.idascope.core.CryptoIdentifier-pysrc.html#CryptoIdentifier.scan_crypto_patterns">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>perform a scan ofr signatures. For matching, the standard python re 
+  module is used.</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>A list of CryptoSignatureHit data objects</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_signature_length"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_signature_length</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">signature_name</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="IDAscope.idascope.core.CryptoIdentifier-pysrc.html#CryptoIdentifier.get_signature_length">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>returns the length for a signature, identified by its name</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>signature_name</code></strong> (str) - name for a signature, e.g. &quot;ADLER 32&quot;</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>(int) length of the signature.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_xrefs_to_address"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_xrefs_to_address</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">address</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="IDAscope.idascope.core.CryptoIdentifier-pysrc.html#CryptoIdentifier.get_xrefs_to_address">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>get all references to a certain address. These are no xrefs in IDA 
+  sense but references to the crypto signatures. If the signature points to
+  an instruction, e.g. if a constant is moved to a register, the return is 
+  flagged as &quot;True&quot;, meaning it is an in-code reference.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>address</code></strong> (int) - an arbitrary address</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>a list of tuples (int, boolean)</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_signature_hits"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_signature_hits</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="IDAscope.idascope.core.CryptoIdentifier-pysrc.html#CryptoIdentifier.get_signature_hits">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get all signature hits that have a length of at least 
+  match_filter_factor percent of the signature they triggered. Hits are 
+  grouped by signature names.</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>a dictionary  with key/value entries of the following form: 
+          (&quot;signature name&quot;, [CryptoSignatureHit])</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="IDAscope-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Mon Sep 17 13:18:34 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

@@ -1,0 +1,252 @@
+<html>
+<head>
+<title>IDAscope v1.1 manual</title>
+<style type="text/css">
+body {
+	font-family: Courier; 
+	font-size: 1em;
+}
+a {
+	color: #FF3300;
+}
+a:hover, a:active {
+	color: #BB0000;
+}
+li {
+	font-size: 0.7em;
+	margin: 0 0 0 30px;
+}
+p {
+	font-size: 0.8em;
+	margin: 0.6em 20px 0 50px;
+}
+.version_info {
+	font-size: 0.7em;
+	font-style: italic;
+	margin: 0 0 20px 10px;
+}
+h1 {
+	font-size: 4em;
+	margin: 0 0 0 10px;
+}
+h2 {
+	font-size: 2.5em;
+	margin: 25px 0 0 20px;
+}
+h3 {
+	font-size: 1.2em;
+	margin: 15px 0 0.5em 30px;
+	text-decoration: underline;
+}
+h4 {
+	font-size: 1em;
+	margin: 15px 0 0.5em 40px;
+	text-decoration: underline;
+}
+h5 {
+	font-size: 0.8em;
+	margin: 15px 0 0.5em 50px;
+	text-decoration: underline;
+}
+img {
+	margin: 15px 0 0.5em 50px;
+	border: 2px solid black;
+}
+</style>
+</head>
+<body>
+
+<h1>simpliFiRE.IDAscope</h1>
+<p class="version_info">[Release version: 1.0a - Date: 18.09.2012]</p>
+
+<p>This is the guide to IDAscope, a plugin intended to ease reverse engineering with a focus on malware analysis. The idea for the plugin was born at <a href="http://recon.cx">RECON 2012</a> out of some prototype scripts. IDAscope is written in pure Python with a PySide based GUI.</p><p>The authors of IDAscope are:</p>
+<ul>
+<li><a href="https://twitter.com/push_pnx">Daniel Plohmann</a> [<a href="http://blog.pnx.tf">blog</a>] [daniel.plohmann&lt;at&gt;gmail&lt;dot&gt;com]</li>
+<li><a href="https://twitter.com/nullandnull">Alexander Hanel</a> [<a href="http://hooked-on-mnemonics.blogspot.com">blog</a>] [alexander.hanel&lt;at&gt;gmail&lt;dot&gt;com]</li>
+</ul>
+
+<h2>Setup</h2>
+
+<p>This section covers the requirements and installation process for IDAscope.
+
+<h3>Package</h3>
+
+<p>This release version of IDAscope has the following package structure:</p>
+<ul>
+<li>./IDAscope.py - The main script to be opened from IDA Pro.</li>
+<li>./config.json - The config file that can be used to adjust path and hotkey settings.</li>
+<li>./idascope/* - The code base of this plugin.</li>
+<li>./documentation/manual/* - The manual you are reading right now.</li>
+<li>./documentation/epydoc/* - Formal documentation of the code.</li>
+</ul>
+
+<h3>Requirements</h3>
+<p>IDAscope has been tested with IDA Pro 6.2 and 6.3 for Windows, OS X, and Linux. The GUI of IDAscope is based on PySide. It is required to install PySide as provided by Hex-Rays on their <a href="http://www.hex-rays.com/products/ida/support/download.shtml">website</a>.</p>
+
+<h3>Installation</h3>
+
+<p>The description of the installation process is divided into two steps: for IDAscope itself and for the information database needed by the WinAPI Browsing functionality.</p>
+
+<h4>IDAscope</h4>
+
+<p>Installation of IDAscope is pretty straight forward. Just unpack the contents of the zip file in a location accessible by IDA Pro. </p>
+<p>Depending on the operating system you are using, you may have to adjust the settings in the config.json in IDAscope's root directory. If "idascope_root_dir" is left as an empty string like the standard setting suggests, the paths should be automatically resolved by the plugin. </p>
+
+<h4>WinAPI Browsing</h4>
+
+<p>The setup for browsing Windows API documentation from within IDA needs a bit more effort. The files that constitute the information database for this functionality are included in Windows SDK version 7 (published 24.07.2009) and must be extracted manually in order to be directly accessible.</p>
+<p>The installation procedure is described in 4 steps.</p>
+
+<h5>Step 1 - Installation of .NET 3.5</h5>
+<p>For installation of v7 of the Windows SDK, .NET framework 3.5 is required IT can be downloaded <a href="http://www.microsoft.com/en-us/download/details.aspx?id=21&bldi=3-0">here</a>.</p>
+
+<h5>Step 2 - Installation of Windows SDK v7</h5>
+
+<p>After installing .NET 3.5, Windows SDK v7 can be downloaded from this <a href="http://www.microsoft.com/en-us/download/details.aspx?id=3138">website</a> and be installed.</p>
+<p>Not the whole SDK is needed, it is enough to limit the installation to "Documentation / Win32 and COM".</p>
+
+<img src="images/windows_sdk_reduced_install.png" height=450px />
+
+<h5>Step 3 - Extracting the information database from the SDK installation</h5>
+
+<p>With the Windows SDK installed, we can now extract its help database and make it usable for IDAscope. First, we need to gather the compressed files of filetype "Microsoft Help Compiled Storage" (*.HXS) from the Windows SDK installation directory.</p>
+<p>If no alternative installation path has been chosen, the files should remain in "C:\Program Files\Microsoft SDKs\Windows\v7.0\Help\1033". Otherwise, the path will be "$CUSTOM_DIR\Windows\v7.0\Help\1033".</p>
+<p>This folder should contain a total of 249 *.hxs files that have a combined size of 244 MB. These files need to be copied to another folder, e.g. the standard IDAscope WinAPI folder "C:\WinAPI".</p>
+
+<img src="images/windows_sdk_hxs.png" height=450px />
+
+<h5>Step 4 - Preparing the information database for usage with IDAscope</h5>
+
+<p>The last step is decompressing the compiled help files in order to obtain the contained HTML files. Assuming the files have been copied to "C:\WinAPI", it suffices to unzip the files with a tool like 7zip into the same folder. After decompressing, the *.hxs are of no further use and may be deleted.</p>
+
+
+<h3 id="known_issues">Known Issues</h3>
+
+<h4>Windows 7 64bit</h4>
+<p>It is known that the installation of Python and PySide for IDA Pro on a 64bit Windows 7 can interfere with an already existing Python installation. The reason for this is that IDA Pro relies on a 32bit version of Python. In case a 64bit version of Python had been installed prior to installation of IDA Pro, it may come to path conflicts that deny importing the PySide module from within IDA Pro. In this case, IDAscope will not work in this system setup.</p>
+
+<h4>Extensive IDAscope loading time</h4>
+<p>It has been reported that under yet unknown circumstances the extension may have a long loading time (30+ seconds) when preparing the keyword database for the WinAPI widget. This is going to be addresses in a future release by changing the storage format of the database and its loading mechanism. If you do not want to use the WinAPI database at all, you can disable it via config.json by changing the key "load_keyword_database" under "winapi" to <font color="#FF0000">false</font>.</p>
+
+<h3>3rd Party Dependencies</h3>
+
+<p>IDAscope is intended to be as self-contained as possible, thus no 3rd party dependencies are required for this release version.</p>
+ 
+<h2>Usage</h2>
+
+<h3>Starting IDAscope</h3>
+
+<p>In order to start IDAscope, load a binary for analysis and then from IDA Pro's menu select "File / Script file ...".</p>
+<img src="images/idascope_script_file.png" />
+<p>After some initialization, the GUI of IDAscope should pop up.</p>
+<p>IDAscope's functionality is organized in widgets, accessible through tabs.</p>
+<img src="images/idascope_tabs.png" />
+<p>This version contains widgets for</p>
+
+<ul>
+<li>Function Inspection - An approach to faster identification of interesting functions</li>
+<li>WinAPI Browsing - Direct access to Windows API documentation from within IDA Pro</li>
+<li>Crypto Identification - Two approaches for finding cryptographic routines in code</li>
+</ul>
+
+<p>The widgets are described in more detail in the following sections.</p>
+
+<h3>Function Inspection</h3>
+
+<img src="images/idascope_main_view.png" height=550px />
+
+<p>The first widget to be described (which is responsible for the <a href="http://pnx-tf.blogspot.de/2012/07/introducing-idascope.html">idea of building IDAscope</a>) is Function Inspection. It is mainly motivated by the common workflow used by many reverse engineers when dissecting an unknown malware sample. Similar to a puzzle, one will normally start with the cornerstones, which in terms of reverse engineering would be strings and imported API functions. Strings may reveal already a lot about maybe included functionality or command sets, while imported API functions outline the semantics of the functions that make use of them. While strings often require manual interpretation, API inspection allows for a certain degree of automation.</p>
+<p>Therefore, the Function Inspection widget has the goal to provide an overview of occurrences of API calls, grouped by their semantics and the functions containing them.</p>
+
+<p>The widget consists of a toolbar and three tables. The toolbar buttons have the following functionality:</p>
+
+<img src="images/function_inspection_buttons.png" />
+
+<ol>
+<li>Refresh View</li>
+<li>Apply Annotations</li>
+<li>Toggle Coloring</li>
+<li>Fix Unknown Code to Functions</li>
+<li>Rename Potential Wrapper Functions</li>
+</ol>
+
+<h4>1. Refresh View</h4>
+<p>This will rescan the loaded analysis subject and update the counts and names of the functions.</p>
+<h4>2. Apply Annotations</h4>
+<p>IDAscope can perform a basic renaming of functions according to the identified semantics of used API calls. A function that would make use of API functions manipulating files would be prepended with the tag "File", changing its name from "sub_c0ffee" to "File_sub_c0ffee".</p>
+<h4>3. Toggle Coloring</h4>
+<p>IDAscope supports coloring of basic blocks according to the semantics of API calls present in those. This allows quicker spotting of those calls along the execution flow and a better overview when zooming out of the graph.</p>
+<h4>4. Fix Unknown Code to Functions</h4>
+<p>IDA Pro is a very powerful disassembler. Still, there might be some cases where it is not possible to decide how potential code should be transformed into functions, leaving red areas in the Navigation Bar. This button fixes those areas, by first identifying and converting potential function prologues (push ebp; mov ebp, esp) and then all other code to functions.</p>
+<p>This function action looks like the following:</p>
+<img src="images/function_inspection_heal_a_function.png" height=350px />
+<p>Giving all converted code locations in the output window:</p>
+<img src="images/function_inspection_heal_prologues.png" />
+
+<h4>5. Rename Potential Wrapper Functions</h4>
+<p>Code often contains wrapper functions, i.e. short functions with only one API call and a few checks for border values etc. Those can be heuristically identified and renamed. Thanks to Branko Spasojevic for providing the code for this.</p>
+<img src="images/function_inspection_wrappers.png" height=350px />
+<p>&nbsp;</p>
+<p>As explained earlier, Function Inspection summarizes occurrences of API functions. This is solved through the three tables. The topmost table (function table) contains a listing of function addresses, names and the number of identified API calls belonging to a certain tag. It can be taken as birds-eye like overview of on the functions. Just looking at the combination of tags may already allow to make assumptions about the function contents. For example, a combination of the tags "File" and "Http" or "File" and "Ws2" may indicate downloading functionality.</p>
+<p>The lower left table (calls table) gives a summary of all concrete API functions used in the function selected in the function table. This is useful to confirm a guess made upon the tags as shown by the function table. For example, a listing of API calls in the sequence (DeleteFile, CreateFile, WriteFile) may indicate replacement of a file.</p>
+<p>The lower right table (parameter table) furthermore lists the parameters associated with the API call selected in the calls table. Currently, this is of limited use as no dataflow tracking is performed on these values to provide concrete references. However, it can be used to directly navigate to the responsible assembly instructions.</p>
+
+<h3>WinAPI Browsing</h3>
+
+<img src="images/winapi_browsing.png" height=550px />
+
+<p>As it is not possible to memorize all the information about API calls one encounters during reverse engineering, frequent visits of the MSDN website are usually the result. Changing the window focus and entering a search term does not only cost time but is also a distraction. The widget WinAPI Browsing makes MSDN information available directly from within IDA Pro.</p>
+<p>To search for a API function name, parameter type, enum, just type in the search term. While typing, a suggestion box will pop up, showing keywords starting with the characters already typed.</p>
+<p>Accessing multiple articles or clicking links from within the browser will furthermore build up a history of visited articles that can be navigated by the arrow buttons.</p>
+<p>Because even typing breaks workflow, a shortcut can be used to look up the currently highlighted identifier via WinAPI Browser. In the standard configuration, this is &lt;CTRL-Y&gt;. However, the shortcut can also be changed in the configuration file.</p>
+<p>A description of this widget is also covered in this <a href="http://pnx-tf.blogspot.de/2012/07/idascope-update-winapi-browsing.html">blog post</a>.</p>
+<p><strong>Notice:</strong> If you experience a very long loading time of the IDAscope extension, you can disable the WinAPI browsing feature to dramatically decrease the loading time. See <a href="#known_issues">"Known Issues"</a> for more information.</p>
+
+<h3>Crypto Identification</h3>
+
+<img src="images/crypto_identification.png" height=550px />
+
+<p>This widget contains a classical signature-based approach for the detection of well-known crypto-algorithms as well a not-so-common heuristics-based approach. The toolbar features only one button that is used to start the scanning process.</p>
+<h4>Signature-based Scanning</h4>
+<p>The signature-based approach simply extracts the raw data from the given segments and searches with bytes patterns of signatures for their presence. It can both detect pre-calculated values that e.g. may be present in a data section (CRC tables, S-boxes, ...) as well as constants directly used in the code, i.e. the respective algorithms (CRC32 generator polynome, MD5 initialization values, ...). It covers more or less the same set of algorithms as the popular IDA plugin <a href="http://www.hexblog.com/?p=28">findcrypt2</a>, but has been extended with signatures from the projects PyQemu by <a href="http://twitter.com/pleed_">Felix Matenaar</a> and <a href="http://code.google.com/p/kerckhoffs/">kerckhoff's</a> by <a href="http://twitter.com/fel1x">Felix Gr&ouml;bert</a>.</p>
+<p>The results of this identification method are presented in the lower table. The tree representation with the levels "Name", "Location", "Referenced By" allows easy access to both the raw byte shaving triggered the detection as well as all locations in the code where they may be used.</p>
+
+<h4>Heuristics-based Scanning</h4>
+<p>The heuristics-based approach is based on the academic work of Juan Caballero et al., presented in the paper <a href="http://bitblaze.cs.berkeley.edu/papers/dispatcher_ccs09.pdf">"Dispatcher: Enabling Active Botnet Infiltration using Automatic Protocol Reverse-Engineering"</a>. The basic idea is to evaluate the ratio of arithmetic and logic instructions versus all instructions in a given basic block. The original paper featured a size of 20 instructions for a block and a percentage of 60% or more arithmetic/logic instructions.</p> 
+<p>The implementation in IDAscope gives the user various control bars to adjust the mentioned parameters almost seamlessly, thus finetuning the granularity for detection. The following control bars are given:</p>
+<ol>
+<li>Arit/Log Rating</li>
+<li>Basic Block size</li>
+<li>Allowed Calls</li>
+</ol>
+<p>All of the bars allow limiting by an upper and lower bound and therefore selecting a range instead of chosing one threshold.</p>
+<p>The Arit/Log Rating simply allows narrowing down the ratios to be considered. Raising this value will show only blocks with a high calculation portion but may miss some crypto candidates.</p>
+<p>The Basic Block size can be both used to exclude small and large blocks, thus aiming at typical sizes for certain algorithms.</p>
+<p>The number of allowed calls is counted per function instead of per basic block and turned out to be helpful in order to reduce false positives. By limiting this to a few calls (0, 1, 2), more or less self-contained functions can be selected.</p>
+<p>The check boxes next to the bars give additional methods to reduce false positives or increase the accessibility.
+<ul>
+<li>"Exclude Zeroing" only considers instructions that are not used to clear a register, e.g. "xor eax, eax".</li>
+<li>"Looped Blocks only" will reduce the display to blocks that are contained in loops.</li>
+<li>"Group By Functions" changes the view from a basic block based view to a function based view.</li>
+</ul>
+</p>
+<p>A description of this widget is also covered in this <a href="http://pnx-tf.blogspot.de/2012/08/idascope-update-crypto-identification.html">blog post</a>.</p>
+
+</body>
+</html>
+
+
+<h3>YARA Scanner</h3>
+
+<img src="images/yarascan.png" height=550px />
+
+<p>This widget provides access to YARA seamlessly from IDA.</p>
+<p>Since the 2.0 release of YARA, the python bindings can be flawlessly imported into IDA. This finally allows easy integration of this awesome signature scanner into our preferred static analysis tool. :) <br />
+The widget is split in two parts: After a scan, the upper part lists all available rules and their outcome of matching against the loaded binary. The lower parts provides more detailed information on a rule selected in the upper window. The small button besides the name show the signature (stripped from comments) as contained in the rule source file.  
+</p>
+<p>Make sure to adjust the ./idascope/config.py to your local environment!</p>
+<p>A description of this widget is also covered in this <a href="http://pnx-tf.blogspot.de/2014/02/idascope-v11-yara-scanning.html">blog post</a>.</p>
+
+</body>
+</html>
+

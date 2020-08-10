@@ -1,0 +1,28 @@
+{
+    "author": "Daniel Plohmann",
+    "creation_date": "05.06.2013",
+    "name": "posix",
+    "reference": "",
+    "comment": "template for POSIX semantics by Daniel Plohmann. Credits to Hugo Teso for motivating me ;) Color groups: tag0 (red), tag1 (blue)",
+    "renaming_seperator": "_",
+    "default_neutral_color": "0xCCCCCC",
+    "default_base_color": "0xB3DfFF",
+    "default_highlight_color": "0x33A7FF",
+    "semantic_groups": [{
+        "tag": "tag0",
+        "name": "tag0",
+        "base_color": "0xB3B3FF",
+        "highlight_color": "0x333377"
+    }, {
+        "tag": "tag1",
+        "name": "tag1",
+        "base_color": "0xB3DFFF",
+        "highlight_color": "0x33A7FF"
+    }],
+    "semantic_definitions": [{
+        "tag": "socket",
+        "name": "socket",
+        "group": "tag0",
+        "api_names": ["socket", "open", "close", "connect", "listen", "bind"]
+    }]
+}

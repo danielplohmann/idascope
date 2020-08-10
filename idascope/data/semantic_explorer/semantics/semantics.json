@@ -1,0 +1,1140 @@
+[
+{
+"category": "Anti-Debugging",
+"tag" :  "Check for presence of a debugger",
+"api_sequence": [{ 
+		 "api" : "IsDebuggerPresent", "parameters" : []
+		}]
+},
+{
+"category": "Execution",
+"tag" :  "Check / wait for mutex",
+"api_sequence": [{ 
+		 "api" : "CreateMutex", "parameters" : []
+		},
+		{ 
+		 "api" : "WaitForSingleObject", "parameters" : []
+		}]
+},
+{
+"category": "Execution",
+"tag" :  "Check existence of Mutex",
+"api_sequence": [{ 
+		 "api" : "OpenMutex", "parameters" : []
+		},
+		{ 
+		 "api" : "CloseHandle", "parameters" : []
+		}]
+},
+{
+"category": "Execution",
+"tag" :  "Create mutex",
+"api_sequence": [{ 
+		 "api" : "OpenMutex", "parameters" : []
+		},
+		{ 
+		 "api" : "CreateMutex", "parameters" : []
+		}]
+},
+{
+"category": "Cryptography",
+"tag" :  "Decrypt via Microsoft Enhanced Provider",
+"api_sequence": [{ 
+		 "api" : "CryptDecrypt", "parameters" : []
+		}]
+},
+{
+"category": "Cryptography",
+"tag" :  "Encrypt via Microsoft Enhanced Provider",
+"api_sequence": [{ 
+		 "api" : "CryptEncrypt", "parameters" : []
+		}]
+},
+{
+"category": "Cryptography",
+"tag" :  "Decrypt with imported key",
+"api_sequence": [{ 
+		 "api" : "CryptImportKey", "parameters" : []
+		},
+		{ 
+		 "api" : "CryptDecrypt", "parameters" : []
+		}]
+},
+{
+"category": "Cryptography",
+"tag" :  "Encrypt with imported key",
+"api_sequence": [{ 
+		 "api" : "CryptImportKey", "parameters" : []
+		},
+		{ 
+		 "api" : "CryptEncrypt", "parameters" : []
+		}]
+},
+{
+"category": "Cryptography",
+"tag" :  "Calculate a hash",
+"api_sequence": [{ 
+		 "api" : "CryptCreateHash", "parameters" : []
+		},
+		{ 
+		 "api" : "CryptHashData", "parameters" : []
+		},
+		{ 
+		 "api" : "CryptGetHashParam", "parameters" : []
+		}]
+},
+{
+"category": "Cryptography",
+"tag" :  "Access the windows certificate store",
+"api_sequence": [{ 
+		 "api" : "CertOpenSystemStore", "parameters" : []
+		},
+		{ 
+		 "api" : "CertEnumCertificatesInStore", "parameters" : []
+		},
+		{ 
+		 "api" : "CertCloseStore", "parameters" : []
+		}]
+},
+{
+"category": "Cryptography",
+"tag" :  "Delete entries from the windows certificate store",
+"api_sequence": [{ 
+		 "api" : "CertOpenSystemStore", "parameters" : []
+		},
+		{ 
+		 "api" : "CertEnumCertificatesInStore", "parameters" : []
+		},
+		{ 
+		 "api" : "CertDeleteCertificateFromStore", "parameters" : []
+		},
+		{ 
+		 "api" : "CertCloseStore", "parameters" : []
+		}]
+},
+{
+"category": "Network",
+"tag" :  "Connectivity check",
+"api_sequence": [
+		{ 
+		 "api" : "socket", "parameters" : []
+		},
+		{ 
+		 "api" : "connect", "parameters" : []
+		},
+		{ 
+		 "api" : "closesocket", "parameters" : []
+		}]
+},
+{
+"category": "Network",
+"tag" :  "Resolve hostname to IP address",
+"api_sequence": [
+		{ 
+		 "api" : "gethostbyname", "parameters" : []
+		},
+		{ 
+		 "api" : "inet_addr", "parameters" : []
+		}]
+},
+{
+"category": "Network",
+"tag" :  "Enable remote communication",
+"api_sequence": [{ 
+		 "api" : "getaddrinfo", "parameters" : []
+		},
+		{ 
+		 "api" : "getsockname", "parameters" : []
+		},
+		{ 
+		 "api" : "getpeername", "parameters" : []
+		},
+		{ 
+		 "api" : "recv", "parameters" : []
+		}]
+},
+{
+"category": "Network",
+"tag" :  "Communicate with remote host",
+"api_sequence": [{ 
+		 "api" : "sendto", "parameters" : []
+		},
+		{ 
+		 "api" : "recvfrom", "parameters" : []
+		},
+		{ 
+		 "api" : "sendto", "parameters" : []
+		},
+		{ 
+		 "api" : "select", "parameters" : []
+		}]
+},
+{
+"category": "Network",
+"tag" :  "Connect to remote communication",
+"api_sequence": [{ 
+		 "api" : "gethostbyname", "parameters" : []
+		},
+		{ 
+		 "api" : "connect", "parameters" : []
+		},
+		{ 
+		 "api" : "wsprintfA", "parameters" : []
+		}]
+},
+{
+"category": "Network",
+"tag" :  "Communicate with remote host",
+"api_sequence": [
+		{ 
+		 "api" : "send", "parameters" : []
+		},
+		{ 
+		 "api" : "recv", "parameters" : []
+		},
+		{ 
+		 "api" : "select", "parameters" : []
+		},
+		{ 
+		 "api" : "connect", "parameters" : []
+		}]
+},
+{
+"category": "Network",
+"tag" :  "Receive data from remote host",
+"api_sequence": [{ 
+		 "api" : "recv", "parameters" : []
+		},
+		{ 
+		 "api" : "select", "parameters" : []
+		},
+		{ 
+		 "api" : "recv", "parameters" : []
+		}]
+},
+
+{
+"category": "Network",
+"tag" :  "Download file from remote host",
+"api_sequence": [{ 
+		 "api" : "CreateFile",
+		 "parameters" : []
+		},
+		{ 
+		 "api" : "InternetReadFile",
+		 "parameters" : []
+		},
+		{ 
+		 "api" : "WriteFile",
+		 "parameters" : []
+		}]
+},
+{
+"category": "Network",
+"tag" :  "Perform an HTTP request",
+"api_sequence": [{ 
+		 "api" : "InternetOpen", "parameters" : []
+		},
+		{ 
+		 "api" : "InternetConnect", "parameters" : []
+		},
+		{ 
+		 "api" : "HttpOpenRequest", "parameters" : []
+		},
+		{ 
+		 "api" : "HttpSendRequest", "parameters" : []
+		}
+		]
+},
+{
+"category": "Network",
+"tag" :  "Perform a POST request",
+"api_sequence": [{ 
+		 "api" : "HttpOpenRequest", "parameters" : []
+		},
+		{ 
+		 "api" : "HttpSendRequest", "parameters" : []
+		},
+		{ 
+		 "api" : "HttpQueryInfo", "parameters" : []
+		},
+		{ 
+		 "api" : "InternetCloseHandle", "parameters" : []
+		}
+		]
+},
+{
+"category": "Registry",
+"tag" :  "Obtain a handle to a registry key",
+"api_sequence": [{ 
+		 "api" : "RegOpenKey",
+		 "parameters" : []
+		}]
+},
+{
+"category": "Registry",
+"tag" :  "Query value of a registry key",
+"api_sequence": [{ 
+		 "api" : "RegQueryValue",
+		 "parameters" : []
+		}]
+},
+{ 
+"category": "Registry",
+"tag" :  "Enumerate registry keys",
+"api_sequence": [{ 
+		 "api" : "RegEnumKey",
+		 "parameters" : []
+		}]
+},
+{ 
+"category": "Registry",
+"tag" :  "Delete registry Key",
+"api_sequence": [{ 
+		 "api" : "SHDeleteKey",
+		 "parameters" : []
+		}]
+},
+{ 
+"category": "Registry",
+"tag" :  "Delete registry Key",
+"api_sequence": [{ 
+		 "api" : "SHDeleteEmptyKey",
+		 "parameters" : []
+		}]
+},
+{ 
+"category": "Registry",
+"tag" :  "Delete registry key",
+"api_sequence": [{ 
+		 "api" : "RegDeleteKey",
+		 "parameters" : []
+		}]
+},
+{ 
+"category": "Registry",
+"tag" :  "Persist via start menu",
+"api_sequence": [{
+		 "api" : "RegCreateKey",
+		 "parameters" : [{"name": "lpSubKey", "value" : "\\ADMINISTRATOR\\START MENU\\PROGRAMS\\"}]
+		}]
+},
+{
+"category": "File system",
+"tag" :  "Obtain a file handle",
+"api_sequence": [{ 
+		 "api" : "CreateFile", "parameters" : []
+		}]
+},
+{ 
+"category": "File system",
+"tag" :  "Enumerate or list files inside a directory",  
+"api_sequence": [{
+		 "api" : "FindFirstFile", "parameters" : []		
+		},
+		{ 
+		 "api" : "FindNextFile", "parameters" : []
+		},
+		{ 
+		 "api" : "FindClose", "parameters" : []
+		}]
+},
+{ 
+"category": "File system",
+"tag" :  "Enumerate or list files inside a directory",  
+"api_sequence": [{
+		 "api" : "FindFirstFile", "parameters" : []		
+		},
+		{ 
+		 "api" : "PathMatchSpec", "parameters" : []
+		},
+		{ 
+		 "api" : "FindNextFile", "parameters" : []
+		}]
+},
+{ 
+"category": "Network",
+"tag" :  "enumerate network resources",  
+"api_sequence": [{
+		 "api" : "WNetOpenEnum", "parameters" : []		
+		},
+		{ 
+		 "api" : "WNetEnumResource", "parameters" : []
+		},
+		{ 
+		 "api" : "WNetCloseEnum", "parameters" : []
+		}]
+},
+{ 
+"category": "Network",
+"tag" :  "Enumerate network resources",  
+"api_sequence": [{
+		 "api" : "WNetOpenEnum", "parameters" : []		
+		},
+		{ 
+		 "api" : "GlobalAlloc", "parameters" : []
+		},
+		{ 
+		 "api" : "WNetEnumResource", "parameters" : []
+		}]
+},
+{
+"category": "File system",
+"tag" :  "Query logical drives",
+"api_sequence": [{ 
+		 "api" : "GetLogicalDrives",
+		 "parameters" : []
+		}]
+},
+{
+"category": "Configuration",
+"tag" :  "Query environment-variable",
+"api_sequence": [{ 
+		 "api" : "ExpandEnvironmentStrings",
+		 "parameters" : []
+		}]
+},
+
+{
+"category": "File system",
+"tag" :  "Query local drives",
+"api_sequence": [{ 
+		 "api" : "GetLogicalDriveStrings",
+		 "parameters" : []
+		},
+		{ 
+		 "api" : "QueryDosDevice",
+		 "parameters" : []
+		}]
+},
+{
+"category": "File system",
+"tag" :  "Query removable media",
+"api_sequence": [{ 
+		 "api" : "GetDriveType",
+		 "parameters" : []
+		},
+		{ 
+		 "api" : "GetVolumeInformation",
+		 "parameters" : []
+		}]
+},
+{
+"category": "File system",
+"tag" :  "Query free disk space",
+"api_sequence": [{ 
+		 "api" : "WNetOpenEnum",
+		 "parameters" : []
+		},
+		{ 
+		 "api" : "WNetEnumResource",
+		 "parameters" : []
+		},
+		{ 
+		 "api" : "GetDriveType",
+		 "parameters" : []
+		},
+		{ 
+		 "api" : "GetDiskFreeSpace",
+		 "parameters" : []
+		},
+		{ 
+		 "api" : "WNetCloseEnum",
+		 "parameters" : []
+		}]
+},
+{
+"category": "File system",
+"tag" :  "query free disk space",
+"api_sequence": [{ 
+		 "api" : "GetDriveType",
+		 "parameters" : []
+		},
+		{ 
+		 "api" : "GetDiskFreeSpace",
+		 "parameters" : []
+		}]
+},
+{
+"category": "File system",
+"tag" :  "Query windows folder",
+"api_sequence": [{ 
+		 "api" : "GetWindowsDirectory",
+		 "parameters" : []
+		}]
+},
+{
+"category": "Time",
+"tag" :  "Query local time",
+"api_sequence": [{ 
+		 "api" : "GetLocalTime",
+		 "parameters" : []
+		}]
+},
+{
+"category": "Time",
+"tag" :  "Query system (as file time)",
+"api_sequence": [{ 
+		 "api" : "GetSystemTimeAsFileTime",
+		 "parameters" : []
+		}]
+},
+{
+"category": "Time",
+"tag" :  "Query system time",
+"api_sequence": [{ 
+		 "api" : "GetSystemTime",
+		 "parameters" : []
+		}]
+},
+{
+"category": "Time",
+"tag" :  "Convert date and time",
+"api_sequence": [{ 
+		 "api" : "SystemTimeToFileTime",
+		 "parameters" : []
+		}]
+},
+{
+"category": "Time",
+"tag" :  "query time zone information",
+"api_sequence": [{ 
+		 "api" : "GetTimeZoneInformation",
+		 "parameters" : []
+		}]
+},
+{ 
+"category": "Reconaissance",
+"tag" :  "Query user name information",  
+"api_sequence": [
+		{"api" : "GetUserName", "parameters" : []
+		}]
+},
+{ 
+"category": "Reconaissance",
+"tag" :  "Query user interface language",  
+"api_sequence": [{
+		 "api" : "GetUserDefaultUILanguage", "parameters" : []		
+		}]
+},
+{ 
+"category": "Reconaissance",
+"tag" :  "Query system and version information",  
+"api_sequence": [{
+		 "api" : "GetVersion", "parameters" : []		
+		},
+
+		{"api" : "GetNativeSystemInfo", "parameters" : []
+		}]
+},
+{ 
+"category": "Configuration",
+"tag" :  "Query system information",  
+"api_sequence": [{
+		 "api" : "GetProcessHeap", "parameters" : []		
+		},
+		{
+		 "api" : "GetVersion", "parameters" : []		
+		},
+
+		{"api" : "GetCommandLine", "parameters" : []
+		}]
+},
+{ 
+"category": "Configuration",
+"tag" :  "determine the NetBios name",  
+"api_sequence": [{
+		 "api" : " GetComputerName", "parameters" : []		
+		}]
+},
+{ 
+"category": "Reconaissance",
+"tag" :  "Query Windows Version",  
+"api_sequence": [{
+		 "api" : "GetProcessHeap", "parameters" : []		
+		},
+{
+		 "api" : "HeapAlloc", "parameters" : []		
+		},
+
+		{"api" : "GetVersion", "parameters" : []
+		}]
+},
+{ 
+"category": "Execution",
+"tag" :  "Create a new desktop",  
+"api_sequence": [{
+		 "api" : "OpenDesktop", "parameters" : []		
+		},
+		{ 
+		 "api" : "CreateDesktop", "parameters" : []
+		}]
+},
+{ 
+"category": "Execution",
+"tag" :  "Modify clipboard data",  
+"api_sequence": [{
+		 "api" : "OpenClipboard", "parameters" : []		
+		},
+		{"api" : "SetClipboardData", "parameters" : []
+		},
+		{"api" : "CloseClipboard", "parameters" : []
+		}]
+},
+{
+"category": "Information Stealing",
+"tag" :  "Extract Clipboard data",
+"api_sequence": [{ 
+		 "api" : "GetClipboardData",
+		 "parameters" : []
+		}]
+},
+{
+"category": "Information Stealing",
+"tag" :  "Capture Mouse events",
+"api_sequence": [{ 
+		 "api" : "SetCapture",
+		 "parameters" : []
+		}]
+},
+{
+"category": "Information Stealing",
+"tag" :  "Make a screenshot",
+"api_sequence": [{ 
+		 "api" : "GetDC",
+		 "parameters" : []
+		},
+		{ 
+		 "api" : "PrintWindow",
+		 "parameters" : []
+		}]
+},
+{ 
+"category": "Execution",
+"tag" :  "Delete clipboard data",  
+"api_sequence": [{
+		 "api" : "OpenClipboard", "parameters" : []		
+		},
+		{"api" : "EmptyClipboard", "parameters" : []
+		},
+		{"api" : "GlobalAlloc", "parameters" : []
+		},
+		{"api" : "GlobalLock", "parameters" : []
+		},
+		{"api" : "SendMessage", "parameters" : []
+		},
+		{"api" : "GlobalUnlock", "parameters" : []
+		},
+		{"api" : "SetClipboardData", "parameters" : []
+		},
+		{"api" : "CloseClipboard", "parameters" : []
+		}]
+},
+{ 
+"category": "Network",
+"tag" :  "Listen on an port (backdoor)",  
+"api_sequence": [{
+		 "api" : "socket", "parameters" : []		
+		},
+		{"api" : "bind", "parameters" : []
+		},
+		{"api" : "listen", "parameters" : []
+		}]
+},
+{ 
+"category": "Network",
+"tag" :  "Check network availability",  
+"api_sequence": [{
+		 "api" : "socket", "parameters" : []		
+		},
+		{"api" : "bind", "parameters" : []
+		},
+		{"api" : "closesocket", "parameters" : []
+		}]
+},
+{
+"category": "Information Stealing",
+"tag" :  "Keylogger: Retrieve status of virtual keys",
+"api_sequence": [{ 
+		 "api" : "GetKeyboardState",
+		 "parameters" : []
+		}]
+},
+{
+"category": "Reconaissance",
+"tag" :  "Identify installed keyboard layouts",
+"api_sequence": [{ 
+		 "api" : "GetKeyboardLayoutList",
+		 "parameters" : []
+		}]
+},
+{
+"category": "Network",
+"tag" :  "Check for proxy settings",
+"api_sequence": [{ 
+		 "api" : "RegOpenKey",
+		 "parameters" : [{"name": "lpSubKey", "value" : "SOFTWARE\\MICROSOFT\\WINDOWS\\CURRENTVERSION\\INTERNET SETTINGS"}]
+		}]
+},
+{
+"category": "Network",
+"tag" :  "Read proxy settings",
+"api_sequence": [{ 
+		 "api" : "RegOpenKey",
+		 "parameters" : [{"name": "lpSubKey", "value" : "SOFTWARE\\MICROSOFT\\WINDOWS\\CURRENTVERSION\\INTERNET SETTINGS"}]
+		},
+		{ 
+		 "api" : "RegQueryValue",
+		 "parameters" : [{"name": "lpValueName", "value" : "PROXYSERVER"}]
+
+		},
+		{ 
+		 "api" : "RegQueryValue",
+		 "parameters" : [{"name": "lpValueName", "value" : "PROXYENABLE"}]
+
+		}]
+},
+{
+"category": "Network",
+"tag" :  "Read proxy settings",
+"api_sequence": [{ 
+		 "api" : "RegOpenKey",
+		  "parameters" : [{"name": "lpSubKey", "value" : "SOFTWARE\\MICROSOFT\\WINDOWS\\CURRENTVERSION\\INTERNET SETTINGS"}]
+		},
+		{ 
+		 "api" : "RegOpenKey",
+		 "parameters" : [{"name": "lpSubKey", "value" : "PROXYSERVER"}]
+		},
+		{ 
+		 "api" : "RegOpenKey",
+		 "parameters" : [{"name": "lpSubKey", "value" : "PROXYENABLE"}]
+		}]
+},
+{
+"category": "Network",
+"tag" :  "Read proxy settings",
+"api_sequence": [{ 
+		 "api" : "RegQueryValue",
+		 "parameters" : [{"name": "lpValueName", "value" : "SOFTWARE\\MICROSOFT\\WINDOWS\\CURRENTVERSION\\INTERNET SETTINGS"}]
+		},
+		{ 
+		 "api" : "RegQueryValue",
+		 "parameters" : [{"name": "lpValueName", "value" : "PROXYSERVER"}]
+		},
+		{ 
+		 "api" : "RegQueryValue",
+		 "parameters" : [{"name": "lpValueName", "value" : "PROXYENABLE"}]
+
+		}]
+},
+{
+"category": "Network",
+"tag" :  "Read proxy settings via WinInet library",
+"api_sequence": [{ 
+		 "api" : "InternetQueryOption",
+		 "parameters" : [{"name":"dwOption", "value" : "INTERNET_OPTION_PROXY"}]
+		}]
+},
+{
+"category": "Configuration",
+"tag" :  "Get Browser information via default browser registry setting",
+"api_sequence": [{ 
+		 "api" : "RegQueryValue",
+		 "parameters" : [{"name": "lpSubKey", "value" : "SOFTWARE\\CLASSES\\HTTP\\SHELL\\OPEN\\COMMAND"}]
+
+		}]
+},
+{
+"category": "Configuration",
+"tag" :  "Get Browser information (IE Registration)",
+"api_sequence": [{ 
+		 "api" : "RegOpenKey",
+		 "parameters" : [{"name": "lpSubKey", "value" : "SOFTWARE\\MICROSOFT\\INTERNET EXPLORER\\REGISTRATION"}]
+		}]
+},
+{
+"category": "Configuration",
+"tag" :  "Get Browser information via default browser registry setting",
+"api_sequence": [{ 
+		 "api" : "RegOpenKey",
+		 "parameters" : [{"name": "lpSubKey", "value" : "SOFTWARE\\CLASSES\\HTTP\\SHELL\\OPEN\\COMMAND"}]
+
+		}]
+},
+{ 
+"category": "Persistence",
+"tag" :  "Nest in registry run key",
+"api_sequence": [{
+		 "api" : "RegCreateKey",
+		 "parameters" : [{"name": "lpSubKey", "value" : "SOFTWARE\\MICROSOFT\\WINDOWS\\CURRENTVERSION\\RUN"}]
+		}]
+},
+{ 
+"category": "Anti-Analysis",
+"tag" :  "Check for ESET",
+"api_sequence": [{
+		 "api" : "RegCreateKey",
+		 "parameters" : [{"name": "lpSubKey", "value" : "SOFTWARE\\ESET\\ESET Security\\CurrentVersion\\Plugins\\01000600\\Profiles\\@My profile\\Excludes\\Node_00009999"}]
+		}]
+},
+
+{ 
+"category": "Anti-Analysis",
+"tag" :  "Check for WinSpy++ 1.5",
+"api_sequence": [{
+		 "api" : "RegCreateKey",
+		 "parameters" : [{"name": "lpSubKey",  "value" : "SOFTWARE\\CATCH22\\WINSPY++ 1.5"}]
+		}]
+},
+{ 
+"category": "Execution",
+"tag" :  "Enumerate processes",
+"api_sequence": [{
+		 "api" : "CreateToolhelp32Snapshot",
+		 "parameters" : []
+		},
+		{ 
+		 "api" : "Process32First",
+		 "parameters" : []
+		},
+		{ 
+		 "api" : "Process32Next",
+		 "parameters" : []
+		}]
+},
+{ 
+"category": "Memory",
+"tag" :  "copy data to memory", 
+"api_sequence": [{
+		 "api" : "VirtualAlloc",
+		 "parameters" : []
+		},
+		{ 
+		 "api" : "WriteProcessMemory",
+		 "parameters" : []
+		},
+		{ 
+		 "api" : "VirtualQuery",
+		 "parameters" : []
+		}]
+},
+{ 
+"category": "Execution",
+"tag" :  "Inject threads in other processes (RemoteThread)",
+"api_sequence": [{
+		 "api" : "OpenProcess","parameters" : []
+		},
+		{ 
+		 "api" : "GetProcAddress", "parameters" : []
+		},
+		{ 
+		 "api" : "VirtualAlloc", "parameters" : []
+		},
+		{ 
+		 "api" : "WriteProcessMemory","parameters" : []
+		},
+		{ 
+		 "api" : "CreateRemoteThread","parameters" : []
+		}]
+},
+{ 
+"category": "Execution",
+"tag" :  "Process injection (RemoteThread)",
+"api_sequence": [{
+		 "api" : "OpenProcess",
+		 "parameters" : []
+		},
+		{ 
+		 "api" : "WriteProcessMemory",
+		 "parameters" : []
+		},
+		{ 
+		 "api" : "CreateRemoteThread",
+		 "parameters" : []
+		}]
+},
+{ 
+"category": "Execution",
+"tag" :  "Process injection (ResumeThread)", 
+"api_sequence": [{
+		 "api" : "CreateProcess",
+		 "parameters" : []
+		},
+		{
+		 "api" : "VirtualAlloc",
+		 "parameters" : []
+		},
+		{ 
+		 "api" : "WriteProcessMemory",
+		 "parameters" : []
+		},
+		{ 
+		 "api" : "ResumeThread",
+		 "parameters" : []
+		}]
+},
+{ 
+"category": "Execution",
+"tag" :  "Process injection (APC)",  
+"api_sequence": [{
+		"api" : "CreateProcess", "parameters" : []		
+		},
+		{"api" : "MapViewOfFile", "parameters" : []
+		},
+		{"api" : "NtQueueApcThread", "parameters" : []
+		},
+		{"api" : "NtResumeThread", "parameters" : []
+		}]
+},
+{ 
+"category": "Privileges",
+"tag" :  "Privilege escalation",  
+"api_sequence": [{
+		 "api" : "GetCurrentProcess", "parameters" : []		
+		},
+
+		{"api" : "LookupPrivilegeValue", "parameters" : []
+		},
+
+		{"api" : "AdjustTokenPrivileges", "parameters" : []
+		}]
+},
+{ 
+"category": "Privileges",
+"tag" :  "Privilege escalation",  
+"api_sequence": [{
+		 "api" : "OpenProcessToken", "parameters" : []		
+		},
+
+		{"api" : "LookupPrivilegeValue", "parameters" : []
+		},
+
+		{"api" : "AdjustTokenPrivileges", "parameters" : []
+		}]
+},
+{ 
+"category": "Privileges",
+"tag" :  "Adjust privileges of service",  
+"api_sequence": [{
+		 "api" : "OpenService", "parameters" : []		
+		},
+		{ 
+		 "api" : "QueryServiceStatus", "parameters" : []
+		},
+		{ 
+		 "api" : "WaitForSingleObject", "parameters" : []
+		},
+		{ 
+		 "api" : "QueryServiceStatus", "parameters" : []
+		},
+		{ 
+		 "api" : "AdjustTokenPrivileges", "parameters" : []
+		}]
+},
+{ 
+"category": "Execution",
+"tag" :  "Adjust token privileges",  
+"api_sequence": [{
+		 "api" : "OpenThreadToken", "parameters" : []		
+		},
+		{ 
+		 "api" : "LookupPrivilegeValue", "parameters" : []
+		},
+		{ 
+		 "api" : "AdjustTokenPrivileges", "parameters" : []
+		}]
+},
+{ 
+"category": "File system",
+"tag" :  "Check free disk space",  
+"api_sequence": [{
+		 "api" : "GetWindowsDirectory", "parameters" : []		
+		},
+		{"api" : "GetVolumeInformation", "parameters" : []
+		},
+		{"api" : "DiskFreeSpace", "parameters" : []
+		}]
+},
+{ 
+"category": "Imports",
+"tag" :  "Dynamic import loading",  
+"api_sequence": [{
+		 "api" : "LoadLibrary", "parameters" : []		
+		},
+		{ 
+		 "api" : "GetProcAddress", "parameters" : []
+		},
+		{ 
+		 "api" : "FreeLibrary", "parameters" : []
+		}]
+},
+{ 
+"category": "Imports",
+"tag" :  "Dynamic import loading",  
+"api_sequence": [{
+		 "api" : "GetModuleHandle", "parameters" : []		
+		},
+		{ 
+		 "api" : "LoadLibrary", "parameters" : []
+		},
+		{ 
+		 "api" : "GetProcAddress", "parameters" : []
+		}]
+},
+{ 
+"category": "Configuration",
+"tag" :  "Obtain system specifications",  
+"api_sequence": [{
+		 "api" : "GetWindowsDirectory", "parameters" : []		
+		},
+		{ 
+		 "api" : "GetDriveType", "parameters" : []
+		},
+		{ 
+		 "api" : "GetVolumeInformation", "parameters" : []
+		},
+		{ 
+		 "api" : "GetComputerName", "parameters" : []
+		},
+		{ "api" : "DiskFreeSpace", "parameters" : [] }]
+},
+{ 
+"category": "Configuration",
+"tag" :  "Retrieve information via native interface",  
+"api_sequence": [{
+		 "api" : "GetModuleHandle", "parameters" : []		
+		},
+		{ 
+		 "api" : "HeapAlloc", "parameters" : []
+		},
+		{ 
+		 "api" : "NtQuerySystemInformation", "parameters" : []
+		}]
+},
+{ 
+"category": "Execution",
+"tag" :  "Launch a process as a different user",  
+"api_sequence": [{
+		 "api" : "LoadLibrary", "parameters" : []		
+		},
+		{ 
+		 "api" : "GetProcAddress", "parameters" : []
+		},
+		{ 
+		 "api" : "CreateProcessAsUser", "parameters" : []
+		},
+		{ 
+		 "api" : "CloseHandle", "parameters" : []
+		}]
+},
+{ 
+"category": "Privileges",
+"tag" :  "Modify a security descriptor",  
+"api_sequence": [{
+		 "api" : "ConvertStringSecurityDescriptorToSecurityDescriptor", "parameters" : []		
+		},
+		{ 
+		 "api" : "GetSecurityDescriptorSacl", "parameters" : []
+		},
+		{ 
+		 "api" : "SetSecurityInfo", "parameters" : []
+		}]
+},
+{ 
+"category": "Execution",
+"tag" :  "Check for active session (i.e. if someone is logged in)",  
+"api_sequence": [
+		{ 
+		 "api" : "WTSGetActiveConsoleSessionId", "parameters" : []
+		}]
+},
+{ 
+"category": "Execution",
+"tag" :  "Check for attached Remote Desktop",  
+"api_sequence": [{ 
+		 "api" : "WTSGetActiveConsoleSessionId", "parameters" : []
+		},
+		{ 
+		 "api" : "GetFileAttributes", "parameters" : []
+		}]
+},
+{ 
+"category": "Privileges",
+"tag" :  "Modify ACL of a security descriptor",  
+"api_sequence": [{ 
+		 "api" : "GetSecurityDescriptorSacl", "parameters" : []
+		},
+		{ 
+		 "api" : "SetSecurityDescriptorSacl", "parameters" : []
+		}]
+},
+{ 
+"category": "Privileges",
+"tag" :  "Modify ACL of a security descriptor",  
+"api_sequence": [{
+		 "api" : "InitializeSecurityDescriptor", "parameters" : []		
+		},
+		{ 
+		 "api" : "SetSecurityDescriptorDacl", "parameters" : []
+		},
+		{ 
+		 "api" : "ConvertStringSecurityDescriptorToSecurityDescriptor", "parameters" : []
+		},
+		{ 
+		 "api" : "GetSecurityDescriptorSacl", "parameters" : []
+		},
+		{ 
+		 "api" : "SetSecurityDescriptorSacl", "parameters" : []
+		}]
+},
+{ 
+"category": "Execution",
+"tag" :  "Shutdown system",  
+"api_sequence": [{ 
+		 "api" : "InitiateSystemShutdown", "parameters" : []
+		}]
+},
+{ 
+"category": "Execution",
+"tag" :  "Modify the current session (log off, reboot, ...)",   
+"api_sequence": [{ 
+		 "api" : "ExitWindows", "parameters" : []
+		}]
+},
+{ 
+"category": "Execution",
+"tag" :  "Load DLL through native calls",  
+"api_sequence": [{
+		 "api" : "LdrLoadDll", "parameters" : []		
+		},
+		{ 
+		 "api" : "LdrGetDllHandle", "parameters" : []
+		}]
+},
+{ 
+"category": "Execution",
+"tag" :  "Access native DLL loader functionality",  
+"api_sequence": [{
+		 "api" : "GetProcAddress", "parameters" : [{"name":"lpProcName", "value" : "LdrLoadDll"}]	
+		}]
+},
+{
+"category": "Configuration",
+"tag" :  "Load data from resource section",
+"api_sequence": [
+		{ 
+		 "api" : "FindResource", "parameters" : []
+		},
+		{ 
+		 "api" : "LoadResource", "parameters" : []
+		}]
+},
+{
+"category": "COM",
+"tag" :  "Initialize COM object",
+"api_sequence": [
+		{ 
+		 "api" : "CoCreateInstance", "parameters" : []
+		}]
+}
+]

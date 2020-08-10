@@ -1,0 +1,5946 @@
+[
+  {
+    "category": "Execution", 
+    "tag": "Check / wait for mutex", 
+    "hit": {
+      "start_addr": 4272620, 
+      "apis": [
+        {
+          "api_name": "CreateMutex", 
+          "addr": 4272620, 
+          "arguments": [
+            {
+              "arg_type": "LPSECURITY_ATTRIBUTES", 
+              "arg_value": "offset MutexAttributes", 
+              "arg_name": "lpMutexAttributes"
+            }, 
+            {
+              "arg_type": "BOOL", 
+              "arg_value": "1", 
+              "arg_name": "bInitialOwner"
+            }, 
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "sub_412757", 
+              "arg_name": "lpName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "WaitForSingleObject", 
+          "addr": 4319009, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "base:ebx", 
+              "arg_name": "hHandle"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "2710h", 
+              "arg_name": "dwMilliseconds"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Execution", 
+    "tag": "Check / wait for mutex", 
+    "hit": {
+      "start_addr": 4266704, 
+      "apis": [
+        {
+          "api_name": "CreateMutex", 
+          "addr": 4266704, 
+          "arguments": [
+            {
+              "arg_type": "LPSECURITY_ATTRIBUTES", 
+              "arg_value": "offset MutexAttributes", 
+              "arg_name": "lpMutexAttributes"
+            }, 
+            {
+              "arg_type": "BOOL", 
+              "arg_value": "dest:edi", 
+              "arg_name": "bInitialOwner"
+            }, 
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "source:offset word_433F50", 
+              "arg_name": "lpName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "WaitForSingleObject", 
+          "addr": 4381914, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "esi", 
+              "arg_name": "hHandle"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "0FFFFFFFFh", 
+              "arg_name": "dwMilliseconds"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Execution", 
+    "tag": "Check / wait for mutex", 
+    "hit": {
+      "start_addr": 4242016, 
+      "apis": [
+        {
+          "api_name": "CreateMutex", 
+          "addr": 4242016, 
+          "arguments": [
+            {
+              "arg_type": "LPSECURITY_ATTRIBUTES", 
+              "arg_value": "offset MutexAttributes", 
+              "arg_name": "lpMutexAttributes"
+            }, 
+            {
+              "arg_type": "BOOL", 
+              "arg_value": "base:esp", 
+              "arg_name": "bInitialOwner"
+            }, 
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "sub_412757", 
+              "arg_name": "lpName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "WaitForSingleObject", 
+          "addr": 4381914, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "esi", 
+              "arg_name": "hHandle"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "0FFFFFFFFh", 
+              "arg_name": "dwMilliseconds"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Execution", 
+    "tag": "Check / wait for mutex", 
+    "hit": {
+      "start_addr": 4255918, 
+      "apis": [
+        {
+          "api_name": "CreateMutex", 
+          "addr": 4255918, 
+          "arguments": [
+            {
+              "arg_type": "LPSECURITY_ATTRIBUTES", 
+              "arg_value": "offset MutexAttributes", 
+              "arg_name": "lpMutexAttributes"
+            }, 
+            {
+              "arg_type": "BOOL", 
+              "arg_value": "0", 
+              "arg_name": "bInitialOwner"
+            }, 
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "source:offset Name", 
+              "arg_name": "lpName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "WaitForSingleObject", 
+          "addr": 4381914, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "esi", 
+              "arg_name": "hHandle"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "0FFFFFFFFh", 
+              "arg_name": "dwMilliseconds"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Execution", 
+    "tag": "Check / wait for mutex", 
+    "hit": {
+      "start_addr": 4270000, 
+      "apis": [
+        {
+          "api_name": "CreateMutex", 
+          "addr": 4270000, 
+          "arguments": [
+            {
+              "arg_type": "LPSECURITY_ATTRIBUTES", 
+              "arg_value": "offset MutexAttributes", 
+              "arg_name": "lpMutexAttributes"
+            }, 
+            {
+              "arg_type": "BOOL", 
+              "arg_value": "0", 
+              "arg_name": "bInitialOwner"
+            }, 
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "sub_412757", 
+              "arg_name": "lpName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "WaitForSingleObject", 
+          "addr": 4381914, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "esi", 
+              "arg_name": "hHandle"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "0FFFFFFFFh", 
+              "arg_name": "dwMilliseconds"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Execution", 
+    "tag": "Check / wait for mutex", 
+    "hit": {
+      "start_addr": 4235664, 
+      "apis": [
+        {
+          "api_name": "CreateMutex", 
+          "addr": 4235664, 
+          "arguments": [
+            {
+              "arg_type": "LPSECURITY_ATTRIBUTES", 
+              "arg_value": "offset MutexAttributes", 
+              "arg_name": "lpMutexAttributes"
+            }, 
+            {
+              "arg_type": "BOOL", 
+              "arg_value": "1", 
+              "arg_name": "bInitialOwner"
+            }, 
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "sub_429E69", 
+              "arg_name": "lpName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "WaitForSingleObject", 
+          "addr": 4235861, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "hHandle", 
+              "arg_name": "hHandle"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "0EA60h", 
+              "arg_name": "dwMilliseconds"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Execution", 
+    "tag": "Check existence of Mutex", 
+    "hit": {
+      "start_addr": 4382102, 
+      "apis": [
+        {
+          "api_name": "OpenMutex", 
+          "addr": 4382102, 
+          "arguments": [
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "100000h", 
+              "arg_name": "dwDesiredAccess"
+            }, 
+            {
+              "arg_type": "BOOL", 
+              "arg_value": "0", 
+              "arg_name": "bInheritHandle"
+            }, 
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "[esp+lpName]", 
+              "arg_name": "lpName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "CloseHandle", 
+          "addr": 4382113, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "ds:OpenMutexW", 
+              "arg_name": "hObject"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Cryptography", 
+    "tag": "Access the windows certificate store", 
+    "hit": {
+      "start_addr": 4267356, 
+      "apis": [
+        {
+          "api_name": "CertOpenSystemStore", 
+          "addr": 4267356, 
+          "arguments": [
+            {
+              "arg_type": "HCRYPTPROV_LEGACY", 
+              "arg_value": "0", 
+              "arg_name": "hProv"
+            }, 
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "offset szSubsystemProtocol", 
+              "arg_name": "szSubsystemProtocol"
+            }
+          ]
+        }, 
+        {
+          "api_name": "CertEnumCertificatesInStore", 
+          "addr": 4267400, 
+          "arguments": [
+            {
+              "arg_type": "HCERTSTORE", 
+              "arg_value": "dest:eax", 
+              "arg_name": "hCertStore"
+            }, 
+            {
+              "arg_type": "PCCERT_CONTEXT", 
+              "arg_value": "esi", 
+              "arg_name": "pPrevCertContext"
+            }
+          ]
+        }, 
+        {
+          "api_name": "CertCloseStore", 
+          "addr": 4267412, 
+          "arguments": [
+            {
+              "arg_type": "HCERTSTORE", 
+              "arg_value": "dest:eax", 
+              "arg_name": "hCertStore"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "ebp", 
+              "arg_name": "dwFlags"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Cryptography", 
+    "tag": "Access the windows certificate store", 
+    "hit": {
+      "start_addr": 4266999, 
+      "apis": [
+        {
+          "api_name": "CertOpenSystemStore", 
+          "addr": 4266999, 
+          "arguments": [
+            {
+              "arg_type": "HCRYPTPROV_LEGACY", 
+              "arg_value": "base:esp", 
+              "arg_name": "hProv"
+            }, 
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "offset szSubsystemProtocol", 
+              "arg_name": "szSubsystemProtocol"
+            }
+          ]
+        }, 
+        {
+          "api_name": "CertEnumCertificatesInStore", 
+          "addr": 4267027, 
+          "arguments": [
+            {
+              "arg_type": "HCERTSTORE", 
+              "arg_value": "ds:CertOpenSystemStoreW", 
+              "arg_name": "hCertStore"
+            }, 
+            {
+              "arg_type": "PCCERT_CONTEXT", 
+              "arg_value": "base:esp", 
+              "arg_name": "pPrevCertContext"
+            }
+          ]
+        }, 
+        {
+          "api_name": "CertCloseStore", 
+          "addr": 4267328, 
+          "arguments": [
+            {
+              "arg_type": "HCERTSTORE", 
+              "arg_value": "[esp+384h+hCertStore]", 
+              "arg_name": "hCertStore"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "base:esp", 
+              "arg_name": "dwFlags"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Network", 
+    "tag": "Enable remote communication", 
+    "hit": {
+      "start_addr": 4238877, 
+      "apis": [
+        {
+          "api_name": "getaddrinfo", 
+          "addr": 4238877, 
+          "arguments": [
+            {
+              "arg_type": "PCSTR", 
+              "arg_value": "sub_42D395", 
+              "arg_name": "pNodeName"
+            }, 
+            {
+              "arg_type": "PCSTR", 
+              "arg_value": "base:esp", 
+              "arg_name": "pServiceName"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "base:esp", 
+              "arg_name": "pHints"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "sub_42D395", 
+              "arg_name": "ppResult"
+            }
+          ]
+        }, 
+        {
+          "api_name": "getsockname", 
+          "addr": 4239159, 
+          "arguments": [
+            {
+              "arg_type": "SOCKET", 
+              "arg_value": "[ebp+addrlen]", 
+              "arg_name": "s"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "sub_429085", 
+              "arg_name": "name"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "sub_429085", 
+              "arg_name": "namelen"
+            }
+          ]
+        }, 
+        {
+          "api_name": "getpeername", 
+          "addr": 4238221, 
+          "arguments": [
+            {
+              "arg_type": "SOCKET", 
+              "arg_value": "[ebp+s]", 
+              "arg_name": "s"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "accumulator:eax", 
+              "arg_name": "name"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "accumulator:eax", 
+              "arg_name": "namelen"
+            }
+          ]
+        }, 
+        {
+          "api_name": "recv", 
+          "addr": 4379530, 
+          "arguments": [
+            {
+              "arg_type": "SOCKET", 
+              "arg_value": "base:esp", 
+              "arg_name": "s"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "[ebp+buf]", 
+              "arg_name": "buf"
+            }, 
+            {
+              "arg_type": "int", 
+              "arg_value": "[ebp+len]", 
+              "arg_name": "len"
+            }, 
+            {
+              "arg_type": "int", 
+              "arg_value": "source:3E8h", 
+              "arg_name": "flags"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Network", 
+    "tag": "Enable remote communication", 
+    "hit": {
+      "start_addr": 4241037, 
+      "apis": [
+        {
+          "api_name": "getaddrinfo", 
+          "addr": 4241037, 
+          "arguments": [
+            {
+              "arg_type": "PCSTR", 
+              "arg_value": "sub_42D395", 
+              "arg_name": "pNodeName"
+            }, 
+            {
+              "arg_type": "PCSTR", 
+              "arg_value": "dest:edi", 
+              "arg_name": "pServiceName"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "dest:edi", 
+              "arg_name": "pHints"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "sub_42D395", 
+              "arg_name": "ppResult"
+            }
+          ]
+        }, 
+        {
+          "api_name": "getsockname", 
+          "addr": 4240763, 
+          "arguments": [
+            {
+              "arg_type": "SOCKET", 
+              "arg_value": "[ebp+s]", 
+              "arg_name": "s"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "accumulator:eax", 
+              "arg_name": "name"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "accumulator:eax", 
+              "arg_name": "namelen"
+            }
+          ]
+        }, 
+        {
+          "api_name": "getpeername", 
+          "addr": 4240748, 
+          "arguments": [
+            {
+              "arg_type": "SOCKET", 
+              "arg_value": "[ebp+s]", 
+              "arg_name": "s"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "accumulator:eax", 
+              "arg_name": "name"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "accumulator:eax", 
+              "arg_name": "namelen"
+            }
+          ]
+        }, 
+        {
+          "api_name": "recv", 
+          "addr": 4380512, 
+          "arguments": [
+            {
+              "arg_type": "SOCKET", 
+              "arg_value": "accumulator:[ebp+74h+var_4]", 
+              "arg_name": "s"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "counter:[ebp+74h+arg_0]", 
+              "arg_name": "buf"
+            }, 
+            {
+              "arg_type": "int", 
+              "arg_value": "400h", 
+              "arg_name": "len"
+            }, 
+            {
+              "arg_type": "int", 
+              "arg_value": "source:esi", 
+              "arg_name": "flags"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Network", 
+    "tag": "Receive data from remote host", 
+    "hit": {
+      "start_addr": 4239445, 
+      "apis": [
+        {
+          "api_name": "recv", 
+          "addr": 4239445, 
+          "arguments": [
+            {
+              "arg_type": "SOCKET", 
+              "arg_value": "None:eax", 
+              "arg_name": "s"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "dest:[ebp+addrlen]", 
+              "arg_name": "buf"
+            }, 
+            {
+              "arg_type": "int", 
+              "arg_value": "0FFFFh", 
+              "arg_name": "len"
+            }, 
+            {
+              "arg_type": "int", 
+              "arg_value": "base:esp", 
+              "arg_name": "flags"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "sub_42D2FF", 
+              "arg_name": "from"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "sub_42D2FF", 
+              "arg_name": "fromlen"
+            }
+          ]
+        }, 
+        {
+          "api_name": "select", 
+          "addr": 4240345, 
+          "arguments": [
+            {
+              "arg_type": "int", 
+              "arg_value": "base:esp", 
+              "arg_name": "nfds"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "ds:sendto", 
+              "arg_name": "readfds"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "base:esp", 
+              "arg_name": "writefds"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "base:esp", 
+              "arg_name": "exceptfds"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "base:esp", 
+              "arg_name": "timeout"
+            }
+          ]
+        }, 
+        {
+          "api_name": "recv", 
+          "addr": 4240152, 
+          "arguments": [
+            {
+              "arg_type": "SOCKET", 
+              "arg_value": "None:[ebp+var_18]", 
+              "arg_name": "s"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "sub_42D2FF", 
+              "arg_name": "buf"
+            }, 
+            {
+              "arg_type": "int", 
+              "arg_value": "sub_42D2FF", 
+              "arg_name": "len"
+            }, 
+            {
+              "arg_type": "int", 
+              "arg_value": "base:esp", 
+              "arg_name": "flags"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "sub_42D2FF", 
+              "arg_name": "from"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "sub_42D2FF", 
+              "arg_name": "fromlen"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Network", 
+    "tag": "Receive data from remote host", 
+    "hit": {
+      "start_addr": 4240152, 
+      "apis": [
+        {
+          "api_name": "recv", 
+          "addr": 4240152, 
+          "arguments": [
+            {
+              "arg_type": "SOCKET", 
+              "arg_value": "None:[ebp+var_18]", 
+              "arg_name": "s"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "sub_42D2FF", 
+              "arg_name": "buf"
+            }, 
+            {
+              "arg_type": "int", 
+              "arg_value": "sub_42D2FF", 
+              "arg_name": "len"
+            }, 
+            {
+              "arg_type": "int", 
+              "arg_value": "base:esp", 
+              "arg_name": "flags"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "sub_42D2FF", 
+              "arg_name": "from"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "sub_42D2FF", 
+              "arg_name": "fromlen"
+            }
+          ]
+        }, 
+        {
+          "api_name": "select", 
+          "addr": 4240345, 
+          "arguments": [
+            {
+              "arg_type": "int", 
+              "arg_value": "base:esp", 
+              "arg_name": "nfds"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "ds:sendto", 
+              "arg_name": "readfds"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "base:esp", 
+              "arg_name": "writefds"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "base:esp", 
+              "arg_name": "exceptfds"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "base:esp", 
+              "arg_name": "timeout"
+            }
+          ]
+        }, 
+        {
+          "api_name": "recv", 
+          "addr": 4239381, 
+          "arguments": [
+            {
+              "arg_type": "SOCKET", 
+              "arg_value": "[ebp+addrlen]", 
+              "arg_name": "s"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "dest:[ebp+addrlen]", 
+              "arg_name": "buf"
+            }, 
+            {
+              "arg_type": "int", 
+              "arg_value": "0FFFFh", 
+              "arg_name": "len"
+            }, 
+            {
+              "arg_type": "int", 
+              "arg_value": "base:esp", 
+              "arg_name": "flags"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Network", 
+    "tag": "Receive data from remote host", 
+    "hit": {
+      "start_addr": 4379577, 
+      "apis": [
+        {
+          "api_name": "recv", 
+          "addr": 4379577, 
+          "arguments": [
+            {
+              "arg_type": "SOCKET", 
+              "arg_value": "base:esp", 
+              "arg_name": "s"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "[ebp+buf]", 
+              "arg_name": "buf"
+            }, 
+            {
+              "arg_type": "int", 
+              "arg_value": "source:eax", 
+              "arg_name": "len"
+            }, 
+            {
+              "arg_type": "int", 
+              "arg_value": "0", 
+              "arg_name": "flags"
+            }
+          ]
+        }, 
+        {
+          "api_name": "select", 
+          "addr": 4379506, 
+          "arguments": [
+            {
+              "arg_type": "int", 
+              "arg_value": "source:3E8h", 
+              "arg_name": "nfds"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "accumulator:ecx", 
+              "arg_name": "readfds"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "source:3E8h", 
+              "arg_name": "writefds"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "source:3E8h", 
+              "arg_name": "exceptfds"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "counter:ecx", 
+              "arg_name": "timeout"
+            }
+          ]
+        }, 
+        {
+          "api_name": "recv", 
+          "addr": 4379530, 
+          "arguments": [
+            {
+              "arg_type": "SOCKET", 
+              "arg_value": "base:esp", 
+              "arg_name": "s"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "[ebp+buf]", 
+              "arg_name": "buf"
+            }, 
+            {
+              "arg_type": "int", 
+              "arg_value": "[ebp+len]", 
+              "arg_name": "len"
+            }, 
+            {
+              "arg_type": "int", 
+              "arg_value": "source:3E8h", 
+              "arg_name": "flags"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Network", 
+    "tag": "Receive data from remote host", 
+    "hit": {
+      "start_addr": 4315487, 
+      "apis": [
+        {
+          "api_name": "recv", 
+          "addr": 4315487, 
+          "arguments": [
+            {
+              "arg_type": "SOCKET", 
+              "arg_value": "source:[ebp+s]", 
+              "arg_name": "s"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "accumulator:eax", 
+              "arg_name": "buf"
+            }, 
+            {
+              "arg_type": "int", 
+              "arg_value": "dest:edi", 
+              "arg_name": "len"
+            }, 
+            {
+              "arg_type": "int", 
+              "arg_value": "base:esp", 
+              "arg_name": "flags"
+            }
+          ]
+        }, 
+        {
+          "api_name": "select", 
+          "addr": 4240345, 
+          "arguments": [
+            {
+              "arg_type": "int", 
+              "arg_value": "base:esp", 
+              "arg_name": "nfds"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "ds:sendto", 
+              "arg_name": "readfds"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "base:esp", 
+              "arg_name": "writefds"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "base:esp", 
+              "arg_name": "exceptfds"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "base:esp", 
+              "arg_name": "timeout"
+            }
+          ]
+        }, 
+        {
+          "api_name": "recv", 
+          "addr": 4379530, 
+          "arguments": [
+            {
+              "arg_type": "SOCKET", 
+              "arg_value": "base:esp", 
+              "arg_name": "s"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "[ebp+buf]", 
+              "arg_name": "buf"
+            }, 
+            {
+              "arg_type": "int", 
+              "arg_value": "[ebp+len]", 
+              "arg_name": "len"
+            }, 
+            {
+              "arg_type": "int", 
+              "arg_value": "source:3E8h", 
+              "arg_name": "flags"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Network", 
+    "tag": "Receive data from remote host", 
+    "hit": {
+      "start_addr": 4239381, 
+      "apis": [
+        {
+          "api_name": "recv", 
+          "addr": 4239381, 
+          "arguments": [
+            {
+              "arg_type": "SOCKET", 
+              "arg_value": "[ebp+addrlen]", 
+              "arg_name": "s"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "dest:[ebp+addrlen]", 
+              "arg_name": "buf"
+            }, 
+            {
+              "arg_type": "int", 
+              "arg_value": "0FFFFh", 
+              "arg_name": "len"
+            }, 
+            {
+              "arg_type": "int", 
+              "arg_value": "base:esp", 
+              "arg_name": "flags"
+            }
+          ]
+        }, 
+        {
+          "api_name": "select", 
+          "addr": 4240345, 
+          "arguments": [
+            {
+              "arg_type": "int", 
+              "arg_value": "base:esp", 
+              "arg_name": "nfds"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "ds:sendto", 
+              "arg_name": "readfds"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "base:esp", 
+              "arg_name": "writefds"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "base:esp", 
+              "arg_name": "exceptfds"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "base:esp", 
+              "arg_name": "timeout"
+            }
+          ]
+        }, 
+        {
+          "api_name": "recv", 
+          "addr": 4240152, 
+          "arguments": [
+            {
+              "arg_type": "SOCKET", 
+              "arg_value": "None:[ebp+var_18]", 
+              "arg_name": "s"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "sub_42D2FF", 
+              "arg_name": "buf"
+            }, 
+            {
+              "arg_type": "int", 
+              "arg_value": "sub_42D2FF", 
+              "arg_name": "len"
+            }, 
+            {
+              "arg_type": "int", 
+              "arg_value": "base:esp", 
+              "arg_name": "flags"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "sub_42D2FF", 
+              "arg_name": "from"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "sub_42D2FF", 
+              "arg_name": "fromlen"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Network", 
+    "tag": "Download file from remote host", 
+    "hit": {
+      "start_addr": 4375053, 
+      "apis": [
+        {
+          "api_name": "CreateFile", 
+          "addr": 4375053, 
+          "arguments": [
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "[ebp+lpFileName]", 
+              "arg_name": "lpFileName"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "40000000h", 
+              "arg_name": "dwDesiredAccess"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "1", 
+              "arg_name": "dwShareMode"
+            }, 
+            {
+              "arg_type": "LPSECURITY_ATTRIBUTES", 
+              "arg_value": "base:esp", 
+              "arg_name": "lpSecurityAttributes"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "2", 
+              "arg_name": "dwCreationDisposition"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "80h", 
+              "arg_name": "dwFlagsAndAttributes"
+            }, 
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "base:esp", 
+              "arg_name": "hTemplateFile"
+            }
+          ]
+        }, 
+        {
+          "api_name": "InternetReadFile", 
+          "addr": 4375127, 
+          "arguments": [
+            {
+              "arg_type": "HINTERNET", 
+              "arg_value": "[ebp+hFile]", 
+              "arg_name": "hFile"
+            }, 
+            {
+              "arg_type": "LPVOID", 
+              "arg_value": "None:eax", 
+              "arg_name": "lpBuffer"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "1000h", 
+              "arg_name": "dwNumberOfBytesToRead"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "ds:WaitForSingleObject", 
+              "arg_name": "lpdwNumberOfBytesRead"
+            }
+          ]
+        }, 
+        {
+          "api_name": "WriteFile", 
+          "addr": 4375154, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "dest:eax", 
+              "arg_name": "hFile"
+            }, 
+            {
+              "arg_type": "LPCVOID", 
+              "arg_value": "None:eax", 
+              "arg_name": "lpBuffer"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "[ebp+nNumberOfBytesToWrite]", 
+              "arg_name": "nNumberOfBytesToWrite"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "ds:InternetReadFile", 
+              "arg_name": "lpNumberOfBytesWritten"
+            }, 
+            {
+              "arg_type": "LPOVERLAPPED", 
+              "arg_value": "base:esp", 
+              "arg_name": "lpOverlapped"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Registry", 
+    "tag": "Obtain a handle to a registry key", 
+    "hit": {
+      "start_addr": 4338748, 
+      "apis": [
+        {
+          "api_name": "RegOpenKey", 
+          "addr": 4338748, 
+          "arguments": [
+            {
+              "arg_type": "HKEY", 
+              "arg_value": "80000001h", 
+              "arg_name": "hKey"
+            }, 
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "[ebp+eax*4+lpSubKey]", 
+              "arg_name": "lpSubKey"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "dest:edi", 
+              "arg_name": "ulOptions"
+            }, 
+            {
+              "arg_type": "REGSAM", 
+              "arg_value": "8", 
+              "arg_name": "samDesired"
+            }, 
+            {
+              "arg_type": "PHKEY", 
+              "arg_value": "decryptString", 
+              "arg_name": "phkResult"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Registry", 
+    "tag": "Obtain a handle to a registry key", 
+    "hit": {
+      "start_addr": 4339577, 
+      "apis": [
+        {
+          "api_name": "RegOpenKey", 
+          "addr": 4339577, 
+          "arguments": [
+            {
+              "arg_type": "HKEY", 
+              "arg_value": "[ebp+eax*4+hKey]", 
+              "arg_name": "hKey"
+            }, 
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "decryptString", 
+              "arg_name": "lpSubKey"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "dest:edi", 
+              "arg_name": "ulOptions"
+            }, 
+            {
+              "arg_type": "REGSAM", 
+              "arg_value": "8", 
+              "arg_name": "samDesired"
+            }, 
+            {
+              "arg_type": "PHKEY", 
+              "arg_value": "decryptString", 
+              "arg_name": "phkResult"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Registry", 
+    "tag": "Obtain a handle to a registry key", 
+    "hit": {
+      "start_addr": 4384670, 
+      "apis": [
+        {
+          "api_name": "RegOpenKey", 
+          "addr": 4384670, 
+          "arguments": [
+            {
+              "arg_type": "HKEY", 
+              "arg_value": "eax", 
+              "arg_name": "hKey"
+            }, 
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "[ebp+Type]", 
+              "arg_name": "lpSubKey"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "0", 
+              "arg_name": "ulOptions"
+            }, 
+            {
+              "arg_type": "REGSAM", 
+              "arg_value": "1", 
+              "arg_name": "samDesired"
+            }, 
+            {
+              "arg_type": "PHKEY", 
+              "arg_value": "counter:ecx", 
+              "arg_name": "phkResult"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Registry", 
+    "tag": "Obtain a handle to a registry key", 
+    "hit": {
+      "start_addr": 4245815, 
+      "apis": [
+        {
+          "api_name": "RegOpenKey", 
+          "addr": 4245815, 
+          "arguments": [
+            {
+              "arg_type": "HKEY", 
+              "arg_value": "sub_4293ED", 
+              "arg_name": "hKey"
+            }, 
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "counter:ecx", 
+              "arg_name": "lpSubKey"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "0", 
+              "arg_name": "ulOptions"
+            }, 
+            {
+              "arg_type": "REGSAM", 
+              "arg_value": "1", 
+              "arg_name": "samDesired"
+            }, 
+            {
+              "arg_type": "PHKEY", 
+              "arg_value": "counter:ecx", 
+              "arg_name": "phkResult"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Registry", 
+    "tag": "Obtain a handle to a registry key", 
+    "hit": {
+      "start_addr": 4340973, 
+      "apis": [
+        {
+          "api_name": "RegOpenKey", 
+          "addr": 4340973, 
+          "arguments": [
+            {
+              "arg_type": "HKEY", 
+              "arg_value": "80000001h", 
+              "arg_name": "hKey"
+            }, 
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "decryptString", 
+              "arg_name": "lpSubKey"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "dest:edi", 
+              "arg_name": "ulOptions"
+            }, 
+            {
+              "arg_type": "REGSAM", 
+              "arg_value": "8", 
+              "arg_name": "samDesired"
+            }, 
+            {
+              "arg_type": "PHKEY", 
+              "arg_value": "decryptString", 
+              "arg_name": "phkResult"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Registry", 
+    "tag": "Obtain a handle to a registry key", 
+    "hit": {
+      "start_addr": 4385053, 
+      "apis": [
+        {
+          "api_name": "RegOpenKey", 
+          "addr": 4385053, 
+          "arguments": [
+            {
+              "arg_type": "HKEY", 
+              "arg_value": "source:eax", 
+              "arg_name": "hKey"
+            }, 
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "[ebp+lpSubKey]", 
+              "arg_name": "lpSubKey"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "0", 
+              "arg_name": "ulOptions"
+            }, 
+            {
+              "arg_type": "REGSAM", 
+              "arg_value": "1", 
+              "arg_name": "samDesired"
+            }, 
+            {
+              "arg_type": "PHKEY", 
+              "arg_value": "accumulator:eax", 
+              "arg_name": "phkResult"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Registry", 
+    "tag": "Obtain a handle to a registry key", 
+    "hit": {
+      "start_addr": 4255646, 
+      "apis": [
+        {
+          "api_name": "RegOpenKey", 
+          "addr": 4255646, 
+          "arguments": [
+            {
+              "arg_type": "HKEY", 
+              "arg_value": "dest:80000001h", 
+              "arg_name": "hKey"
+            }, 
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "ds:Sleep", 
+              "arg_name": "lpSubKey"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "0", 
+              "arg_name": "ulOptions"
+            }, 
+            {
+              "arg_type": "REGSAM", 
+              "arg_value": "1", 
+              "arg_name": "samDesired"
+            }, 
+            {
+              "arg_type": "PHKEY", 
+              "arg_value": "ds:Sleep", 
+              "arg_name": "phkResult"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Registry", 
+    "tag": "Obtain a handle to a registry key", 
+    "hit": {
+      "start_addr": 4384485, 
+      "apis": [
+        {
+          "api_name": "RegOpenKey", 
+          "addr": 4384485, 
+          "arguments": [
+            {
+              "arg_type": "HKEY", 
+              "arg_value": "eax", 
+              "arg_name": "hKey"
+            }, 
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "[ebp+Type]", 
+              "arg_name": "lpSubKey"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "0", 
+              "arg_name": "ulOptions"
+            }, 
+            {
+              "arg_type": "REGSAM", 
+              "arg_value": "1", 
+              "arg_name": "samDesired"
+            }, 
+            {
+              "arg_type": "PHKEY", 
+              "arg_value": "counter:ecx", 
+              "arg_name": "phkResult"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Registry", 
+    "tag": "Obtain a handle to a registry key", 
+    "hit": {
+      "start_addr": 4325371, 
+      "apis": [
+        {
+          "api_name": "RegOpenKey", 
+          "addr": 4325371, 
+          "arguments": [
+            {
+              "arg_type": "HKEY", 
+              "arg_value": "base:ebp", 
+              "arg_name": "hKey"
+            }, 
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "decryptString", 
+              "arg_name": "lpSubKey"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "dest:edi", 
+              "arg_name": "ulOptions"
+            }, 
+            {
+              "arg_type": "REGSAM", 
+              "arg_value": "1", 
+              "arg_name": "samDesired"
+            }, 
+            {
+              "arg_type": "PHKEY", 
+              "arg_value": "decryptString", 
+              "arg_name": "phkResult"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Registry", 
+    "tag": "Obtain a handle to a registry key", 
+    "hit": {
+      "start_addr": 4338951, 
+      "apis": [
+        {
+          "api_name": "RegOpenKey", 
+          "addr": 4338951, 
+          "arguments": [
+            {
+              "arg_type": "HKEY", 
+              "arg_value": "sub_42E6D0", 
+              "arg_name": "hKey"
+            }, 
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "counter:ecx", 
+              "arg_name": "lpSubKey"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "0", 
+              "arg_name": "ulOptions"
+            }, 
+            {
+              "arg_type": "REGSAM", 
+              "arg_value": "1", 
+              "arg_name": "samDesired"
+            }, 
+            {
+              "arg_type": "PHKEY", 
+              "arg_value": "counter:ecx", 
+              "arg_name": "phkResult"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Registry", 
+    "tag": "Query value of a registry key", 
+    "hit": {
+      "start_addr": 4384985, 
+      "apis": [
+        {
+          "api_name": "RegQueryValue", 
+          "addr": 4384985, 
+          "arguments": [
+            {
+              "arg_type": "HKEY", 
+              "arg_value": "[ebp+hKey]", 
+              "arg_name": "hKey"
+            }, 
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "[ebp+lpValueName]", 
+              "arg_name": "lpValueName"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "dest:edi", 
+              "arg_name": "lpReserved"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "[ebp+lpType]", 
+              "arg_name": "lpType"
+            }, 
+            {
+              "arg_type": "LPBYTE", 
+              "arg_value": "base:esp", 
+              "arg_name": "lpData"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "sub_429055", 
+              "arg_name": "lpcbData"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Registry", 
+    "tag": "Query value of a registry key", 
+    "hit": {
+      "start_addr": 4243818, 
+      "apis": [
+        {
+          "api_name": "RegQueryValue", 
+          "addr": 4243818, 
+          "arguments": [
+            {
+              "arg_type": "HKEY", 
+              "arg_value": "None:edi", 
+              "arg_name": "hKey"
+            }, 
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "offset aDisplayname_0", 
+              "arg_name": "lpValueName"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "dest:edi", 
+              "arg_name": "lpReserved"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "sub_429138", 
+              "arg_name": "lpType"
+            }, 
+            {
+              "arg_type": "LPBYTE", 
+              "arg_value": "sub_429138", 
+              "arg_name": "lpData"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "sub_429138", 
+              "arg_name": "lpcbData"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Registry", 
+    "tag": "Query value of a registry key", 
+    "hit": {
+      "start_addr": 4243748, 
+      "apis": [
+        {
+          "api_name": "RegQueryValue", 
+          "addr": 4243748, 
+          "arguments": [
+            {
+              "arg_type": "HKEY", 
+              "arg_value": "None:edi", 
+              "arg_name": "hKey"
+            }, 
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "offset ValueName", 
+              "arg_name": "lpValueName"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "dest:edi", 
+              "arg_name": "lpReserved"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "sub_429138", 
+              "arg_name": "lpType"
+            }, 
+            {
+              "arg_type": "LPBYTE", 
+              "arg_value": "sub_429138", 
+              "arg_name": "lpData"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "sub_429138", 
+              "arg_name": "lpcbData"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Registry", 
+    "tag": "Query value of a registry key", 
+    "hit": {
+      "start_addr": 4384937, 
+      "apis": [
+        {
+          "api_name": "RegQueryValue", 
+          "addr": 4384937, 
+          "arguments": [
+            {
+              "arg_type": "HKEY", 
+              "arg_value": "[ebp+hKey]", 
+              "arg_name": "hKey"
+            }, 
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "[ebp+lpValueName]", 
+              "arg_name": "lpValueName"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "dest:edi", 
+              "arg_name": "lpReserved"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "[ebp+lpType]", 
+              "arg_name": "lpType"
+            }, 
+            {
+              "arg_type": "LPBYTE", 
+              "arg_value": "dest:edi", 
+              "arg_name": "lpData"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "accumulator:[ebp+arg_C]", 
+              "arg_name": "lpcbData"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Registry", 
+    "tag": "Query value of a registry key", 
+    "hit": {
+      "start_addr": 4385121, 
+      "apis": [
+        {
+          "api_name": "RegQueryValue", 
+          "addr": 4385121, 
+          "arguments": [
+            {
+              "arg_type": "HKEY", 
+              "arg_value": "dword ptr [esi]", 
+              "arg_name": "hKey"
+            }, 
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "[esp+14h+lpValueName]", 
+              "arg_name": "lpValueName"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "accumulator:eax", 
+              "arg_name": "lpReserved"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "accumulator:eax", 
+              "arg_name": "lpType"
+            }, 
+            {
+              "arg_type": "LPBYTE", 
+              "arg_value": "accumulator:eax", 
+              "arg_name": "lpData"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "accumulator:eax", 
+              "arg_name": "lpcbData"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Registry", 
+    "tag": "Query value of a registry key", 
+    "hit": {
+      "start_addr": 4243888, 
+      "apis": [
+        {
+          "api_name": "RegQueryValue", 
+          "addr": 4243888, 
+          "arguments": [
+            {
+              "arg_type": "HKEY", 
+              "arg_value": "None:edi", 
+              "arg_name": "hKey"
+            }, 
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "offset aDisplayversion", 
+              "arg_name": "lpValueName"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "dest:edi", 
+              "arg_name": "lpReserved"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "sub_429138", 
+              "arg_name": "lpType"
+            }, 
+            {
+              "arg_type": "LPBYTE", 
+              "arg_value": "sub_429138", 
+              "arg_name": "lpData"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "sub_429138", 
+              "arg_name": "lpcbData"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Registry", 
+    "tag": "Query value of a registry key", 
+    "hit": {
+      "start_addr": 4384784, 
+      "apis": [
+        {
+          "api_name": "RegQueryValue", 
+          "addr": 4384784, 
+          "arguments": [
+            {
+              "arg_type": "HKEY", 
+              "arg_value": "dword ptr [esi]", 
+              "arg_name": "hKey"
+            }, 
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "[ebp+lpValueName]", 
+              "arg_name": "lpValueName"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "0", 
+              "arg_name": "lpReserved"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "[ebp+lpType]", 
+              "arg_name": "lpType"
+            }, 
+            {
+              "arg_type": "LPBYTE", 
+              "arg_value": "[ebp+lpData]", 
+              "arg_name": "lpData"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "accumulator:eax", 
+              "arg_name": "lpcbData"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Registry", 
+    "tag": "Query value of a registry key", 
+    "hit": {
+      "start_addr": 4245847, 
+      "apis": [
+        {
+          "api_name": "RegQueryValue", 
+          "addr": 4245847, 
+          "arguments": [
+            {
+              "arg_type": "HKEY", 
+              "arg_value": "None:eax", 
+              "arg_name": "hKey"
+            }, 
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "ds:RegOpenKeyExW", 
+              "arg_name": "lpValueName"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "0", 
+              "arg_name": "lpReserved"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "0", 
+              "arg_name": "lpType"
+            }, 
+            {
+              "arg_type": "LPBYTE", 
+              "arg_value": "ds:RegOpenKeyExW", 
+              "arg_name": "lpData"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "ds:RegOpenKeyExW", 
+              "arg_name": "lpcbData"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Registry", 
+    "tag": "Enumerate registry keys", 
+    "hit": {
+      "start_addr": 4339141, 
+      "apis": [
+        {
+          "api_name": "RegEnumKey", 
+          "addr": 4339141, 
+          "arguments": [
+            {
+              "arg_type": "HKEY", 
+              "arg_value": "[ebp+hKey]", 
+              "arg_name": "hKey"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "None:edi", 
+              "arg_name": "dwIndex"
+            }, 
+            {
+              "arg_type": "LPWSTR", 
+              "arg_value": "sub_429479", 
+              "arg_name": "lpName"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "sub_429479", 
+              "arg_name": "lpcchName"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "sub_429479", 
+              "arg_name": "lpReserved"
+            }, 
+            {
+              "arg_type": "LPWSTR", 
+              "arg_value": "sub_429479", 
+              "arg_name": "lpClass"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "sub_429479", 
+              "arg_name": "lpcchClass"
+            }, 
+            {
+              "arg_type": "PFILETIME", 
+              "arg_value": "sub_429479", 
+              "arg_name": "lpftLastWriteTime"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Registry", 
+    "tag": "Enumerate registry keys", 
+    "hit": {
+      "start_addr": 4338791, 
+      "apis": [
+        {
+          "api_name": "RegEnumKey", 
+          "addr": 4338791, 
+          "arguments": [
+            {
+              "arg_type": "HKEY", 
+              "arg_value": "[ebp+hKey]", 
+              "arg_name": "hKey"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "dest:edi", 
+              "arg_name": "dwIndex"
+            }, 
+            {
+              "arg_type": "LPWSTR", 
+              "arg_value": "ds:RegOpenKeyExW", 
+              "arg_name": "lpName"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "ds:RegOpenKeyExW", 
+              "arg_name": "lpcchName"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "dest:edi", 
+              "arg_name": "lpReserved"
+            }, 
+            {
+              "arg_type": "LPWSTR", 
+              "arg_value": "dest:edi", 
+              "arg_name": "lpClass"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "dest:edi", 
+              "arg_name": "lpcchClass"
+            }, 
+            {
+              "arg_type": "PFILETIME", 
+              "arg_value": "dest:edi", 
+              "arg_name": "lpftLastWriteTime"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Registry", 
+    "tag": "Enumerate registry keys", 
+    "hit": {
+      "start_addr": 4339620, 
+      "apis": [
+        {
+          "api_name": "RegEnumKey", 
+          "addr": 4339620, 
+          "arguments": [
+            {
+              "arg_type": "HKEY", 
+              "arg_value": "[ebp+phkResult]", 
+              "arg_name": "hKey"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "dest:edi", 
+              "arg_name": "dwIndex"
+            }, 
+            {
+              "arg_type": "LPWSTR", 
+              "arg_value": "ds:RegOpenKeyExW", 
+              "arg_name": "lpName"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "ds:RegOpenKeyExW", 
+              "arg_name": "lpcchName"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "dest:edi", 
+              "arg_name": "lpReserved"
+            }, 
+            {
+              "arg_type": "LPWSTR", 
+              "arg_value": "dest:edi", 
+              "arg_name": "lpClass"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "dest:edi", 
+              "arg_name": "lpcchClass"
+            }, 
+            {
+              "arg_type": "PFILETIME", 
+              "arg_value": "dest:edi", 
+              "arg_name": "lpftLastWriteTime"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Registry", 
+    "tag": "Enumerate registry keys", 
+    "hit": {
+      "start_addr": 4339911, 
+      "apis": [
+        {
+          "api_name": "RegEnumKey", 
+          "addr": 4339911, 
+          "arguments": [
+            {
+              "arg_type": "HKEY", 
+              "arg_value": "[ebp+phkResult]", 
+              "arg_name": "hKey"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "None:edi", 
+              "arg_name": "dwIndex"
+            }, 
+            {
+              "arg_type": "LPWSTR", 
+              "arg_value": "sub_429479", 
+              "arg_name": "lpName"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "sub_429479", 
+              "arg_name": "lpcchName"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "sub_429479", 
+              "arg_name": "lpReserved"
+            }, 
+            {
+              "arg_type": "LPWSTR", 
+              "arg_value": "sub_429479", 
+              "arg_name": "lpClass"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "sub_429479", 
+              "arg_name": "lpcchClass"
+            }, 
+            {
+              "arg_type": "PFILETIME", 
+              "arg_value": "sub_429479", 
+              "arg_name": "lpftLastWriteTime"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Registry", 
+    "tag": "Enumerate registry keys", 
+    "hit": {
+      "start_addr": 4243653, 
+      "apis": [
+        {
+          "api_name": "RegEnumKey", 
+          "addr": 4243653, 
+          "arguments": [
+            {
+              "arg_type": "HKEY", 
+              "arg_value": "None:edi", 
+              "arg_name": "hKey"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "None:edi", 
+              "arg_name": "dwIndex"
+            }, 
+            {
+              "arg_type": "LPWSTR", 
+              "arg_value": "ds:RegQueryInfoKeyW", 
+              "arg_name": "lpName"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "104h", 
+              "arg_name": "cchName"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Registry", 
+    "tag": "Enumerate registry keys", 
+    "hit": {
+      "start_addr": 4341320, 
+      "apis": [
+        {
+          "api_name": "RegEnumKey", 
+          "addr": 4341320, 
+          "arguments": [
+            {
+              "arg_type": "HKEY", 
+              "arg_value": "[ebp+hKey]", 
+              "arg_name": "hKey"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "None:edi", 
+              "arg_name": "dwIndex"
+            }, 
+            {
+              "arg_type": "LPWSTR", 
+              "arg_value": "sub_429479", 
+              "arg_name": "lpName"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "sub_429479", 
+              "arg_name": "lpcchName"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "sub_429479", 
+              "arg_name": "lpReserved"
+            }, 
+            {
+              "arg_type": "LPWSTR", 
+              "arg_value": "sub_429479", 
+              "arg_name": "lpClass"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "sub_429479", 
+              "arg_name": "lpcchClass"
+            }, 
+            {
+              "arg_type": "PFILETIME", 
+              "arg_value": "sub_429479", 
+              "arg_name": "lpftLastWriteTime"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Registry", 
+    "tag": "Enumerate registry keys", 
+    "hit": {
+      "start_addr": 4341016, 
+      "apis": [
+        {
+          "api_name": "RegEnumKey", 
+          "addr": 4341016, 
+          "arguments": [
+            {
+              "arg_type": "HKEY", 
+              "arg_value": "[ebp+hKey]", 
+              "arg_name": "hKey"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "dest:edi", 
+              "arg_name": "dwIndex"
+            }, 
+            {
+              "arg_type": "LPWSTR", 
+              "arg_value": "ds:RegOpenKeyExW", 
+              "arg_name": "lpName"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "ds:RegOpenKeyExW", 
+              "arg_name": "lpcchName"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "dest:edi", 
+              "arg_name": "lpReserved"
+            }, 
+            {
+              "arg_type": "LPWSTR", 
+              "arg_value": "dest:edi", 
+              "arg_name": "lpClass"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "dest:edi", 
+              "arg_name": "lpcchClass"
+            }, 
+            {
+              "arg_type": "PFILETIME", 
+              "arg_value": "dest:edi", 
+              "arg_name": "lpftLastWriteTime"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Registry", 
+    "tag": "Delete registry Key", 
+    "hit": {
+      "start_addr": 4313693, 
+      "apis": [
+        {
+          "api_name": "SHDeleteKey", 
+          "addr": 4313693, 
+          "arguments": [
+            {
+              "arg_type": "HKEY", 
+              "arg_value": "80000001h", 
+              "arg_name": "hkey"
+            }, 
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "sub_412C33", 
+              "arg_name": "pszSubKey"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "File system", 
+    "tag": "Obtain a file handle", 
+    "hit": {
+      "start_addr": 4390672, 
+      "apis": [
+        {
+          "api_name": "CreateFile", 
+          "addr": 4390672, 
+          "arguments": [
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "[ebp+lpFileName]", 
+              "arg_name": "lpFileName"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "80000000h", 
+              "arg_name": "dwDesiredAccess"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "1", 
+              "arg_name": "dwShareMode"
+            }, 
+            {
+              "arg_type": "LPSECURITY_ATTRIBUTES", 
+              "arg_value": "0", 
+              "arg_name": "lpSecurityAttributes"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "3", 
+              "arg_name": "dwCreationDisposition"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "0", 
+              "arg_name": "dwFlagsAndAttributes"
+            }, 
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "0", 
+              "arg_name": "hTemplateFile"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "File system", 
+    "tag": "Obtain a file handle", 
+    "hit": {
+      "start_addr": 4394799, 
+      "apis": [
+        {
+          "api_name": "CreateFile", 
+          "addr": 4394799, 
+          "arguments": [
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "[ebp+NumberOfBytesRead]", 
+              "arg_name": "lpFileName"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "accumulator:80000000h", 
+              "arg_name": "dwDesiredAccess"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "1", 
+              "arg_name": "dwShareMode"
+            }, 
+            {
+              "arg_type": "LPSECURITY_ATTRIBUTES", 
+              "arg_value": "dest:edi", 
+              "arg_name": "lpSecurityAttributes"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "counter:ecx", 
+              "arg_name": "dwCreationDisposition"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "80h", 
+              "arg_name": "dwFlagsAndAttributes"
+            }, 
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "dest:edi", 
+              "arg_name": "hTemplateFile"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "File system", 
+    "tag": "Obtain a file handle", 
+    "hit": {
+      "start_addr": 4296906, 
+      "apis": [
+        {
+          "api_name": "CreateFile", 
+          "addr": 4296906, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "base:esp", 
+              "arg_name": "hFile"
+            }, 
+            {
+              "arg_type": "LPSECURITY_ATTRIBUTES", 
+              "arg_value": "dest:offset MutexAttributes", 
+              "arg_name": "lpFileMappingAttributes"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "4", 
+              "arg_name": "flProtect"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "base:esp", 
+              "arg_name": "dwMaximumSizeHigh"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "3D09128h", 
+              "arg_name": "dwMaximumSizeLow"
+            }, 
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "sub_412757", 
+              "arg_name": "lpName"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "File system", 
+    "tag": "Obtain a file handle", 
+    "hit": {
+      "start_addr": 4391569, 
+      "apis": [
+        {
+          "api_name": "CreateFile", 
+          "addr": 4391569, 
+          "arguments": [
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "[esp+20h+lpFileName]", 
+              "arg_name": "lpFileName"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "100h", 
+              "arg_name": "dwDesiredAccess"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "1", 
+              "arg_name": "dwShareMode"
+            }, 
+            {
+              "arg_type": "LPSECURITY_ATTRIBUTES", 
+              "arg_value": "base:ebx", 
+              "arg_name": "lpSecurityAttributes"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "3", 
+              "arg_name": "dwCreationDisposition"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "accumulator:al", 
+              "arg_name": "dwFlagsAndAttributes"
+            }, 
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "base:ebx", 
+              "arg_name": "hTemplateFile"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "File system", 
+    "tag": "Obtain a file handle", 
+    "hit": {
+      "start_addr": 4390761, 
+      "apis": [
+        {
+          "api_name": "CreateFile", 
+          "addr": 4390761, 
+          "arguments": [
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "[ebp+NumberOfBytesRead]", 
+              "arg_name": "lpFileName"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "80000000h", 
+              "arg_name": "dwDesiredAccess"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "accumulator:al", 
+              "arg_name": "dwShareMode"
+            }, 
+            {
+              "arg_type": "LPSECURITY_ATTRIBUTES", 
+              "arg_value": "dest:edi", 
+              "arg_name": "lpSecurityAttributes"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "3", 
+              "arg_name": "dwCreationDisposition"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "dest:edi", 
+              "arg_name": "dwFlagsAndAttributes"
+            }, 
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "dest:edi", 
+              "arg_name": "hTemplateFile"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "File system", 
+    "tag": "Obtain a file handle", 
+    "hit": {
+      "start_addr": 4382521, 
+      "apis": [
+        {
+          "api_name": "CreateFile", 
+          "addr": 4382521, 
+          "arguments": [
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "[ebp+lpFileName]", 
+              "arg_name": "lpFileName"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "source:0C0000000h", 
+              "arg_name": "dwDesiredAccess"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "3", 
+              "arg_name": "dwShareMode"
+            }, 
+            {
+              "arg_type": "LPSECURITY_ATTRIBUTES", 
+              "arg_value": "0", 
+              "arg_name": "lpSecurityAttributes"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "accumulator:[ebp+arg_4]", 
+              "arg_name": "dwCreationDisposition"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "80h", 
+              "arg_name": "dwFlagsAndAttributes"
+            }, 
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "0", 
+              "arg_name": "hTemplateFile"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "File system", 
+    "tag": "Obtain a file handle", 
+    "hit": {
+      "start_addr": 4390563, 
+      "apis": [
+        {
+          "api_name": "CreateFile", 
+          "addr": 4390563, 
+          "arguments": [
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "[ebp+lpFileName]", 
+              "arg_name": "lpFileName"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "40000000h", 
+              "arg_name": "dwDesiredAccess"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "1", 
+              "arg_name": "dwShareMode"
+            }, 
+            {
+              "arg_type": "LPSECURITY_ATTRIBUTES", 
+              "arg_value": "base:esp", 
+              "arg_name": "lpSecurityAttributes"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "2", 
+              "arg_name": "dwCreationDisposition"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "80h", 
+              "arg_name": "dwFlagsAndAttributes"
+            }, 
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "base:esp", 
+              "arg_name": "hTemplateFile"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "File system", 
+    "tag": "Obtain a file handle", 
+    "hit": {
+      "start_addr": 4391076, 
+      "apis": [
+        {
+          "api_name": "CreateFile", 
+          "addr": 4391076, 
+          "arguments": [
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "[esp+24h+lpFileName]", 
+              "arg_name": "lpFileName"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "80000000h", 
+              "arg_name": "dwDesiredAccess"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "7", 
+              "arg_name": "dwShareMode"
+            }, 
+            {
+              "arg_type": "LPSECURITY_ATTRIBUTES", 
+              "arg_value": "accumulator:eax", 
+              "arg_name": "lpSecurityAttributes"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "3", 
+              "arg_name": "dwCreationDisposition"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "accumulator:eax", 
+              "arg_name": "dwFlagsAndAttributes"
+            }, 
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "accumulator:eax", 
+              "arg_name": "hTemplateFile"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "File system", 
+    "tag": "Obtain a file handle", 
+    "hit": {
+      "start_addr": 4375053, 
+      "apis": [
+        {
+          "api_name": "CreateFile", 
+          "addr": 4375053, 
+          "arguments": [
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "[ebp+lpFileName]", 
+              "arg_name": "lpFileName"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "40000000h", 
+              "arg_name": "dwDesiredAccess"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "1", 
+              "arg_name": "dwShareMode"
+            }, 
+            {
+              "arg_type": "LPSECURITY_ATTRIBUTES", 
+              "arg_value": "base:esp", 
+              "arg_name": "lpSecurityAttributes"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "2", 
+              "arg_name": "dwCreationDisposition"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "80h", 
+              "arg_name": "dwFlagsAndAttributes"
+            }, 
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "base:esp", 
+              "arg_name": "hTemplateFile"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "File system", 
+    "tag": "Obtain a file handle", 
+    "hit": {
+      "start_addr": 4320529, 
+      "apis": [
+        {
+          "api_name": "CreateFile", 
+          "addr": 4320529, 
+          "arguments": [
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "sub_430647", 
+              "arg_name": "lpFileName"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "40000000h", 
+              "arg_name": "dwDesiredAccess"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "1", 
+              "arg_name": "dwShareMode"
+            }, 
+            {
+              "arg_type": "LPSECURITY_ATTRIBUTES", 
+              "arg_value": "source:esi", 
+              "arg_name": "lpSecurityAttributes"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "2", 
+              "arg_name": "dwCreationDisposition"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "80h", 
+              "arg_name": "dwFlagsAndAttributes"
+            }, 
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "source:esi", 
+              "arg_name": "hTemplateFile"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "File system", 
+    "tag": "Enumerate or list files inside a directory", 
+    "hit": {
+      "start_addr": 4392033, 
+      "apis": [
+        {
+          "api_name": "FindFirstFile", 
+          "addr": 4392033, 
+          "arguments": [
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "sub_430647", 
+              "arg_name": "lpFileName"
+            }, 
+            {
+              "arg_type": "LPWIN32_FIND_DATAW", 
+              "arg_value": "sub_430647", 
+              "arg_name": "lpFindFileData"
+            }
+          ]
+        }, 
+        {
+          "api_name": "FindNextFile", 
+          "addr": 4392124, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "source:eax", 
+              "arg_name": "hFindFile"
+            }, 
+            {
+              "arg_type": "LPWIN32_FIND_DATAW", 
+              "arg_value": "sub_4300CB", 
+              "arg_name": "lpFindFileData"
+            }
+          ]
+        }, 
+        {
+          "api_name": "FindClose", 
+          "addr": 4392135, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "source:eax", 
+              "arg_name": "hFindFile"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "File system", 
+    "tag": "Enumerate or list files inside a directory", 
+    "hit": {
+      "start_addr": 4392234, 
+      "apis": [
+        {
+          "api_name": "FindFirstFile", 
+          "addr": 4392234, 
+          "arguments": [
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "sub_430647", 
+              "arg_name": "lpFileName"
+            }, 
+            {
+              "arg_type": "LPWIN32_FIND_DATAW", 
+              "arg_value": "sub_430647", 
+              "arg_name": "lpFindFileData"
+            }
+          ]
+        }, 
+        {
+          "api_name": "FindNextFile", 
+          "addr": 4392486, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "[esp+474h+hFindFile]", 
+              "arg_name": "hFindFile"
+            }, 
+            {
+              "arg_type": "LPWIN32_FIND_DATAW", 
+              "arg_value": "sub_4304EB", 
+              "arg_name": "lpFindFileData"
+            }
+          ]
+        }, 
+        {
+          "api_name": "FindClose", 
+          "addr": 4392504, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "None:eax", 
+              "arg_name": "hFindFile"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "File system", 
+    "tag": "Enumerate or list files inside a directory", 
+    "hit": {
+      "start_addr": 4392234, 
+      "apis": [
+        {
+          "api_name": "FindFirstFile", 
+          "addr": 4392234, 
+          "arguments": [
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "sub_430647", 
+              "arg_name": "lpFileName"
+            }, 
+            {
+              "arg_type": "LPWIN32_FIND_DATAW", 
+              "arg_value": "sub_430647", 
+              "arg_name": "lpFindFileData"
+            }
+          ]
+        }, 
+        {
+          "api_name": "PathMatchSpec", 
+          "addr": 4392347, 
+          "arguments": [
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "sub_43024C", 
+              "arg_name": "pszFile"
+            }, 
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "dword ptr [eax+esi*4]", 
+              "arg_name": "pszSpec"
+            }
+          ]
+        }, 
+        {
+          "api_name": "FindNextFile", 
+          "addr": 4392486, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "[esp+474h+hFindFile]", 
+              "arg_name": "hFindFile"
+            }, 
+            {
+              "arg_type": "LPWIN32_FIND_DATAW", 
+              "arg_value": "sub_4304EB", 
+              "arg_name": "lpFindFileData"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Configuration", 
+    "tag": "Query environment-variable", 
+    "hit": {
+      "start_addr": 4337480, 
+      "apis": [
+        {
+          "api_name": "ExpandEnvironmentStrings", 
+          "addr": 4337480, 
+          "arguments": [
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "sub_42E6D0", 
+              "arg_name": "lpSrc"
+            }, 
+            {
+              "arg_type": "LPWSTR", 
+              "arg_value": "sub_42E6D0", 
+              "arg_name": "lpDst"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "source:esi", 
+              "arg_name": "nSize"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Configuration", 
+    "tag": "Query environment-variable", 
+    "hit": {
+      "start_addr": 4343426, 
+      "apis": [
+        {
+          "api_name": "ExpandEnvironmentStrings", 
+          "addr": 4343426, 
+          "arguments": [
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "sub_42E6D0", 
+              "arg_name": "lpSrc"
+            }, 
+            {
+              "arg_type": "LPWSTR", 
+              "arg_value": "sub_42E6D0", 
+              "arg_name": "lpDst"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "base:esp", 
+              "arg_name": "nSize"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Configuration", 
+    "tag": "Query environment-variable", 
+    "hit": {
+      "start_addr": 4276380, 
+      "apis": [
+        {
+          "api_name": "ExpandEnvironmentStrings", 
+          "addr": 4276380, 
+          "arguments": [
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "dword ptr [ebx+4]", 
+              "arg_name": "lpSrc"
+            }, 
+            {
+              "arg_type": "LPWSTR", 
+              "arg_value": "sub_429FBB", 
+              "arg_name": "lpDst"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "104h", 
+              "arg_name": "nSize"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Configuration", 
+    "tag": "Query environment-variable", 
+    "hit": {
+      "start_addr": 4336394, 
+      "apis": [
+        {
+          "api_name": "ExpandEnvironmentStrings", 
+          "addr": 4336394, 
+          "arguments": [
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "sub_42E6D0", 
+              "arg_name": "lpSrc"
+            }, 
+            {
+              "arg_type": "LPWSTR", 
+              "arg_value": "sub_42E6D0", 
+              "arg_name": "lpDst"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "base:esp", 
+              "arg_name": "nSize"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Configuration", 
+    "tag": "Query environment-variable", 
+    "hit": {
+      "start_addr": 4336698, 
+      "apis": [
+        {
+          "api_name": "ExpandEnvironmentStrings", 
+          "addr": 4336698, 
+          "arguments": [
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "sub_42E6D0", 
+              "arg_name": "lpSrc"
+            }, 
+            {
+              "arg_type": "LPWSTR", 
+              "arg_value": "sub_42E6D0", 
+              "arg_name": "lpDst"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "base:esp", 
+              "arg_name": "nSize"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Configuration", 
+    "tag": "Query environment-variable", 
+    "hit": {
+      "start_addr": 4261966, 
+      "apis": [
+        {
+          "api_name": "ExpandEnvironmentStrings", 
+          "addr": 4261966, 
+          "arguments": [
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "ds:PathUnquoteSpacesW", 
+              "arg_name": "lpSrc"
+            }, 
+            {
+              "arg_type": "LPWSTR", 
+              "arg_value": "[ebp+lpDst]", 
+              "arg_name": "lpDst"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "source:esi", 
+              "arg_name": "nSize"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Configuration", 
+    "tag": "Query environment-variable", 
+    "hit": {
+      "start_addr": 4335238, 
+      "apis": [
+        {
+          "api_name": "ExpandEnvironmentStrings", 
+          "addr": 4335238, 
+          "arguments": [
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "sub_42E6D0", 
+              "arg_name": "lpSrc"
+            }, 
+            {
+              "arg_type": "LPWSTR", 
+              "arg_value": "sub_42E6D0", 
+              "arg_name": "lpDst"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "source:esi", 
+              "arg_name": "nSize"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Configuration", 
+    "tag": "Query environment-variable", 
+    "hit": {
+      "start_addr": 4384614, 
+      "apis": [
+        {
+          "api_name": "ExpandEnvironmentStrings", 
+          "addr": 4384614, 
+          "arguments": [
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "source:esi", 
+              "arg_name": "lpSrc"
+            }, 
+            {
+              "arg_type": "LPWSTR", 
+              "arg_value": "dest:ax", 
+              "arg_name": "lpDst"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "[ebp+nSize]", 
+              "arg_name": "nSize"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "File system", 
+    "tag": "Query local drives", 
+    "hit": {
+      "start_addr": 4372491, 
+      "apis": [
+        {
+          "api_name": "GetLogicalDriveStrings", 
+          "addr": 4372491, 
+          "arguments": [
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "1FFh", 
+              "arg_name": "nBufferLength"
+            }, 
+            {
+              "arg_type": "LPWSTR", 
+              "arg_value": "eax", 
+              "arg_name": "lpBuffer"
+            }
+          ]
+        }, 
+        {
+          "api_name": "QueryDosDevice", 
+          "addr": 4372548, 
+          "arguments": [
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "ds:GetLogicalDriveStringsW", 
+              "arg_name": "lpDeviceName"
+            }, 
+            {
+              "arg_type": "LPWSTR", 
+              "arg_value": "ds:GetLogicalDriveStringsW", 
+              "arg_name": "lpTargetPath"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "source:[ebp+lpString1]", 
+              "arg_name": "ucchMax"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Configuration", 
+    "tag": "Query local time", 
+    "hit": {
+      "start_addr": 4245881, 
+      "apis": [
+        {
+          "api_name": "GetLocalTime", 
+          "addr": 4245881, 
+          "arguments": [
+            {
+              "arg_type": "LPSYSTEMTIME", 
+              "arg_value": "ds:RegCloseKey", 
+              "arg_name": "lpSystemTime"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Configuration", 
+    "tag": "Query local time", 
+    "hit": {
+      "start_addr": 4280912, 
+      "apis": [
+        {
+          "api_name": "GetLocalTime", 
+          "addr": 4280912, 
+          "arguments": [
+            {
+              "arg_type": "LPSYSTEMTIME", 
+              "arg_value": "accumulator:eax", 
+              "arg_name": "lpSystemTime"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Configuration", 
+    "tag": "Query local time", 
+    "hit": {
+      "start_addr": 4250630, 
+      "apis": [
+        {
+          "api_name": "GetLocalTime", 
+          "addr": 4250630, 
+          "arguments": [
+            {
+              "arg_type": "LPSYSTEMTIME", 
+              "arg_value": "sub_4293ED", 
+              "arg_name": "lpSystemTime"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Configuration", 
+    "tag": "Query system time", 
+    "hit": {
+      "start_addr": 4267191, 
+      "apis": [
+        {
+          "api_name": "GetSystemTime", 
+          "addr": 4267191, 
+          "arguments": [
+            {
+              "arg_type": "LPSYSTEMTIME", 
+              "arg_value": "ds:CharLowerW", 
+              "arg_name": "lpSystemTime"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Configuration", 
+    "tag": "Query system time", 
+    "hit": {
+      "start_addr": 4250346, 
+      "apis": [
+        {
+          "api_name": "GetSystemTime", 
+          "addr": 4250346, 
+          "arguments": [
+            {
+              "arg_type": "LPSYSTEMTIME", 
+              "arg_value": "ds:InternetCrackUrlA", 
+              "arg_name": "lpSystemTime"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Configuration", 
+    "tag": "Query system time", 
+    "hit": {
+      "start_addr": 4362641, 
+      "apis": [
+        {
+          "api_name": "GetSystemTime", 
+          "addr": 4362641, 
+          "arguments": [
+            {
+              "arg_type": "LPSYSTEMTIME", 
+              "arg_value": "accumulator:eax", 
+              "arg_name": "lpSystemTime"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Configuration", 
+    "tag": "Query system time", 
+    "hit": {
+      "start_addr": 4241749, 
+      "apis": [
+        {
+          "api_name": "GetSystemTime", 
+          "addr": 4241749, 
+          "arguments": [
+            {
+              "arg_type": "LPSYSTEMTIME", 
+              "arg_value": "accumulator:eax", 
+              "arg_name": "lpSystemTime"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Configuration", 
+    "tag": "Query system time", 
+    "hit": {
+      "start_addr": 4267526, 
+      "apis": [
+        {
+          "api_name": "GetSystemTime", 
+          "addr": 4267526, 
+          "arguments": [
+            {
+              "arg_type": "LPSYSTEMTIME", 
+              "arg_value": "sub_412966", 
+              "arg_name": "lpSystemTime"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Configuration", 
+    "tag": "Convert date and time", 
+    "hit": {
+      "start_addr": 4362655, 
+      "apis": [
+        {
+          "api_name": "SystemTimeToFileTime", 
+          "addr": 4362655, 
+          "arguments": [
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "ds:GetSystemTime", 
+              "arg_name": "lpSystemTime"
+            }, 
+            {
+              "arg_type": "LPFILETIME", 
+              "arg_value": "ds:GetSystemTime", 
+              "arg_name": "lpFileTime"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Configuration", 
+    "tag": "query time zone information", 
+    "hit": {
+      "start_addr": 4362686, 
+      "apis": [
+        {
+          "api_name": "GetTimeZoneInformation", 
+          "addr": 4362686, 
+          "arguments": [
+            {
+              "arg_type": "LPTIME_ZONE_INFORMATION", 
+              "arg_value": "accumulator:eax", 
+              "arg_name": "lpTimeZoneInformation"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Configuration", 
+    "tag": "Query user information", 
+    "hit": {
+      "start_addr": 4284729, 
+      "apis": [
+        {
+          "api_name": "GetUserDefaultUILanguage", 
+          "addr": 4284729, 
+          "arguments": []
+        }, 
+        {
+          "api_name": "GetModuleFileName", 
+          "addr": 4284799, 
+          "arguments": [
+            {
+              "arg_type": "HMODULE", 
+              "arg_value": "0", 
+              "arg_name": "hModule"
+            }, 
+            {
+              "arg_type": "LPWSTR", 
+              "arg_value": "sub_4306B7", 
+              "arg_name": "lpFilename"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "103h", 
+              "arg_name": "nSize"
+            }
+          ]
+        }, 
+        {
+          "api_name": "GetUserName", 
+          "addr": 4285128, 
+          "arguments": [
+            {
+              "arg_type": "EXTENDED_NAME_FORMAT", 
+              "arg_value": "2", 
+              "arg_name": "NameFormat"
+            }, 
+            {
+              "arg_type": "LPWSTR", 
+              "arg_value": "sub_430764", 
+              "arg_name": "lpNameBuffer"
+            }, 
+            {
+              "arg_type": "PULONG", 
+              "arg_value": "sub_430764", 
+              "arg_name": "nSize"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Configuration", 
+    "tag": "Query system and version information", 
+    "hit": {
+      "start_addr": 4261739, 
+      "apis": [
+        {
+          "api_name": "GetVersion", 
+          "addr": 4261739, 
+          "arguments": [
+            {
+              "arg_type": "LPOSVERSIONINFOW", 
+              "arg_value": "sub_429138", 
+              "arg_name": "lpVersionInformation"
+            }
+          ]
+        }, 
+        {
+          "api_name": "GetNativeSystemInfo", 
+          "addr": 4261753, 
+          "arguments": [
+            {
+              "arg_type": "LPSYSTEM_INFO", 
+              "arg_value": "ds:GetVersionExW", 
+              "arg_name": "lpSystemInfo"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Configuration", 
+    "tag": "Query Windows Version", 
+    "hit": {
+      "start_addr": 4269320, 
+      "apis": [
+        {
+          "api_name": "GetProcessHeap", 
+          "addr": 4269320, 
+          "arguments": []
+        }, 
+        {
+          "api_name": "HeapAlloc", 
+          "addr": 4362342, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "hHeap", 
+              "arg_name": "hHeap"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "8", 
+              "arg_name": "dwFlags"
+            }, 
+            {
+              "arg_type": "SIZE_T", 
+              "arg_value": "accumulator:eax", 
+              "arg_name": "dwBytes"
+            }
+          ]
+        }, 
+        {
+          "api_name": "GetVersion", 
+          "addr": 4261520, 
+          "arguments": [
+            {
+              "arg_type": "LPOSVERSIONINFOW", 
+              "arg_value": "accumulator:eax", 
+              "arg_name": "lpVersionInformation"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Execution", 
+    "tag": "create a new desktop", 
+    "hit": {
+      "start_addr": 4278539, 
+      "apis": [
+        {
+          "api_name": "OpenDesktop", 
+          "addr": 4278539, 
+          "arguments": [
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "None:eax", 
+              "arg_name": "lpszDesktop"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "dest:edi", 
+              "arg_name": "dwFlags"
+            }, 
+            {
+              "arg_type": "BOOL", 
+              "arg_value": "dest:edi", 
+              "arg_name": "fInherit"
+            }, 
+            {
+              "arg_type": "ACCESS_MASK", 
+              "arg_value": "source:eax", 
+              "arg_name": "dwDesiredAccess"
+            }
+          ]
+        }, 
+        {
+          "api_name": "CreateDesktop", 
+          "addr": 4278559, 
+          "arguments": [
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "None:eax", 
+              "arg_name": "lpszDesktop"
+            }, 
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "dest:edi", 
+              "arg_name": "lpszDevice"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "dest:edi", 
+              "arg_name": "pDevmode"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "dest:edi", 
+              "arg_name": "dwFlags"
+            }, 
+            {
+              "arg_type": "ACCESS_MASK", 
+              "arg_value": "source:eax", 
+              "arg_name": "dwDesiredAccess"
+            }, 
+            {
+              "arg_type": "LPSECURITY_ATTRIBUTES", 
+              "arg_value": "dest:edi", 
+              "arg_name": "lpsa"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Execution", 
+    "tag": "Retrieve Clipboard data", 
+    "hit": {
+      "start_addr": 4344353, 
+      "apis": [
+        {
+          "api_name": "GetClipboardData", 
+          "addr": 4344353, 
+          "arguments": [
+            {
+              "arg_type": "UINT", 
+              "arg_value": "source:[ebp+hMem]", 
+              "arg_name": "uFormat"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Network", 
+    "tag": "Listen on an port (backdoor)", 
+    "hit": {
+      "start_addr": 4380262, 
+      "apis": [
+        {
+          "api_name": "socket", 
+          "addr": 4380262, 
+          "arguments": [
+            {
+              "arg_type": "int", 
+              "arg_value": "accumulator:word ptr [esi]", 
+              "arg_name": "af"
+            }, 
+            {
+              "arg_type": "int", 
+              "arg_value": "1", 
+              "arg_name": "type"
+            }, 
+            {
+              "arg_type": "int", 
+              "arg_value": "6", 
+              "arg_name": "protocol"
+            }
+          ]
+        }, 
+        {
+          "api_name": "bind", 
+          "addr": 4380294, 
+          "arguments": [
+            {
+              "arg_type": "SOCKET", 
+              "arg_value": "dest:eax", 
+              "arg_name": "s"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "esi", 
+              "arg_name": "name"
+            }, 
+            {
+              "arg_type": "int", 
+              "arg_value": "ds:socket", 
+              "arg_name": "namelen"
+            }
+          ]
+        }, 
+        {
+          "api_name": "listen", 
+          "addr": 4380309, 
+          "arguments": [
+            {
+              "arg_type": "SOCKET", 
+              "arg_value": "dest:eax", 
+              "arg_name": "s"
+            }, 
+            {
+              "arg_type": "int", 
+              "arg_value": "[esp+4+backlog]", 
+              "arg_name": "backlog"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Network", 
+    "tag": "act as a backdoor", 
+    "hit": {
+      "start_addr": 4381108, 
+      "apis": [
+        {
+          "api_name": "socket", 
+          "addr": 4381108, 
+          "arguments": [
+            {
+              "arg_type": "int", 
+              "arg_value": "accumulator:word ptr [esi]", 
+              "arg_name": "af"
+            }, 
+            {
+              "arg_type": "int", 
+              "arg_value": "2", 
+              "arg_name": "type"
+            }, 
+            {
+              "arg_type": "int", 
+              "arg_value": "11h", 
+              "arg_name": "protocol"
+            }
+          ]
+        }, 
+        {
+          "api_name": "bind", 
+          "addr": 4381140, 
+          "arguments": [
+            {
+              "arg_type": "SOCKET", 
+              "arg_value": "dest:eax", 
+              "arg_name": "s"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "esi", 
+              "arg_name": "name"
+            }, 
+            {
+              "arg_type": "int", 
+              "arg_value": "ds:socket", 
+              "arg_name": "namelen"
+            }
+          ]
+        }, 
+        {
+          "api_name": "closesocket", 
+          "addr": 4381151, 
+          "arguments": [
+            {
+              "arg_type": "SOCKET", 
+              "arg_value": "dest:eax", 
+              "arg_name": "s"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Network", 
+    "tag": "act as a backdoor", 
+    "hit": {
+      "start_addr": 4380262, 
+      "apis": [
+        {
+          "api_name": "socket", 
+          "addr": 4380262, 
+          "arguments": [
+            {
+              "arg_type": "int", 
+              "arg_value": "accumulator:word ptr [esi]", 
+              "arg_name": "af"
+            }, 
+            {
+              "arg_type": "int", 
+              "arg_value": "1", 
+              "arg_name": "type"
+            }, 
+            {
+              "arg_type": "int", 
+              "arg_value": "6", 
+              "arg_name": "protocol"
+            }
+          ]
+        }, 
+        {
+          "api_name": "bind", 
+          "addr": 4380294, 
+          "arguments": [
+            {
+              "arg_type": "SOCKET", 
+              "arg_value": "dest:eax", 
+              "arg_name": "s"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "esi", 
+              "arg_name": "name"
+            }, 
+            {
+              "arg_type": "int", 
+              "arg_value": "ds:socket", 
+              "arg_name": "namelen"
+            }
+          ]
+        }, 
+        {
+          "api_name": "closesocket", 
+          "addr": 4380320, 
+          "arguments": [
+            {
+              "arg_type": "SOCKET", 
+              "arg_value": "dest:eax", 
+              "arg_name": "s"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Keylogger", 
+    "tag": "Retrieve status of virtual keys", 
+    "hit": {
+      "start_addr": 4344233, 
+      "apis": [
+        {
+          "api_name": "GetKeyboardState", 
+          "addr": 4344233, 
+          "arguments": [
+            {
+              "arg_type": "PBYTE", 
+              "arg_value": "ds:LeaveCriticalSection", 
+              "arg_name": "lpKeyState"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Execution", 
+    "tag": "Enumerate processes", 
+    "hit": {
+      "start_addr": 4319083, 
+      "apis": [
+        {
+          "api_name": "CreateToolhelp32Snapshot", 
+          "addr": 4319083, 
+          "arguments": [
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "2", 
+              "arg_name": "dwFlags"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "dest:edi", 
+              "arg_name": "th32ProcessID"
+            }
+          ]
+        }, 
+        {
+          "api_name": "Process32First", 
+          "addr": 4319124, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "None:eax", 
+              "arg_name": "hSnapshot"
+            }, 
+            {
+              "arg_type": "LPPROCESSENTRY32W", 
+              "arg_value": "ds:CreateToolhelp32Snapshot", 
+              "arg_name": "lppe"
+            }
+          ]
+        }, 
+        {
+          "api_name": "Process32Next", 
+          "addr": 4319358, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "None:eax", 
+              "arg_name": "hSnapshot"
+            }, 
+            {
+              "arg_type": "LPPROCESSENTRY32W", 
+              "arg_value": "ds:CloseHandle", 
+              "arg_name": "lppe"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Execution", 
+    "tag": "Enumerate processes", 
+    "hit": {
+      "start_addr": 4386079, 
+      "apis": [
+        {
+          "api_name": "CreateToolhelp32Snapshot", 
+          "addr": 4386079, 
+          "arguments": [
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "2", 
+              "arg_name": "dwFlags"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "source:esi", 
+              "arg_name": "th32ProcessID"
+            }
+          ]
+        }, 
+        {
+          "api_name": "Process32First", 
+          "addr": 4386117, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "None:eax", 
+              "arg_name": "hSnapshot"
+            }, 
+            {
+              "arg_type": "LPPROCESSENTRY32W", 
+              "arg_value": "ds:CreateToolhelp32Snapshot", 
+              "arg_name": "lppe"
+            }
+          ]
+        }, 
+        {
+          "api_name": "Process32Next", 
+          "addr": 4386340, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "None:eax", 
+              "arg_name": "hSnapshot"
+            }, 
+            {
+              "arg_type": "LPPROCESSENTRY32W", 
+              "arg_value": "ds:CloseHandle", 
+              "arg_name": "lppe"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Execution", 
+    "tag": "Enumerate processes", 
+    "hit": {
+      "start_addr": 4295787, 
+      "apis": [
+        {
+          "api_name": "CreateToolhelp32Snapshot", 
+          "addr": 4295787, 
+          "arguments": [
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "2", 
+              "arg_name": "dwFlags"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "0", 
+              "arg_name": "th32ProcessID"
+            }
+          ]
+        }, 
+        {
+          "api_name": "Process32First", 
+          "addr": 4295823, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "dest:eax", 
+              "arg_name": "hSnapshot"
+            }, 
+            {
+              "arg_type": "LPPROCESSENTRY32W", 
+              "arg_value": "ds:CreateToolhelp32Snapshot", 
+              "arg_name": "lppe"
+            }
+          ]
+        }, 
+        {
+          "api_name": "Process32Next", 
+          "addr": 4295961, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "dest:eax", 
+              "arg_name": "hSnapshot"
+            }, 
+            {
+              "arg_type": "LPPROCESSENTRY32W", 
+              "arg_value": "ebx", 
+              "arg_name": "lppe"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Memory", 
+    "tag": "copy data to memory", 
+    "hit": {
+      "start_addr": 4301375, 
+      "apis": [
+        {
+          "api_name": "VirtualAlloc", 
+          "addr": 4301375, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "0FFFFFFFFh", 
+              "arg_name": "hProcess"
+            }, 
+            {
+              "arg_type": "LPVOID", 
+              "arg_value": "source:esi", 
+              "arg_name": "lpAddress"
+            }, 
+            {
+              "arg_type": "SIZE_T", 
+              "arg_value": "accumulator:[ebp+arg_0]", 
+              "arg_name": "dwSize"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "3000h", 
+              "arg_name": "flAllocationType"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "40h", 
+              "arg_name": "flProtect"
+            }
+          ]
+        }, 
+        {
+          "api_name": "WriteProcessMemory", 
+          "addr": 4387073, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "0FFFFFFFFh", 
+              "arg_name": "hProcess"
+            }, 
+            {
+              "arg_type": "LPVOID", 
+              "arg_value": "[ebp+lpBaseAddress]", 
+              "arg_name": "lpBaseAddress"
+            }, 
+            {
+              "arg_type": "LPCVOID", 
+              "arg_value": "loc_424AD0", 
+              "arg_name": "lpBuffer"
+            }, 
+            {
+              "arg_type": "SIZE_T", 
+              "arg_value": "base:esp", 
+              "arg_name": "nSize"
+            }, 
+            {
+              "arg_type": "SIZE_T", 
+              "arg_value": "base:esp", 
+              "arg_name": "*lpNumberOfBytesWritten"
+            }
+          ]
+        }, 
+        {
+          "api_name": "WriteProcessMemory", 
+          "addr": 4387340, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "0FFFFFFFFh", 
+              "arg_name": "hProcess"
+            }, 
+            {
+              "arg_type": "LPVOID", 
+              "arg_value": "edi", 
+              "arg_name": "lpBaseAddress"
+            }, 
+            {
+              "arg_type": "LPCVOID", 
+              "arg_value": "sub_41A169", 
+              "arg_name": "lpBuffer"
+            }, 
+            {
+              "arg_type": "SIZE_T", 
+              "arg_value": "6", 
+              "arg_name": "nSize"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "0", 
+              "arg_name": "lpNumberOfBytesWritten"
+            }
+          ]
+        }, 
+        {
+          "api_name": "WriteProcessMemory", 
+          "addr": 4387299, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "0FFFFFFFFh", 
+              "arg_name": "hProcess"
+            }, 
+            {
+              "arg_type": "LPVOID", 
+              "arg_value": "[ebp+lpBaseAddress]", 
+              "arg_name": "lpBaseAddress"
+            }, 
+            {
+              "arg_type": "LPCVOID", 
+              "arg_value": "loc_424AD0", 
+              "arg_name": "lpBuffer"
+            }, 
+            {
+              "arg_type": "SIZE_T", 
+              "arg_value": "base:esp", 
+              "arg_name": "nSize"
+            }, 
+            {
+              "arg_type": "SIZE_T", 
+              "arg_value": "base:esp", 
+              "arg_name": "*lpNumberOfBytesWritten"
+            }
+          ]
+        }, 
+        {
+          "api_name": "VirtualQuery", 
+          "addr": 4386789, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "0FFFFFFFFh", 
+              "arg_name": "hProcess"
+            }, 
+            {
+              "arg_type": "LPCVOID", 
+              "arg_value": "source:eax", 
+              "arg_name": "lpAddress"
+            }, 
+            {
+              "arg_type": "PMEMORY_BASIC_INFORMATION", 
+              "arg_value": "accumulator:eax", 
+              "arg_name": "lpBuffer"
+            }, 
+            {
+              "arg_type": "SIZE_T", 
+              "arg_value": "1Ch", 
+              "arg_name": "dwLength"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Execution", 
+    "tag": "Process injection (RemoteThread)", 
+    "hit": {
+      "start_addr": 4318943, 
+      "apis": [
+        {
+          "api_name": "OpenProcess", 
+          "addr": 4318943, 
+          "arguments": [
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "47Ah", 
+              "arg_name": "dwDesiredAccess"
+            }, 
+            {
+              "arg_type": "BOOL", 
+              "arg_value": "base:ebx", 
+              "arg_name": "bInheritHandle"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "ecx", 
+              "arg_name": "dwProcessId"
+            }
+          ]
+        }, 
+        {
+          "api_name": "WriteProcessMemory", 
+          "addr": 4270340, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "dest:[ebp+hSourceProcessHandle]", 
+              "arg_name": "hProcess"
+            }, 
+            {
+              "arg_type": "LPVOID", 
+              "arg_value": "esi", 
+              "arg_name": "lpBaseAddress"
+            }, 
+            {
+              "arg_type": "LPCVOID", 
+              "arg_value": "counter:ecx", 
+              "arg_name": "lpBuffer"
+            }, 
+            {
+              "arg_type": "SIZE_T", 
+              "arg_value": "4", 
+              "arg_name": "nSize"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "base:esp", 
+              "arg_name": "lpNumberOfBytesWritten"
+            }
+          ]
+        }, 
+        {
+          "api_name": "WriteProcessMemory", 
+          "addr": 4270308, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "dest:[ebp+hSourceProcessHandle]", 
+              "arg_name": "hProcess"
+            }, 
+            {
+              "arg_type": "LPVOID", 
+              "arg_value": "ds:DuplicateHandle", 
+              "arg_name": "lpBaseAddress"
+            }, 
+            {
+              "arg_type": "LPCVOID", 
+              "arg_value": "counter:ecx", 
+              "arg_name": "lpBuffer"
+            }, 
+            {
+              "arg_type": "SIZE_T", 
+              "arg_value": "4", 
+              "arg_name": "nSize"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "base:esp", 
+              "arg_name": "lpNumberOfBytesWritten"
+            }
+          ]
+        }, 
+        {
+          "api_name": "CreateRemoteThread", 
+          "addr": 4318991, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "source:eax", 
+              "arg_name": "hProcess"
+            }, 
+            {
+              "arg_type": "LPSECURITY_ATTRIBUTES", 
+              "arg_value": "base:ebx", 
+              "arg_name": "lpThreadAttributes"
+            }, 
+            {
+              "arg_type": "SIZE_T", 
+              "arg_value": "base:ebx", 
+              "arg_name": "dwStackSize"
+            }, 
+            {
+              "arg_type": "LPTHREAD_START_ROUTINE", 
+              "arg_value": "writeBufferToProcess", 
+              "arg_name": "lpStartAddress"
+            }, 
+            {
+              "arg_type": "LPVOID", 
+              "arg_value": "base:ebx", 
+              "arg_name": "lpParameter"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "base:ebx", 
+              "arg_name": "dwCreationFlags"
+            }, 
+            {
+              "arg_type": "LPDWORD", 
+              "arg_value": "base:ebx", 
+              "arg_name": "lpThreadId"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Execution", 
+    "tag": "Privilege escalation", 
+    "hit": {
+      "start_addr": 4372983, 
+      "apis": [
+        {
+          "api_name": "OpenProcessToken", 
+          "addr": 4372983, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "0FFFFFFFFh", 
+              "arg_name": "ProcessHandle"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "20h", 
+              "arg_name": "DesiredAccess"
+            }, 
+            {
+              "arg_type": "PHANDLE", 
+              "arg_value": "ds:OpenThreadToken", 
+              "arg_name": "TokenHandle"
+            }
+          ]
+        }, 
+        {
+          "api_name": "LookupPrivilegeValue", 
+          "addr": 4373019, 
+          "arguments": [
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "base:esp", 
+              "arg_name": "lpSystemName"
+            }, 
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "[ebp+lpName]", 
+              "arg_name": "lpName"
+            }, 
+            {
+              "arg_type": "PLUID", 
+              "arg_value": "ds:OpenProcessToken", 
+              "arg_name": "lpLuid"
+            }
+          ]
+        }, 
+        {
+          "api_name": "AdjustTokenPrivileges", 
+          "addr": 4373040, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "[ebp+hObject]", 
+              "arg_name": "TokenHandle"
+            }, 
+            {
+              "arg_type": "BOOL", 
+              "arg_value": "base:esp", 
+              "arg_name": "DisableAllPrivileges"
+            }, 
+            {
+              "arg_type": "PTOKEN_PRIVILEGES", 
+              "arg_value": "ds:LookupPrivilegeValueW", 
+              "arg_name": "NewState"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "base:esp", 
+              "arg_name": "BufferLength"
+            }, 
+            {
+              "arg_type": "PTOKEN_PRIVILEGES", 
+              "arg_value": "base:esp", 
+              "arg_name": "PreviousState"
+            }, 
+            {
+              "arg_type": "PDWORD", 
+              "arg_value": "base:esp", 
+              "arg_name": "ReturnLength"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Execution", 
+    "tag": "Adjust token privileges", 
+    "hit": {
+      "start_addr": 4372965, 
+      "apis": [
+        {
+          "api_name": "OpenThreadToken", 
+          "addr": 4372965, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "ds:GetCurrentThread", 
+              "arg_name": "ThreadHandle"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "20h", 
+              "arg_name": "DesiredAccess"
+            }, 
+            {
+              "arg_type": "BOOL", 
+              "arg_value": "base:esp", 
+              "arg_name": "OpenAsSelf"
+            }, 
+            {
+              "arg_type": "PHANDLE", 
+              "arg_value": "accumulator:eax", 
+              "arg_name": "TokenHandle"
+            }
+          ]
+        }, 
+        {
+          "api_name": "LookupPrivilegeValue", 
+          "addr": 4373019, 
+          "arguments": [
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "base:esp", 
+              "arg_name": "lpSystemName"
+            }, 
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "[ebp+lpName]", 
+              "arg_name": "lpName"
+            }, 
+            {
+              "arg_type": "PLUID", 
+              "arg_value": "ds:OpenProcessToken", 
+              "arg_name": "lpLuid"
+            }
+          ]
+        }, 
+        {
+          "api_name": "AdjustTokenPrivileges", 
+          "addr": 4373040, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "[ebp+hObject]", 
+              "arg_name": "TokenHandle"
+            }, 
+            {
+              "arg_type": "BOOL", 
+              "arg_value": "base:esp", 
+              "arg_name": "DisableAllPrivileges"
+            }, 
+            {
+              "arg_type": "PTOKEN_PRIVILEGES", 
+              "arg_value": "ds:LookupPrivilegeValueW", 
+              "arg_name": "NewState"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "base:esp", 
+              "arg_name": "BufferLength"
+            }, 
+            {
+              "arg_type": "PTOKEN_PRIVILEGES", 
+              "arg_value": "base:esp", 
+              "arg_name": "PreviousState"
+            }, 
+            {
+              "arg_type": "PDWORD", 
+              "arg_value": "base:esp", 
+              "arg_name": "ReturnLength"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Execution", 
+    "tag": "Dynamic import loading", 
+    "hit": {
+      "start_addr": 4313001, 
+      "apis": [
+        {
+          "api_name": "LoadLibrary", 
+          "addr": 4313001, 
+          "arguments": [
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "decryptString", 
+              "arg_name": "lpLibFileName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "GetProcAddress", 
+          "addr": 4313034, 
+          "arguments": [
+            {
+              "arg_type": "HMODULE", 
+              "arg_value": "source:esi", 
+              "arg_name": "hModule"
+            }, 
+            {
+              "arg_type": "LPCSTR", 
+              "arg_value": "sub_418B9A", 
+              "arg_name": "lpProcName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "FreeLibrary", 
+          "addr": 4313157, 
+          "arguments": [
+            {
+              "arg_type": "HMODULE", 
+              "arg_value": "source:esi", 
+              "arg_name": "hLibModule"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Execution", 
+    "tag": "Dynamic import loading", 
+    "hit": {
+      "start_addr": 4375607, 
+      "apis": [
+        {
+          "api_name": "LoadLibrary", 
+          "addr": 4375607, 
+          "arguments": [
+            {
+              "arg_type": "LPCSTR", 
+              "arg_value": "offset aUrlmon_dll", 
+              "arg_name": "lpLibFileName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "GetProcAddress", 
+          "addr": 4375626, 
+          "arguments": [
+            {
+              "arg_type": "HMODULE", 
+              "arg_value": "ds:LoadLibraryA", 
+              "arg_name": "hModule"
+            }, 
+            {
+              "arg_type": "LPCSTR", 
+              "arg_value": "offset aObtainuseragen", 
+              "arg_name": "lpProcName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "FreeLibrary", 
+          "addr": 4375708, 
+          "arguments": [
+            {
+              "arg_type": "HMODULE", 
+              "arg_value": "None:eax", 
+              "arg_name": "hLibModule"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Execution", 
+    "tag": "Dynamic import loading", 
+    "hit": {
+      "start_addr": 4310067, 
+      "apis": [
+        {
+          "api_name": "LoadLibrary", 
+          "addr": 4310067, 
+          "arguments": [
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "decryptString", 
+              "arg_name": "lpLibFileName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "GetProcAddress", 
+          "addr": 4310111, 
+          "arguments": [
+            {
+              "arg_type": "HMODULE", 
+              "arg_value": "None:eax", 
+              "arg_name": "hModule"
+            }, 
+            {
+              "arg_type": "LPCSTR", 
+              "arg_value": "sub_418B9A", 
+              "arg_name": "lpProcName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "GetProcAddress", 
+          "addr": 4310134, 
+          "arguments": [
+            {
+              "arg_type": "HMODULE", 
+              "arg_value": "None:eax", 
+              "arg_name": "hModule"
+            }, 
+            {
+              "arg_type": "LPCSTR", 
+              "arg_value": "sub_418B9A", 
+              "arg_name": "lpProcName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "GetProcAddress", 
+          "addr": 4310158, 
+          "arguments": [
+            {
+              "arg_type": "HMODULE", 
+              "arg_value": "None:eax", 
+              "arg_name": "hModule"
+            }, 
+            {
+              "arg_type": "LPCSTR", 
+              "arg_value": "sub_418B9A", 
+              "arg_name": "lpProcName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "FreeLibrary", 
+          "addr": 4310295, 
+          "arguments": [
+            {
+              "arg_type": "HMODULE", 
+              "arg_value": "None:eax", 
+              "arg_name": "hLibModule"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Execution", 
+    "tag": "Dynamic import loading", 
+    "hit": {
+      "start_addr": 4383398, 
+      "apis": [
+        {
+          "api_name": "LoadLibrary", 
+          "addr": 4383398, 
+          "arguments": [
+            {
+              "arg_type": "LPCSTR", 
+              "arg_value": "offset aCabinet_dll", 
+              "arg_name": "lpLibFileName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "GetProcAddress", 
+          "addr": 4383430, 
+          "arguments": [
+            {
+              "arg_type": "HMODULE", 
+              "arg_value": "ds:LoadLibraryA", 
+              "arg_name": "hModule"
+            }, 
+            {
+              "arg_type": "LPCSTR", 
+              "arg_value": "offset aFcicreate", 
+              "arg_name": "lpProcName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "GetProcAddress", 
+          "addr": 4383448, 
+          "arguments": [
+            {
+              "arg_type": "HMODULE", 
+              "arg_value": "None:eax", 
+              "arg_name": "hModule"
+            }, 
+            {
+              "arg_type": "LPCSTR", 
+              "arg_value": "offset aFciaddfile", 
+              "arg_name": "lpProcName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "GetProcAddress", 
+          "addr": 4383466, 
+          "arguments": [
+            {
+              "arg_type": "HMODULE", 
+              "arg_value": "None:eax", 
+              "arg_name": "hModule"
+            }, 
+            {
+              "arg_type": "LPCSTR", 
+              "arg_value": "offset aFciflushcabine", 
+              "arg_name": "lpProcName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "GetProcAddress", 
+          "addr": 4383484, 
+          "arguments": [
+            {
+              "arg_type": "HMODULE", 
+              "arg_value": "None:eax", 
+              "arg_name": "hModule"
+            }, 
+            {
+              "arg_type": "LPCSTR", 
+              "arg_value": "offset aFcidestroy", 
+              "arg_name": "lpProcName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "FreeLibrary", 
+          "addr": 4383548, 
+          "arguments": [
+            {
+              "arg_type": "HMODULE", 
+              "arg_value": "None:eax", 
+              "arg_name": "hLibModule"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Execution", 
+    "tag": "Dynamic import loading", 
+    "hit": {
+      "start_addr": 4373706, 
+      "apis": [
+        {
+          "api_name": "LoadLibrary", 
+          "addr": 4373706, 
+          "arguments": [
+            {
+              "arg_type": "LPCSTR", 
+              "arg_value": "offset aUserenv_dll", 
+              "arg_name": "lpLibFileName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "GetProcAddress", 
+          "addr": 4373737, 
+          "arguments": [
+            {
+              "arg_type": "HMODULE", 
+              "arg_value": "ds:LoadLibraryA", 
+              "arg_name": "hModule"
+            }, 
+            {
+              "arg_type": "LPCSTR", 
+              "arg_value": "offset aCreateenvironm", 
+              "arg_name": "lpProcName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "GetProcAddress", 
+          "addr": 4373749, 
+          "arguments": [
+            {
+              "arg_type": "HMODULE", 
+              "arg_value": "None:eax", 
+              "arg_name": "hModule"
+            }, 
+            {
+              "arg_type": "LPCSTR", 
+              "arg_value": "offset aDestroyenviron", 
+              "arg_name": "lpProcName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "FreeLibrary", 
+          "addr": 4373909, 
+          "arguments": [
+            {
+              "arg_type": "HMODULE", 
+              "arg_value": "None:eax", 
+              "arg_name": "hLibModule"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Execution", 
+    "tag": "Dynamic import loading", 
+    "hit": {
+      "start_addr": 4252398, 
+      "apis": [
+        {
+          "api_name": "LoadLibrary", 
+          "addr": 4252398, 
+          "arguments": [
+            {
+              "arg_type": "LPCSTR", 
+              "arg_value": "offset LibFileName", 
+              "arg_name": "lpLibFileName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "GetProcAddress", 
+          "addr": 4252576, 
+          "arguments": [
+            {
+              "arg_type": "HMODULE", 
+              "arg_value": "edi", 
+              "arg_name": "hModule"
+            }, 
+            {
+              "arg_type": "LPCSTR", 
+              "arg_value": "offset aCreatestreamon", 
+              "arg_name": "lpProcName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "FreeLibrary", 
+          "addr": 4253511, 
+          "arguments": [
+            {
+              "arg_type": "HMODULE", 
+              "arg_value": "None:eax", 
+              "arg_name": "hLibModule"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Execution", 
+    "tag": "Dynamic import loading", 
+    "hit": {
+      "start_addr": 4333387, 
+      "apis": [
+        {
+          "api_name": "LoadLibrary", 
+          "addr": 4333387, 
+          "arguments": [
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "sub_42E6D0", 
+              "arg_name": "lpLibFileName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "GetProcAddress", 
+          "addr": 4333421, 
+          "arguments": [
+            {
+              "arg_type": "HMODULE", 
+              "arg_value": "None:eax", 
+              "arg_name": "hModule"
+            }, 
+            {
+              "arg_type": "LPCSTR", 
+              "arg_value": "sub_418B9A", 
+              "arg_name": "lpProcName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "FreeLibrary", 
+          "addr": 4333897, 
+          "arguments": [
+            {
+              "arg_type": "HMODULE", 
+              "arg_value": "None:eax", 
+              "arg_name": "hLibModule"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Execution", 
+    "tag": "Dynamic import loading", 
+    "hit": {
+      "start_addr": 4252565, 
+      "apis": [
+        {
+          "api_name": "LoadLibrary", 
+          "addr": 4252565, 
+          "arguments": [
+            {
+              "arg_type": "LPCSTR", 
+              "arg_value": "offset aOle32_dll_0", 
+              "arg_name": "lpLibFileName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "GetProcAddress", 
+          "addr": 4252605, 
+          "arguments": [
+            {
+              "arg_type": "HMODULE", 
+              "arg_value": "edi", 
+              "arg_name": "hModule"
+            }, 
+            {
+              "arg_type": "LPCSTR", 
+              "arg_value": "offset aCreatedcw", 
+              "arg_name": "lpProcName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "GetProcAddress", 
+          "addr": 4252617, 
+          "arguments": [
+            {
+              "arg_type": "HMODULE", 
+              "arg_value": "None:ebx", 
+              "arg_name": "hModule"
+            }, 
+            {
+              "arg_type": "LPCSTR", 
+              "arg_value": "offset aCreatecompatib", 
+              "arg_name": "lpProcName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "GetProcAddress", 
+          "addr": 4252630, 
+          "arguments": [
+            {
+              "arg_type": "HMODULE", 
+              "arg_value": "None:ebx", 
+              "arg_name": "hModule"
+            }, 
+            {
+              "arg_type": "LPCSTR", 
+              "arg_value": "offset aCreatecompat_0", 
+              "arg_name": "lpProcName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "GetProcAddress", 
+          "addr": 4252643, 
+          "arguments": [
+            {
+              "arg_type": "HMODULE", 
+              "arg_value": "None:ebx", 
+              "arg_name": "hModule"
+            }, 
+            {
+              "arg_type": "LPCSTR", 
+              "arg_value": "offset aGetdevicecaps", 
+              "arg_name": "lpProcName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "GetProcAddress", 
+          "addr": 4252656, 
+          "arguments": [
+            {
+              "arg_type": "HMODULE", 
+              "arg_value": "None:ebx", 
+              "arg_name": "hModule"
+            }, 
+            {
+              "arg_type": "LPCSTR", 
+              "arg_value": "offset aSelectobject", 
+              "arg_name": "lpProcName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "GetProcAddress", 
+          "addr": 4252669, 
+          "arguments": [
+            {
+              "arg_type": "HMODULE", 
+              "arg_value": "None:ebx", 
+              "arg_name": "hModule"
+            }, 
+            {
+              "arg_type": "LPCSTR", 
+              "arg_value": "offset aBitblt", 
+              "arg_name": "lpProcName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "GetProcAddress", 
+          "addr": 4252682, 
+          "arguments": [
+            {
+              "arg_type": "HMODULE", 
+              "arg_value": "None:ebx", 
+              "arg_name": "hModule"
+            }, 
+            {
+              "arg_type": "LPCSTR", 
+              "arg_value": "offset aDeleteobject", 
+              "arg_name": "lpProcName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "GetProcAddress", 
+          "addr": 4252695, 
+          "arguments": [
+            {
+              "arg_type": "HMODULE", 
+              "arg_value": "None:ebx", 
+              "arg_name": "hModule"
+            }, 
+            {
+              "arg_type": "LPCSTR", 
+              "arg_value": "offset aDeletedc", 
+              "arg_name": "lpProcName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "FreeLibrary", 
+          "addr": 4253531, 
+          "arguments": [
+            {
+              "arg_type": "HMODULE", 
+              "arg_value": "None:ebx", 
+              "arg_name": "hLibModule"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Execution", 
+    "tag": "Launch a process as a different user", 
+    "hit": {
+      "start_addr": 4313001, 
+      "apis": [
+        {
+          "api_name": "LoadLibrary", 
+          "addr": 4313001, 
+          "arguments": [
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "decryptString", 
+              "arg_name": "lpLibFileName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "GetProcAddress", 
+          "addr": 4313034, 
+          "arguments": [
+            {
+              "arg_type": "HMODULE", 
+              "arg_value": "source:esi", 
+              "arg_name": "hModule"
+            }, 
+            {
+              "arg_type": "LPCSTR", 
+              "arg_value": "sub_418B9A", 
+              "arg_name": "lpProcName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "CreateProcessAsUser", 
+          "addr": 4373862, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "[ebp+hToken]", 
+              "arg_name": "hToken"
+            }, 
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "base:esp", 
+              "arg_name": "lpApplicationName"
+            }, 
+            {
+              "arg_type": "LPWSTR", 
+              "arg_value": "counter:[ebp+lpCommandLine]", 
+              "arg_name": "lpCommandLine"
+            }, 
+            {
+              "arg_type": "LPSECURITY_ATTRIBUTES", 
+              "arg_value": "base:esp", 
+              "arg_name": "lpProcessAttributes"
+            }, 
+            {
+              "arg_type": "LPSECURITY_ATTRIBUTES", 
+              "arg_value": "base:esp", 
+              "arg_name": "lpThreadAttributes"
+            }, 
+            {
+              "arg_type": "BOOL", 
+              "arg_value": "base:esp", 
+              "arg_name": "bInheritHandles"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "sub_429138", 
+              "arg_name": "dwCreationFlags"
+            }, 
+            {
+              "arg_type": "LPVOID", 
+              "arg_value": "sub_429138", 
+              "arg_name": "lpEnvironment"
+            }, 
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "base:esp", 
+              "arg_name": "lpCurrentDirectory"
+            }, 
+            {
+              "arg_type": "LPSTARTUPINFOW", 
+              "arg_value": "sub_429138", 
+              "arg_name": "lpStartupInfo"
+            }, 
+            {
+              "arg_type": "LPPROCESS_INFORMATION", 
+              "arg_value": "sub_429138", 
+              "arg_name": "lpProcessInformation"
+            }
+          ]
+        }, 
+        {
+          "api_name": "CloseHandle", 
+          "addr": 4373881, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "[ebp+ProcessInformation.hThread]", 
+              "arg_name": "hObject"
+            }
+          ]
+        }, 
+        {
+          "api_name": "CloseHandle", 
+          "addr": 4373886, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "[ebp+ProcessInformation.hProcess]", 
+              "arg_name": "hObject"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Execution", 
+    "tag": "Launch a process as a different user", 
+    "hit": {
+      "start_addr": 4310067, 
+      "apis": [
+        {
+          "api_name": "LoadLibrary", 
+          "addr": 4310067, 
+          "arguments": [
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "decryptString", 
+              "arg_name": "lpLibFileName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "GetProcAddress", 
+          "addr": 4310111, 
+          "arguments": [
+            {
+              "arg_type": "HMODULE", 
+              "arg_value": "None:eax", 
+              "arg_name": "hModule"
+            }, 
+            {
+              "arg_type": "LPCSTR", 
+              "arg_value": "sub_418B9A", 
+              "arg_name": "lpProcName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "GetProcAddress", 
+          "addr": 4310134, 
+          "arguments": [
+            {
+              "arg_type": "HMODULE", 
+              "arg_value": "None:eax", 
+              "arg_name": "hModule"
+            }, 
+            {
+              "arg_type": "LPCSTR", 
+              "arg_value": "sub_418B9A", 
+              "arg_name": "lpProcName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "GetProcAddress", 
+          "addr": 4310158, 
+          "arguments": [
+            {
+              "arg_type": "HMODULE", 
+              "arg_value": "None:eax", 
+              "arg_name": "hModule"
+            }, 
+            {
+              "arg_type": "LPCSTR", 
+              "arg_value": "sub_418B9A", 
+              "arg_name": "lpProcName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "CreateProcessAsUser", 
+          "addr": 4373862, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "[ebp+hToken]", 
+              "arg_name": "hToken"
+            }, 
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "base:esp", 
+              "arg_name": "lpApplicationName"
+            }, 
+            {
+              "arg_type": "LPWSTR", 
+              "arg_value": "counter:[ebp+lpCommandLine]", 
+              "arg_name": "lpCommandLine"
+            }, 
+            {
+              "arg_type": "LPSECURITY_ATTRIBUTES", 
+              "arg_value": "base:esp", 
+              "arg_name": "lpProcessAttributes"
+            }, 
+            {
+              "arg_type": "LPSECURITY_ATTRIBUTES", 
+              "arg_value": "base:esp", 
+              "arg_name": "lpThreadAttributes"
+            }, 
+            {
+              "arg_type": "BOOL", 
+              "arg_value": "base:esp", 
+              "arg_name": "bInheritHandles"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "sub_429138", 
+              "arg_name": "dwCreationFlags"
+            }, 
+            {
+              "arg_type": "LPVOID", 
+              "arg_value": "sub_429138", 
+              "arg_name": "lpEnvironment"
+            }, 
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "base:esp", 
+              "arg_name": "lpCurrentDirectory"
+            }, 
+            {
+              "arg_type": "LPSTARTUPINFOW", 
+              "arg_value": "sub_429138", 
+              "arg_name": "lpStartupInfo"
+            }, 
+            {
+              "arg_type": "LPPROCESS_INFORMATION", 
+              "arg_value": "sub_429138", 
+              "arg_name": "lpProcessInformation"
+            }
+          ]
+        }, 
+        {
+          "api_name": "CloseHandle", 
+          "addr": 4373881, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "[ebp+ProcessInformation.hThread]", 
+              "arg_name": "hObject"
+            }
+          ]
+        }, 
+        {
+          "api_name": "CloseHandle", 
+          "addr": 4373886, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "[ebp+ProcessInformation.hProcess]", 
+              "arg_name": "hObject"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Execution", 
+    "tag": "Launch a process as a different user", 
+    "hit": {
+      "start_addr": 4373706, 
+      "apis": [
+        {
+          "api_name": "LoadLibrary", 
+          "addr": 4373706, 
+          "arguments": [
+            {
+              "arg_type": "LPCSTR", 
+              "arg_value": "offset aUserenv_dll", 
+              "arg_name": "lpLibFileName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "GetProcAddress", 
+          "addr": 4373737, 
+          "arguments": [
+            {
+              "arg_type": "HMODULE", 
+              "arg_value": "ds:LoadLibraryA", 
+              "arg_name": "hModule"
+            }, 
+            {
+              "arg_type": "LPCSTR", 
+              "arg_value": "offset aCreateenvironm", 
+              "arg_name": "lpProcName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "GetProcAddress", 
+          "addr": 4373749, 
+          "arguments": [
+            {
+              "arg_type": "HMODULE", 
+              "arg_value": "None:eax", 
+              "arg_name": "hModule"
+            }, 
+            {
+              "arg_type": "LPCSTR", 
+              "arg_value": "offset aDestroyenviron", 
+              "arg_name": "lpProcName"
+            }
+          ]
+        }, 
+        {
+          "api_name": "CreateProcessAsUser", 
+          "addr": 4373862, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "[ebp+hToken]", 
+              "arg_name": "hToken"
+            }, 
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "base:esp", 
+              "arg_name": "lpApplicationName"
+            }, 
+            {
+              "arg_type": "LPWSTR", 
+              "arg_value": "counter:[ebp+lpCommandLine]", 
+              "arg_name": "lpCommandLine"
+            }, 
+            {
+              "arg_type": "LPSECURITY_ATTRIBUTES", 
+              "arg_value": "base:esp", 
+              "arg_name": "lpProcessAttributes"
+            }, 
+            {
+              "arg_type": "LPSECURITY_ATTRIBUTES", 
+              "arg_value": "base:esp", 
+              "arg_name": "lpThreadAttributes"
+            }, 
+            {
+              "arg_type": "BOOL", 
+              "arg_value": "base:esp", 
+              "arg_name": "bInheritHandles"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "sub_429138", 
+              "arg_name": "dwCreationFlags"
+            }, 
+            {
+              "arg_type": "LPVOID", 
+              "arg_value": "sub_429138", 
+              "arg_name": "lpEnvironment"
+            }, 
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "base:esp", 
+              "arg_name": "lpCurrentDirectory"
+            }, 
+            {
+              "arg_type": "LPSTARTUPINFOW", 
+              "arg_value": "sub_429138", 
+              "arg_name": "lpStartupInfo"
+            }, 
+            {
+              "arg_type": "LPPROCESS_INFORMATION", 
+              "arg_value": "sub_429138", 
+              "arg_name": "lpProcessInformation"
+            }
+          ]
+        }, 
+        {
+          "api_name": "CloseHandle", 
+          "addr": 4373881, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "[ebp+ProcessInformation.hThread]", 
+              "arg_name": "hObject"
+            }
+          ]
+        }, 
+        {
+          "api_name": "CloseHandle", 
+          "addr": 4373886, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "[ebp+ProcessInformation.hProcess]", 
+              "arg_name": "hObject"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Configuration", 
+    "tag": "Modify a security descriptor", 
+    "hit": {
+      "start_addr": 4278583, 
+      "apis": [
+        {
+          "api_name": "ConvertStringSecurityDescriptorToSecurityDescriptor", 
+          "addr": 4278583, 
+          "arguments": [
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "offset StringSecurityDescriptor", 
+              "arg_name": "StringSecurityDescriptor"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "1", 
+              "arg_name": "StringSDRevision"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "ds:CreateDesktopW", 
+              "arg_name": "SecurityDescriptor"
+            }, 
+            {
+              "arg_type": "PULONG", 
+              "arg_value": "dest:edi", 
+              "arg_name": "SecurityDescriptorSize"
+            }
+          ]
+        }, 
+        {
+          "api_name": "GetSecurityDescriptorSacl", 
+          "addr": 4278609, 
+          "arguments": [
+            {
+              "arg_type": "PSECURITY_DESCRIPTOR", 
+              "arg_value": "None:eax", 
+              "arg_name": "pSecurityDescriptor"
+            }, 
+            {
+              "arg_type": "LPBOOL", 
+              "arg_value": "ds:ConvertStringSecurityDescriptorToSecurityDescriptorW", 
+              "arg_name": "lpbSaclPresent"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "ds:ConvertStringSecurityDescriptorToSecurityDescriptorW", 
+              "arg_name": "pSacl"
+            }, 
+            {
+              "arg_type": "LPBOOL", 
+              "arg_value": "ds:ConvertStringSecurityDescriptorToSecurityDescriptorW", 
+              "arg_name": "lpbSaclDefaulted"
+            }
+          ]
+        }, 
+        {
+          "api_name": "SetSecurityInfo", 
+          "addr": 4278631, 
+          "arguments": [
+            {
+              "arg_type": "HANDLE", 
+              "arg_value": "base:esp", 
+              "arg_name": "handle"
+            }, 
+            {
+              "arg_type": "SE_OBJECT_TYPE", 
+              "arg_value": "7", 
+              "arg_name": "ObjectType"
+            }, 
+            {
+              "arg_type": "SECURITY_INFORMATION", 
+              "arg_value": "10h", 
+              "arg_name": "SecurityInfo"
+            }, 
+            {
+              "arg_type": "PSID", 
+              "arg_value": "dest:edi", 
+              "arg_name": "psidOwner"
+            }, 
+            {
+              "arg_type": "PSID", 
+              "arg_value": "dest:edi", 
+              "arg_name": "psidGroup"
+            }, 
+            {
+              "arg_type": "PACL", 
+              "arg_value": "dest:edi", 
+              "arg_name": "pDacl"
+            }, 
+            {
+              "arg_type": "PACL", 
+              "arg_value": "[ebp+pSacl]", 
+              "arg_name": "pSacl"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Configuration", 
+    "tag": "Modify ACL of a security descriptor", 
+    "hit": {
+      "start_addr": 4381639, 
+      "apis": [
+        {
+          "api_name": "GetSecurityDescriptorSacl", 
+          "addr": 4381639, 
+          "arguments": [
+            {
+              "arg_type": "PSECURITY_DESCRIPTOR", 
+              "arg_value": "[ebp+hMem]", 
+              "arg_name": "pSecurityDescriptor"
+            }, 
+            {
+              "arg_type": "LPBOOL", 
+              "arg_value": "ds:ConvertStringSecurityDescriptorToSecurityDescriptorW", 
+              "arg_name": "lpbSaclPresent"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "ds:ConvertStringSecurityDescriptorToSecurityDescriptorW", 
+              "arg_name": "pSacl"
+            }, 
+            {
+              "arg_type": "LPBOOL", 
+              "arg_value": "ds:ConvertStringSecurityDescriptorToSecurityDescriptorW", 
+              "arg_name": "lpbSaclDefaulted"
+            }
+          ]
+        }, 
+        {
+          "api_name": "SetSecurityDescriptorSacl", 
+          "addr": 4381659, 
+          "arguments": [
+            {
+              "arg_type": "PSECURITY_DESCRIPTOR", 
+              "arg_value": "edi", 
+              "arg_name": "pSecurityDescriptor"
+            }, 
+            {
+              "arg_type": "BOOL", 
+              "arg_value": "[ebp+bSaclPresent]", 
+              "arg_name": "bSaclPresent"
+            }, 
+            {
+              "arg_type": "PACL", 
+              "arg_value": "None:ebx", 
+              "arg_name": "pSacl"
+            }, 
+            {
+              "arg_type": "BOOL", 
+              "arg_value": "[ebp+bSaclDefaulted]", 
+              "arg_name": "bSaclDefaulted"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Configuration", 
+    "tag": "Modify ACL of a security descriptor", 
+    "hit": {
+      "start_addr": 4381572, 
+      "apis": [
+        {
+          "api_name": "InitializeSecurityDescriptor", 
+          "addr": 4381572, 
+          "arguments": [
+            {
+              "arg_type": "PSECURITY_DESCRIPTOR", 
+              "arg_value": "edi", 
+              "arg_name": "pSecurityDescriptor"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "1", 
+              "arg_name": "dwRevision"
+            }
+          ]
+        }, 
+        {
+          "api_name": "SetSecurityDescriptorDacl", 
+          "addr": 4381589, 
+          "arguments": [
+            {
+              "arg_type": "PSECURITY_DESCRIPTOR", 
+              "arg_value": "edi", 
+              "arg_name": "pSecurityDescriptor"
+            }, 
+            {
+              "arg_type": "BOOL", 
+              "arg_value": "1", 
+              "arg_name": "bDaclPresent"
+            }, 
+            {
+              "arg_type": "PACL", 
+              "arg_value": "base:esp", 
+              "arg_name": "pDacl"
+            }, 
+            {
+              "arg_type": "BOOL", 
+              "arg_value": "base:esp", 
+              "arg_name": "bDaclDefaulted"
+            }
+          ]
+        }, 
+        {
+          "api_name": "ConvertStringSecurityDescriptorToSecurityDescriptor", 
+          "addr": 4381611, 
+          "arguments": [
+            {
+              "arg_type": "LPCWSTR", 
+              "arg_value": "offset aSMlNrnwnxLw", 
+              "arg_name": "StringSecurityDescriptor"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "1", 
+              "arg_name": "StringSDRevision"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "ds:SetSecurityDescriptorDacl", 
+              "arg_name": "SecurityDescriptor"
+            }, 
+            {
+              "arg_type": "PULONG", 
+              "arg_value": "base:esp", 
+              "arg_name": "SecurityDescriptorSize"
+            }
+          ]
+        }, 
+        {
+          "api_name": "GetSecurityDescriptorSacl", 
+          "addr": 4381639, 
+          "arguments": [
+            {
+              "arg_type": "PSECURITY_DESCRIPTOR", 
+              "arg_value": "[ebp+hMem]", 
+              "arg_name": "pSecurityDescriptor"
+            }, 
+            {
+              "arg_type": "LPBOOL", 
+              "arg_value": "ds:ConvertStringSecurityDescriptorToSecurityDescriptorW", 
+              "arg_name": "lpbSaclPresent"
+            }, 
+            {
+              "arg_type": "unresolved", 
+              "arg_value": "ds:ConvertStringSecurityDescriptorToSecurityDescriptorW", 
+              "arg_name": "pSacl"
+            }, 
+            {
+              "arg_type": "LPBOOL", 
+              "arg_value": "ds:ConvertStringSecurityDescriptorToSecurityDescriptorW", 
+              "arg_name": "lpbSaclDefaulted"
+            }
+          ]
+        }, 
+        {
+          "api_name": "SetSecurityDescriptorSacl", 
+          "addr": 4381659, 
+          "arguments": [
+            {
+              "arg_type": "PSECURITY_DESCRIPTOR", 
+              "arg_value": "edi", 
+              "arg_name": "pSecurityDescriptor"
+            }, 
+            {
+              "arg_type": "BOOL", 
+              "arg_value": "[ebp+bSaclPresent]", 
+              "arg_name": "bSaclPresent"
+            }, 
+            {
+              "arg_type": "PACL", 
+              "arg_value": "None:ebx", 
+              "arg_name": "pSacl"
+            }, 
+            {
+              "arg_type": "BOOL", 
+              "arg_value": "[ebp+bSaclDefaulted]", 
+              "arg_name": "bSaclDefaulted"
+            }
+          ]
+        }
+      ]
+    }
+  }, 
+  {
+    "category": "Execution", 
+    "tag": "Shutdown system", 
+    "hit": {
+      "start_addr": 4276901, 
+      "apis": [
+        {
+          "api_name": "InitiateSystemShutdown", 
+          "addr": 4276901, 
+          "arguments": [
+            {
+              "arg_type": "LPWSTR", 
+              "arg_value": "sub_42B9CE", 
+              "arg_name": "lpMachineName"
+            }, 
+            {
+              "arg_type": "LPWSTR", 
+              "arg_value": "sub_42B9CE", 
+              "arg_name": "lpMessage"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "sub_42B9CE", 
+              "arg_name": "dwTimeout"
+            }, 
+            {
+              "arg_type": "BOOL", 
+              "arg_value": "1", 
+              "arg_name": "bForceAppsClosed"
+            }, 
+            {
+              "arg_type": "BOOL", 
+              "arg_value": "sub_42B9CE", 
+              "arg_name": "bRebootAfterShutdown"
+            }, 
+            {
+              "arg_type": "DWORD", 
+              "arg_value": "80000000h", 
+              "arg_name": "dwReason"
+            }
+          ]
+        }
+      ]
+    }
+  }
+]
