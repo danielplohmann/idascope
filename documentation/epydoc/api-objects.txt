@@ -6,8 +6,8 @@ IDAscope.IDAscope.IDASCOPE	IDAscope.IDAscope-module.html#IDASCOPE
 IDAscope.IDAscope.main	IDAscope.IDAscope-module.html#main
 IDAscope.IDAscope.PLUGIN_ENTRY	IDAscope.IDAscope-module.html#PLUGIN_ENTRY
 IDAscope.IDAscope.NAME	IDAscope.IDAscope-module.html#NAME
-IDAscope.idascope	IDAscope.idascope-module.html
-IDAscope.idascope.__package__	IDAscope.idascope-module.html#__package__
+IDAscope.idascope	IDAscope.IDAscope-module.html
+IDAscope.idascope.__package__	IDAscope.IDAscope-module.html#__package__
 IDAscope.idascope.core	IDAscope.idascope.core-module.html
 IDAscope.idascope.core.__package__	IDAscope.idascope.core-module.html#__package__
 IDAscope.idascope.core.AnnotationsProvider	IDAscope.idascope.core.AnnotationsProvider-module.html
