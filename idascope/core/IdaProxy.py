@@ -88,7 +88,7 @@ class IdaProxy():
         return self.idc.del_segm(address, flags)
 
     def Demangle(self, name, disable_mask):
-        return self.idc.demangle(name, disable_mask)
+        return self.idc.demangle_name(name, disable_mask)
 
     def Dword(self, addr):
         return self.idc.get_wide_dword(addr)
