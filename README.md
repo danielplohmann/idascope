@@ -26,6 +26,7 @@ Authors and contributors of IDAscope are [Daniel Plohmann](https://twitter.com/p
 [Luca Corbatto](https://github.com/targodan), [Jean-Michel Picod](https://twitter.com/jmichel_p), Branko Spasojevic, [Sascha Rommelfangen](https://twitter.com/rommelfs)
 
 ## Version History
+ * 2022-08-02 -- v1.3.1: THX to Denis Barkar for fixing a width issue with window sizing!
  * 2020-08-10 -- v1.3: Move to Github, Adaptions for IDA 7.0+ and Python3 - Eternal THX to Luca Corbatto for making the modernization happen!
  * 2018-08-13 -- v1.2.1: Minor fixes on YaraScanner and CryptoIdentifier - thanks to Jean-Michel Picod
  * 2016-01-08 -- v1.2.1: Support up to IDA 6.9 with PyQt5.

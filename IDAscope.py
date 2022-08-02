@@ -55,7 +55,7 @@ from idascope.widgets.SemanticExplorerWidget import SemanticExplorerWidget
 
 HOTKEYS = None
 IDASCOPE = None
-NAME = "simpliFiRE.IDAscope v1.3.0"
+NAME = "simpliFiRE.IDAscope v1.3.1"
 
 
 class IDAscopeForm(PluginForm):
