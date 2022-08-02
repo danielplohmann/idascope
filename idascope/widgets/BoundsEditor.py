@@ -77,7 +77,7 @@ class BoundsEditor(QWidget):
 
         # The default size is a bit too big and probably doesn't need to grow.
         sh = self._label_lo.sizeHint()
-        sh.setWidth(sh.width() / 2)
+        sh.setWidth(int(sh.width() / 2))
         self._label_lo.setMaximumSize(sh)
 
         self.slider = slider = RangeSlider(self, self.cc.QtCore.Qt.Horizontal)
@@ -99,7 +99,7 @@ class BoundsEditor(QWidget):
 
         # The default size is a bit too big and probably doesn't need to grow.
         sh = self._label_hi.sizeHint()
-        sh.setWidth(sh.width() / 2)
+        sh.setWidth(int(sh.width() / 2))
         self._label_hi.setMaximumSize(sh)
 
     def _updateLowOnEnter(self):
